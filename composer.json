@@ -1,0 +1,18 @@
+{
+    "name": "yandod/php-warrior",
+    "description": "Game written in PHP for learning PHP and artificial intelligence.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yusuke Ando",
+            "email": "yandod@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "~4"
+    },
+    "autoload": {
+        "psr-4": { "PHPWarrior\\": "src/PHPWarrior/" }
+    },
+    "bin": ["php-warrior"]
+}
