@@ -13,6 +13,8 @@ class Game {
       $this->profile = Profile::load(Config::$path_prefix . '/.profile');
     } elseif (!is_dir(Config::$path_prefix . '/phpwarrior')) {
       $this->make_game_directory();
+    } else {
+      $this->profile = new Profile();
     }
 
     $this->play_normal_mode();
@@ -28,6 +30,21 @@ class Game {
   }
 
   public function play_normal_mode() {
+    if ($this->profile->current_level()->number == 0) {
+      $this->prepare_next_level();
+      UI::puts("First level has been generated. See the rubywarrior/{$this->profile->directory_name()}/README for instructions.");
+    } else {
+      $this->play_current_level();
+    }
+  }
 
+  public function play_current_level() {
+
+  }
+
+  public function prepare_next_level() {
+    $this->profile->next_level()->generate_player_files();
+    $this->profile->level_number += 1;
+    $this->profile->save(); // this saves score and new abilities too
   }
 }
