@@ -12,7 +12,7 @@ class Profile {
   public $abilities;
   public $level_number = 0;
   public $last_level_number;
-  public $tower_path = 'beginner';
+  public $tower_path = '';
   public $warrior_name;
   public $player_path;
 
@@ -38,7 +38,17 @@ class Profile {
   }
 
   public function directory_name() {
-    return null; //[warrior_name.downcase.gsub(/[^a-z0-9]+/, '-'), tower.name].join('-')
+    return implode(
+      '-',
+      [strtolower($this->warrior_name), $this->tower()->name()]
+    );
+  }
+
+  public function tower() {
+    if (!$this->tower) {
+      $this->tower = new Tower($this->tower_path);
+    }
+    return $this->tower;
   }
 
   public function current_level() {

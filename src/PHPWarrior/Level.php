@@ -20,7 +20,7 @@ class Level {
   }
 
   public function load_path() {
-    return './towers/' . $this->profile->tower_path . '/level_' . sprintf("%03d", $this->number) . '.php';
+    return $this->profile->tower_path . '/level_' . sprintf("%03d", $this->number) . '.php';
   }
 
   public function load_level() {
@@ -29,8 +29,8 @@ class Level {
 
   public function generate_player_files() {
     $this->load_level();
-    //$player_generator = new PlayerGenerator($this);
-    //return $player_generator->generate();
+    $player_generator = new PlayerGenerator($this);
+    return $player_generator->generate();
   }
 
   public function setup_warrior($warrior) {
