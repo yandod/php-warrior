@@ -12,7 +12,7 @@ class Profile {
   public $abilities;
   public $level_number = 0;
   public $last_level_number;
-  public $tower_path;
+  public $tower_path = 'beginner';
   public $warrior_name;
   public $player_path;
 
