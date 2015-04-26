@@ -16,25 +16,30 @@ class Profile {
   public $warrior_name;
   public $player_path;
 
-  public function encode() {
-
+  public static function encode($obj) {
+    return serialize($obj);
   }
 
   public function save() {
-
+    // update_epic_score
+    // @level_number = 0 if epic?
+    file_put_contents($this->player_path() . '/.profile', self::encode($this));
   }
 
-  public function decode($str) {
-
+  public static function decode($str) {
+    return unserialize($str);
   }
 
-  public static function load() {
-    $profile = new Profile();
+  public static function load($path) {
+    $profile = self::decode(file_get_contents($path));
     return $profile;
   }
 
   public function player_path() {
-
+    if (!$this->player_path) {
+      $this->player_path = Config::$path_prefix . '/phpwarrior/' . $this->directory_name();
+    }
+    return $this->player_path;
   }
 
   public function directory_name() {
@@ -42,6 +47,15 @@ class Profile {
       '-',
       [strtolower($this->warrior_name), $this->tower()->name()]
     );
+  }
+
+  public function __ToString() {
+    return implode('-', [
+      $this->warrior_name,
+      $this->tower->name(),
+      "Level ".$this->level_number,
+      "score ".$this->score
+    ]);
   }
 
   public function tower() {

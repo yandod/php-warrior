@@ -49,8 +49,11 @@ class Game {
   }
 
   public function profiles() {
-    return array();
-    //return $this->profile_paths.map { |profile| Profile.load(profile) }
+    $map = [];
+    foreach ($this->profile_paths() as $path) {
+      $map[] = Profile::load($path);
+    }
+    return $map;
   }
 
   public function profile_paths() {
@@ -77,7 +80,7 @@ class Game {
   }
 
   public function choose_profile() {
-    $profile = UI::choose('profile', $this->profiles() + [[':new','New Profile']]);
+    $profile = UI::choose('profile', array_merge($this->profiles(),[[':new','New Profile']]));
     if (is_array($profile) && $profile[0] == ':new') {
       $profile = $this->new_profile();
     }

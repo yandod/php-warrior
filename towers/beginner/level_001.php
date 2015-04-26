@@ -12,4 +12,4 @@ $this->ace_score(10);
 $this->size(8, 1);
 $this->stairs(7, 0);
 
-$this->warrior(0, 0, ':east')->add_abilities(':walk!');
+$this->warrior(0, 0, ':east')->add_abilities([':walk!']);

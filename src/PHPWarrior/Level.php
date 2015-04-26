@@ -19,6 +19,10 @@ class Level {
       $this->number = $number;
   }
 
+  public function player_path() {
+    return $this->profile->player_path();
+  }
+
   public function load_path() {
     return $this->profile->tower_path . '/level_' . sprintf("%03d", $this->number) . '.php';
   }
