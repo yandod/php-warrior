@@ -11,8 +11,8 @@ class UI {
 
   public static function puts_with_delay($msg) {
     $result = self::puts($msg);
-    if (Config::$delay) {
-      sleep(Config::$delay);
+    if (!is_null(Config::$delay)) {
+      usleep(Config::$delay * 1000000);
     }
     return $result;
   }

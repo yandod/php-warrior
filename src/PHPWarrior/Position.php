@@ -8,7 +8,7 @@ class Position {
   public static $DIRECTIONS = [':north', ':east', ':south', ':west'];
   public static $RELATIVE_DIRECTIONS = [':forward', ':right', ':backward', ':left'];
 
-  public function initialize($floor, $x, $y, $direction = null) {
+  public function __construct($floor, $x, $y, $direction = null) {
     $this->floor = $floor;
     $this->x = $x;
     $this->y = $y;
@@ -37,7 +37,10 @@ class Position {
   }
 
   public function relative_space($forward, $right = 0) {
-    return $this->floor->space($this->translate_offset($forward, $right));
+    return call_user_func_array(
+      [$this->floor,'space'],
+      $this->translate_offset($forward, $right)
+    );
   }
 
   public function space() {
@@ -86,18 +89,19 @@ class Position {
   }
 
   public function translate_offset($forward, $right) {
+    $direction = $this->direction();
     switch ($direction) {
       case ':north':
-        return [$this->x + $right, $this->y - $forward];
+        return [$this->x + (int)$right, $this->y - (int)$forward];
         break;
       case ':east':
-        return [$this->x + $forward, $this->y + $right];
+        return [$this->x + (int)$forward, $this->y + (int)$right];
         break;
       case ':south':
-        return [$this->x - $right, $this->y + $forward];
+        return [$this->x - (int)$right, $this->y + (int)$forward];
         break;
       case ':west':
-        return [$this->x - $forward, $this->y - $right];
+        return [$this->x - (int)$forward, $this->y - (int)$right];
         break;
     }
   }

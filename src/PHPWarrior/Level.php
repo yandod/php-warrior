@@ -31,10 +31,40 @@ class Level {
     $level_loader = new LevelLoader($this, $this->load_path());
   }
 
+  public function load_player() {
+    include $this->player_path() . '/player.php';
+  }
+
   public function generate_player_files() {
     $this->load_level();
     $player_generator = new PlayerGenerator($this);
     return $player_generator->generate();
+  }
+
+  public function play($turns = 1000) {
+    $this->load_level();
+    foreach(range(0,$turns) as $n) {
+      $num = $n+1;
+      UI::puts("- turn {$num} -");
+      UI::put($this->floor->character());
+      foreach ($this->floor->units() as $unit) {
+        $unit->prepare_turn();
+      }
+      foreach ($this->floor->units() as $unit) {
+        $unit->perform_turn();
+      }
+    }
+    /*
+    turns.times do |n|
+      return if passed? || failed?
+      UI.puts "- turn #{n+1} -"
+      UI.print @floor.character
+      @floor.units.each { |unit| unit.prepare_turn }
+      @floor.units.each { |unit| unit.perform_turn }
+      yield if block_given?
+      @time_bonus -= 1 if @time_bonus > 0
+    end
+    */
   }
 
   public function setup_warrior($warrior) {

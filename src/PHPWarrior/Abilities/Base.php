@@ -48,8 +48,8 @@ class Base {
   }
 
   public function verify_direction($direction) {
-    if (array_search($direction,Position::RELATIVE_DIRECTIONS) === false) {
-      throw new Exception("Unknown direction {$direction}. Should be :forward, :backward, :left or :right.");
+    if (array_search($direction,\PHPWarrior\Position::$RELATIVE_DIRECTIONS) === false) {
+      throw new \Exception("Unknown direction {$direction}. Should be :forward, :backward, :left or :right.");
     }
   }
 }

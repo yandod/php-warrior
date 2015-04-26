@@ -13,9 +13,8 @@ class Game {
       $this->profile = Profile::load(Config::$path_prefix . '/.profile');
     } elseif (!is_dir(Config::$path_prefix . '/phpwarrior')) {
       $this->make_game_directory();
-    } else {
-      $this->profile = $this->choose_profile();
     }
+    $this->profile = $this->choose_profile();
 
     $this->play_normal_mode();
   }
@@ -39,7 +38,34 @@ class Game {
   }
 
   public function play_current_level() {
-
+    $continue = true;
+    $this->current_level()->load_player();
+    UI::puts("Starting Level {$this->current_level()->number}");
+    $this->current_level()->play();
+    /*
+    current_level.play
+    if current_level.passed?
+      if next_level.exists?
+        UI.puts "Success! You have found the stairs."
+      else
+        UI.puts "CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden Ruby."
+        continue = false
+      end
+      current_level.tally_points
+      if profile.epic?
+        UI.puts final_report if final_report && !continue
+      else
+        request_next_level
+      end
+    else
+      continue = false
+      UI.puts "Sorry, you failed level #{current_level.number}. Change your script and try again."
+      if !Config.skip_input? && current_level.clue && UI.ask("Would you like to read the additional clues for this level?")
+        UI.puts current_level.clue.hard_wrap
+      end
+    end
+    */
+    return $continue;
   }
 
   public function prepare_next_level() {
@@ -77,6 +103,22 @@ class Game {
 
   public function tower_paths() {
     return glob('./towers/*');
+  }
+
+  public function current_level() {
+    if (!$this->current_level) {
+      $this->current_level = $this->profile->current_level();
+    }
+
+    return $this->current_level;
+  }
+
+  public function next_level() {
+    if (!$this->next_level) {
+      $this->next_level = $this->profile->next_level();
+    }
+
+    return $this->next_level;
   }
 
   public function choose_profile() {

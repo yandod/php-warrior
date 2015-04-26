@@ -58,7 +58,7 @@ class Base {
   }
 
   public function say($msg) {
-    UI::puts_with_delay("{$this->name()} {$msg}");
+    \PHPWarrior\UI::puts_with_delay("{$this->name()} {$msg}");
   }
 
   public function name() {
@@ -70,6 +70,32 @@ class Base {
       $class_name = 'PHPWarrior\Abilities\\' . ucfirst(str_replace([':','!'],'',$abbility_str));
       $this->abilities[$abbility_str] = new $class_name($this);
     }
+  }
+
+  public function next_turn() {
+    return new \PHPWarrior\Turn($this->abilities());
+  }
+
+  public function prepare_turn() {
+    $this->current_turn = $this->next_turn();
+    return $this->play_turn($this->current_turn);
+  }
+
+  public function perform_turn() {
+    if ($this->position) {
+      foreach ($this->abilities as $ability) {
+        $ability->pass_turn();
+      }
+      if ($this->current_turn->action && !$this->is_bound()) {
+        list ($name, $args) = $this->current_turn->action;
+        call_user_func_array([$this->abilities[$name], 'perform'], $args);
+        //$this->abilities[$name]->perform($args);
+      }
+    }
+  }
+
+  public function play_turn($turn) {
+    # to be overriden by subclass
   }
 
   public function abilities() {
