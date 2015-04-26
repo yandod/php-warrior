@@ -66,7 +66,10 @@ class Base {
   }
 
   public function add_abilities($new_abbilities) {
-    $this->abilities = array_merge($this->abilities, $new_abbilities);
+    foreach ($new_abbilities as $abbility_str) {
+      $class_name = 'PHPWarrior\Abilities\\' . ucfirst(str_replace([':','!'],'',$abbility_str));
+      $this->abilities[$abbility_str] = new $class_name($this);
+    }
   }
 
   public function abilities() {

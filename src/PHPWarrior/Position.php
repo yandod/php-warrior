@@ -5,8 +5,8 @@ namespace PHPWarrior;
 class Position {
 
   public $floor;
-  public $DIRECTIONS = [':north', ':east', ':south', ':west'];
-  public $RELATIVE_DIRECTIONS = [':forward', ':right', ':backward', ':left'];
+  public static $DIRECTIONS = [':north', ':east', ':south', ':west'];
+  public static $RELATIVE_DIRECTIONS = [':forward', ':right', ':backward', ':left'];
 
   public function initialize($floor, $x, $y, $direction = null) {
     $this->floor = $floor;
@@ -14,7 +14,7 @@ class Position {
     $this->y = $y;
     $this->direction_index = array_search(
       is_null($direction) ? ':north' : $direction,
-      $this->DIRECTIONS
+      self::$DIRECTIONS
     );
   }
 
@@ -23,7 +23,7 @@ class Position {
   }
 
   public function direction() {
-    return $this->DIRECTIONS[$this->direction_index];
+    return self::$DIRECTIONS[$this->direction_index];
   }
 
   public function rotate($amount) {
@@ -75,14 +75,14 @@ class Position {
   }
 
   public function relative_direction($direction) {
-    $offset = array_search($direction,$this->DIRECTIONS) - $this->direction_index;
+    $offset = array_search($direction,self::DIRECTIONS) - $this->direction_index;
     while ($offset > 3) {
       $offset -= 4;
     }
     while ($offset < 0) {
       $offset += 4;
     }
-    return $this->RELATIVE_DIRECTIONS[$offset];
+    return self::$RELATIVE_DIRECTIONS[$offset];
   }
 
   public function translate_offset($forward, $right) {

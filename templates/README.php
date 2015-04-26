@@ -15,11 +15,11 @@ Tip: <?= $this->level->tip ?>
 <?php endforeach; ?>
 
 Warrior Abilities:
-<%- $this->level->warrior.abilities.each do |name, ability| -?>
+<?php foreach ($this->level->warrior->abilities() as $name => $ability): ?>
 
-  $warrior-><?= name ?>
-    <?= ability.description ?>
-<%- end -?>
+  $warrior-><?= $name ?>
+    <?= $ability->description(); ?>
+<?php endforeach; ?>
 
 
 When you're done editing player.php, run the php-warrior command again.

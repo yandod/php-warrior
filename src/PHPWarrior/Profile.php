@@ -9,7 +9,7 @@ class Profile {
   public $current_epic_score;
   public $average_grade;
   public $current_epic_grades;
-  public $abilities;
+  public $abilities = [];
   public $level_number = 0;
   public $last_level_number;
   public $tower_path = '';
