@@ -9,6 +9,14 @@ class UI {
     }
   }
 
+  public static function puts_with_delay($msg) {
+    $result = self::puts($msg);
+    if (Config::$delay) {
+      sleep(Config::$delay);
+    }
+    return $result;
+  }
+
   public static function put($msg) {
     if (Config::$out_stream) {
       fwrite(Config::$out_stream, $msg);

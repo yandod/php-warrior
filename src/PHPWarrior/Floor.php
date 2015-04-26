@@ -73,7 +73,7 @@ class Floor {
   public function unique_units() {
     $unique_units = [];
     foreach ($this->units as $u) {
-      $unique_units[$u->class] = true;
+      $unique_units[] = $u;
     }
     return $unique_units;
   }
