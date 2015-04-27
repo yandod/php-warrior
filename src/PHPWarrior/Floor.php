@@ -50,8 +50,8 @@ class Floor {
     return (
       $x < 0 ||
       $y < 0 ||
-      $x > $this->width-1 ||
-      $y > $this->height-1
+      $x > ($this->width - 1) ||
+      $y > ($this->height - 1)
     );
   }
 

@@ -12,7 +12,7 @@ class Space {
   }
 
   public function is_wall() {
-    $this->floor->is_out_of_bounds($this->x, $this->y);
+    return $this->floor->is_out_of_bounds($this->x, $this->y);
   }
 
   public function is_warrior() {
