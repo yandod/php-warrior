@@ -42,6 +42,14 @@ class Game {
     $this->current_level()->load_player();
     UI::puts("Starting Level {$this->current_level()->number}");
     $this->current_level()->play();
+    if ($this->current_level()->is_passed()) {
+      if ($this->next_level()->is_exists()) {
+        UI::puts('Success! You have found the stairs.');
+      } else {
+        UI::puts('CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden PHP.');
+        $continue = false;
+      }
+    }
     /*
     current_level.play
     if current_level.passed?

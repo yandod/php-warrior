@@ -19,7 +19,10 @@ class Floor {
   }
 
   public function stairs_space() {
-    $this->space($this->stairs_location);
+    return call_user_func_array(
+      [$this, 'space'],
+      $this->stairs_location
+    );
   }
 
   public function units() {

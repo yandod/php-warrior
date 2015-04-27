@@ -44,6 +44,9 @@ class Level {
   public function play($turns = 1000) {
     $this->load_level();
     foreach(range(0,$turns) as $n) {
+      if ($this->is_passed() || $this->is_failed()) {
+        return;
+      }
       $num = $n+1;
       UI::puts("- turn {$num} -");
       UI::put($this->floor->character());
@@ -53,18 +56,25 @@ class Level {
       foreach ($this->floor->units() as $unit) {
         $unit->perform_turn();
       }
+      if ($this->time_bonus > 0) {
+        $this->time_bonus -= 1;
+      }
     }
-    /*
-    turns.times do |n|
-      return if passed? || failed?
-      UI.puts "- turn #{n+1} -"
-      UI.print @floor.character
-      @floor.units.each { |unit| unit.prepare_turn }
-      @floor.units.each { |unit| unit.perform_turn }
-      yield if block_given?
-      @time_bonus -= 1 if @time_bonus > 0
-    end
-    */
+  }
+
+  public function is_passed() {
+    return $this->floor->stairs_space()->is_warrior();
+  }
+
+  public function is_failed() {
+    return (array_search(
+      $this->warrior,
+      $this->floor->units()
+    ) === false);
+  }
+
+  public function is_exists() {
+    return file_exists($this->load_path());
   }
 
   public function setup_warrior($warrior) {
