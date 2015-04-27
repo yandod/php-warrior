@@ -50,31 +50,29 @@ class Game {
         $continue = false;
       }
       $this->current_level()->tally_points();
+      $this->request_next_level();
+    } else {
+      $continue = false;
+      UI::puts("Sorry, you failed level {$this->current_level()->number}. Change your script and try again.");
+      if (!Config::$skip_input && $this->current_level()->clue && UI::ask("Would you like to read the additional clues for this level?")) {
+        UI::puts($this->current_level()->clue);
+      }
     }
-    /*
-    current_level.play
-    if current_level.passed?
-      if next_level.exists?
-        UI.puts "Success! You have found the stairs."
-      else
-        UI.puts "CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden Ruby."
-        continue = false
-      end
-      current_level.tally_points
-      if profile.epic?
-        UI.puts final_report if final_report && !continue
-      else
-        request_next_level
-      end
-    else
-      continue = false
-      UI.puts "Sorry, you failed level #{current_level.number}. Change your script and try again."
-      if !Config.skip_input? && current_level.clue && UI.ask("Would you like to read the additional clues for this level?")
-        UI.puts current_level.clue.hard_wrap
-      end
-    end
-    */
     return $continue;
+  }
+
+  public function request_next_level() {
+    if (!Config::$skip_input && ($this->next_level()->is_exists() && UI::ask("Would you like to continue on to the next level?"))) {
+      if ($this->next_level()->is_exists()) {
+        $this->prepare_next_level();
+        UI::puts("See the updated README in the phpwarrior/{$this->profile->directory_name()} directory.");
+      } else {
+        //$this->prepare_epic_mode();
+        UI::puts("Run rubywarrior again to play epic mode.");
+      }
+    } else {
+      UI::puts("Staying on current level. Try to earn more points next time.");
+    }
   }
 
   public function prepare_next_level() {

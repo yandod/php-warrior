@@ -41,7 +41,8 @@ class LevelLoader {
 
   public function unit($unit, $x, $y, $facing = ':north') {
     if (!is_a($unit, 'PHPWarrior\Units\Base')) {
-      $unit = new $this->unit_to_constant($unit);
+      $camel = $this->unit_to_constant($unit);
+      $unit = new $camel();
     }
     $this->floor->add($unit, $x, $y, $facing);
     //yield unit if block_given?
@@ -55,7 +56,7 @@ class LevelLoader {
   }
 
   public function unit_to_constant($name) {
-    $camel = ucfirst($name);
-    return 'Units\\' . $camel;
+    $camel = ucfirst(str_replace(':','',$name));
+    return 'PHPWarrior\Units\\' . $camel;
   }
 }
