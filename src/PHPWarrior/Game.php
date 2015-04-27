@@ -49,6 +49,7 @@ class Game {
         UI::puts('CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden PHP.');
         $continue = false;
       }
+      $this->current_level()->tally_points();
     }
     /*
     current_level.play

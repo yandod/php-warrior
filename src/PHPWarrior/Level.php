@@ -14,6 +14,22 @@ class Level {
   public $time_bonus;
   public $ace_score;
 
+  public static function grade_letter($percent) {
+    if ($percent >= 1.0) {
+      return 'S';
+    } elseif ($percent >= 0.9) {
+      return 'A';
+    } elseif ($percent >= 0.8) {
+      return 'B';
+    } elseif ($percent >= 0.7) {
+      return 'C';
+    } elseif ($percent >= 0.6) {
+      return 'D';
+    } else {
+      return 'F';
+    }
+  }
+
   public function __construct($profile, $number) {
       $this->profile = $profile;
       $this->number = $number;
@@ -59,6 +75,38 @@ class Level {
       if ($this->time_bonus > 0) {
         $this->time_bonus -= 1;
       }
+    }
+  }
+
+  public function tally_points() {
+    $score = 0;
+
+    UI::puts("Level Score: {$this->warrior->score}");
+    $score += $this->warrior->score;
+
+    UI::puts("Time Bonus: {$this->time_bonus}");
+    $score += $this->time_bonus;
+
+    if (empty($this->floor->other_units())) {
+      UI::puts("Clear Bonus: {$this->clear_bonus()}");
+      $score += $this->clear_bonus();
+    }
+
+    UI::puts("Total Score: " . $this->score_calculation($this->profile->score, $score));
+    $this->profile->score += $score;
+    $this->profile->abilities = array_keys($this->warrior->abilities);
+  }
+
+  public function clear_bonus() {
+    return round(($this->warrior->score + $this->time_bonus)*0.2);
+  }
+
+  public function score_calculation($current_score, $addition) {
+    if (empty($current_score)) {
+      return $addition;
+    } else {
+      $total = $current_score + $addition;
+      return "{$current_score} + {$addition} = {$total}";
     }
   }
 
