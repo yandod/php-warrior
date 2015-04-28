@@ -62,7 +62,11 @@ class Base {
   }
 
   public function name() {
-    return get_class($this);
+    return array_pop(explode('\\',get_class($this)));
+  }
+
+  public function __ToString(){
+    return $this->name();
   }
 
   public function add_abilities($new_abbilities) {

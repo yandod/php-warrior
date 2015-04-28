@@ -82,7 +82,7 @@ class Space {
 
   public function __ToString() {
     if ($this->unit()) {
-      return $this->unit();
+      return (string) $this->unit();
     } elseif ($this->is_wall()) {
       return 'wall';
     } else {

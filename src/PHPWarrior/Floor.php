@@ -39,7 +39,7 @@ class Floor {
 
   public function get($x, $y) {
     foreach ($this->units as $v) {
-      if ($v->position->is_at($x, $y)) {
+      if (!is_null($v->position) && $v->position->is_at($x, $y)) {
         return $v;
       }
     }

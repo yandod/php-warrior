@@ -46,10 +46,6 @@ class Warrior extends Base {
     }
   }
 
-  public function __ToString(){
-    return $this->name();
-  }
-
   public function character() {
     return '@';
   }

@@ -4,6 +4,8 @@ namespace PHPWarrior\Abilities;
 
 class Base {
 
+  public $is_sense = false;
+
   public function __construct($unit) {
     $this->unit = $unit;
   }

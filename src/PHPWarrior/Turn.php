@@ -16,7 +16,13 @@ class Turn {
     if ($this->action) {
       throw new Exception("Only one action can be performed per turn.");
     }
-    $this->action = [$name, $arguments];
-    //@senses[:#{name}].perform(*args)
+    if (!$this->abilities[$name]->is_sense) {
+      return $this->action = [$name, $arguments];
+    } else {
+      return call_user_func_array(
+        [$this->abilities[$name], 'perform'],
+        $arguments
+      );
+    }
   }
 }
