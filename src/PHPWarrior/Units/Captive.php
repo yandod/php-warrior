@@ -4,7 +4,7 @@ namespace PHPWarrior\Units;
 
 
 class Captive extends Base {
-  public function __consturuct() {
+  public function __construct() {
     $this->bind();
   }
 

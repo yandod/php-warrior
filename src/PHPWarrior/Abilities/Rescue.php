@@ -8,7 +8,7 @@ class Rescue extends Base {
     return "Rescue a captive from his chains (earning 20 points) in given direction (forward by default).";
   }
 
-  public perform($direction = ':forward') {
+  public function perform($direction = ':forward') {
     $this->verify_direction($direction);
     if ($this->space($direction)->is_captive()) {
       $recipient = $this->unit($direction);

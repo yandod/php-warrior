@@ -13,8 +13,8 @@ class Turn {
   }
 
   public function __call($name, $arguments) {
-    if ($this->action) {
-      throw new Exception("Only one action can be performed per turn.");
+    if ($this->action && !$this->abilities[$name]->is_sense) {
+      throw new \Exception("Only one action can be performed per turn.");
     }
     if (!$this->abilities[$name]->is_sense) {
       return $this->action = [$name, $arguments];
