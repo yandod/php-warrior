@@ -56,7 +56,11 @@ class LevelLoader {
   }
 
   public function unit_to_constant($name) {
-    $camel = ucfirst(str_replace(':','',$name));
+    $camel = '';
+    $name = str_replace(':', '', $name);
+    foreach(explode('_', $name) as $str)  {
+      $camel .= ucfirst($str);
+    }
     return 'PHPWarrior\Units\\' . $camel;
   }
 }

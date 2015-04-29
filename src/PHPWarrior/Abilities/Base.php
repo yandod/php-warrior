@@ -28,7 +28,11 @@ class Base {
   }
 
   public function space($direction, $forward = 1, $right = 0) {
-    return $this->unit->position->relative_space($this->offset($direction, $forward, $right));
+    return call_user_func_array(
+      [$this->unit->position,'relative_space'],
+      $this->offset($direction, $forward, $right)
+    );
+    //return $this->unit->position->relative_space($this->offset($direction, $forward, $right));
   }
 
   public function unit($direction, $forward = 1, $right = 0) {
