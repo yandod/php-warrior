@@ -11,7 +11,7 @@ $this->ace_score(50);
 $this->size(6, 1);
 $this->stairs(0, 0);
 
-$this->warrior(5, 0, ':east')->add_abilities([':pivot']);
+$this->warrior(5, 0, ':east')->add_abilities(['pivot']);
 
 $this->unit(':archer', 1, 0, ':east');
 $this->unit(':thick_sludge', 3, 0, ':east');
