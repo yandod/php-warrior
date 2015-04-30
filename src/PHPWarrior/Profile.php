@@ -15,6 +15,7 @@ class Profile {
   public $tower_path = '';
   public $warrior_name;
   public $player_path;
+  public $tower;
 
   public static function encode($obj) {
     return serialize($obj);

@@ -64,7 +64,7 @@ class Floor {
     for ($y=0; $y<$this->height; $y++) {
       $row = '|';
       for ($x=0; $x<$this->width; $x++) {
-        $row .= $this->space($x, $i)->character();
+        $row .= $this->space($x, $y)->character();
       }
       $row .= '|';
       $rows[] = $row;
