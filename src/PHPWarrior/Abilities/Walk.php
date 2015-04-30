@@ -14,7 +14,10 @@ class Walk extends Base {
       $s_direction = str_replace(':','',$direction);
       $this->unit->say("walks {$s_direction}");
       if ($this->space($direction)->is_empty()) {
-        $this->unit->position->move($this->offset($direction));
+        call_user_func_array(
+          [$this->unit->position,'move'],
+          $this->offset($direction)
+        );
       } else {
         $this->unit->say("bumps into ". $this->space($direction));
       }
