@@ -14,4 +14,4 @@ $this->ace_score(19);
 $this->size(6, 4);
 $this->stairs(2, 3);
 
-$this->warrior(0, 1, ':east')->add_abilities([':walk', ':feel', ':direction_of_stairs']);
+$this->warrior(0, 1, ':east')->add_abilities(['walk', 'feel', 'direction_of_stairs']);

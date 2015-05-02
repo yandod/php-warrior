@@ -13,9 +13,9 @@ $this->time_bonus(70);
 $this->size(4, 3);
 $this->stairs(3, 0);
 
-$this->warrior(0, 1, ':east')->add_abilities([':distance_of']);
+$this->warrior(0, 1, ':east')->add_abilities(['distance_of']);
 
-$this->unit(':captive', 2, 0, ':south')->add_abilities([':explode'])
+$this->unit(':captive', 2, 0, ':south')->add_abilities(['explode'])
 ->abilities['explode']->time = 20;
 $this->unit(':captive', 2, 2, ':north');
 

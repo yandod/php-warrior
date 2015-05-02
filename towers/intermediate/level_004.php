@@ -14,7 +14,7 @@ $this->ace_score(144);
 $this->size(4, 3);
 $this->stairs(3, 2);
 
-$this->warrior(1, 1, ':east')->add_abilities([':listen', ':direction_of']);
+$this->warrior(1, 1, ':east')->add_abilities(['listen', 'direction_of']);
 
 $this->unit(':captive', 0, 0, ':east');
 $this->unit(':captive', 0, 2, ':east');

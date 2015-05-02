@@ -13,7 +13,7 @@ $this->ace_score(84);
 $this->size(4, 2);
 $this->stairs(3, 1);
 
-$this->warrior(0, 0, ':east')->add_abilities(':attack', ':health', ':rest');
+$this->warrior(0, 0, ':east')->add_abilities('attack', 'health', 'rest');
 
 $this->unit(':sludge', 1, 0, ':west');
 $this->unit(':thick_sludge', 2, 1, ':west');

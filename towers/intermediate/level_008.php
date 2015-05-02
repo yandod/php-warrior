@@ -11,9 +11,9 @@ $this->time_bonus(30);
 $this->size(7, 1);
 $this->stairs(6, 0);
 
-$this->warrior(0, 0, ':east')->add_abilities([':look',':detonate']);
+$this->warrior(0, 0, ':east')->add_abilities(['look','detonate']);
 
-$this->unit(':captive', 5, 0, ':west')->add_abilities([':explode'])
+$this->unit(':captive', 5, 0, ':west')->add_abilities(['explode'])
 ->abilities['explode']->time = 9;
 $this->unit(':thick_sludge', 2, 0, ':west');
 $this->unit(':sludge', 3, 0, ':west');

@@ -18,5 +18,5 @@ $this->warrior(0, 1, ':east');
 $this->unit(':sludge', 1, 0, ':west');
 $this->unit(':sludge', 3, 1, ':west');
 $this->unit(':captive', 0, 0, ':west');
-$this->unit(':captive', 4, 1, ':west')->add_abilities([':explode'])
+$this->unit(':captive', 4, 1, ':west')->add_abilities(['explode'])
 ->abilities[':explode']->time = 7;

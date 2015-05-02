@@ -14,7 +14,7 @@ $this->ace_score(101);
 $this->size(3, 3);
 $this->stairs(0, 0);
 
-$this->warrior(1, 1, ':east')->add_abilities([':rescue', ':bind']);
+$this->warrior(1, 1, ':east')->add_abilities(['rescue', 'bind']);
 
 $this->unit(':sludge', 1, 0, ':west');
 $this->unit(':captive', 1, 2, ':west');
