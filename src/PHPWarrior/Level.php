@@ -48,7 +48,7 @@ class Level {
   }
 
   public function load_player() {
-    include $this->player_path() . '/player.php';
+    include_once $this->player_path() . '/player.php';
   }
 
   public function generate_player_files() {
@@ -92,9 +92,26 @@ class Level {
       $score += $this->clear_bonus();
     }
 
-    UI::puts("Total Score: " . $this->score_calculation($this->profile->score, $score));
-    $this->profile->score += $score;
-    $this->profile->abilities = array_keys($this->warrior->abilities);
+    if ($this->profile->is_epic()) {
+      if ($this->grade_for($score)) {
+        UI::puts("Level Grade: {$this->grade_for($score)}");
+      }
+      UI::puts("Total Score: " . $this->score_calculation($this->profile->current_epic_score, $score));
+      if ($this->ace_score) {
+        $this->profile->current_epic_grades[$this->number] = ($score / $this->ace_score);
+      }
+      $this->profile->current_epic_score += $score;
+    } else {
+      UI::puts("Total Score: " . $this->score_calculation($this->profile->score, $score));
+      $this->profile->score += $score;
+      $this->profile->abilities = array_keys($this->warrior->abilities);
+    }
+  }
+
+  public function grade_for($score) {
+    if ($this->ace_score) {
+      return self::grade_letter($score / $this->ace_score);
+    }
   }
 
   public function clear_bonus() {
