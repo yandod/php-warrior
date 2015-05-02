@@ -17,7 +17,7 @@ Tip: <?= $this->level->tip ?>
 Warrior Abilities:
 <?php foreach ($this->level->warrior->abilities() as $name => $ability): ?>
 
-  $warrior-><?= $name ?>
+  $warrior-><?= $name ?>();
     <?= $ability->description(); ?>
 <?php endforeach; ?>
 

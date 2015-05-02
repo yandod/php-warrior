@@ -12,7 +12,7 @@ $this->ace_score(46);
 $this->size(6, 1);
 $this->stairs(5, 0);
 
-$this->warrior(0, 0, ':east')->add_abilities([':look',':shoot!']);
+$this->warrior(0, 0, ':east')->add_abilities(['look','shoot']);
 
 $this->unit(':captive', 2, 0, ':west');
 $this->unit(':wizard', 3, 0, ':west');
