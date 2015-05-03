@@ -6,7 +6,7 @@
 //  ---
 
 $this->description("You feel slime on all sides, you're surrounded!");
-$this->tip("Call warrior.bind!);(direction) to bind an enemy to keep him from attacking. Bound enemies look like captives.";
+$this->tip("Call warrior.bind!(direction) to bind an enemy to keep him from attacking. Bound enemies look like captives.");
 $this->clue("Count the number of enemies around you. Bind an enemy if there are two or more.");
 
 $this->time_bonus(50);
