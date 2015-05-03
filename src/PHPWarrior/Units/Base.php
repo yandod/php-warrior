@@ -79,6 +79,7 @@ class Base {
       $class_name = 'PHPWarrior\Abilities\\' . $camel;
       $this->abilities[$abbility_str] = new $class_name($this);
     }
+    return $this;
   }
 
   public function next_turn() {
