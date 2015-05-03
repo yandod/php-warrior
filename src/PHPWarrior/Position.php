@@ -69,7 +69,7 @@ class Position {
   }
 
   public function direction_of($space) {
-    list ($space_x, $space_y) = $this->space->location();
+    list ($space_x, $space_y) = $space->location();
     if (abs($this->x - $space_x) > abs($this->y - $space_y)) {
       return $space_x > $this->x ? ':east' : ':west';
     } else {
@@ -78,7 +78,7 @@ class Position {
   }
 
   public function relative_direction($direction) {
-    $offset = array_search($direction,self::DIRECTIONS) - $this->direction_index;
+    $offset = array_search($direction,self::$DIRECTIONS) - $this->direction_index;
     while ($offset > 3) {
       $offset -= 4;
     }
