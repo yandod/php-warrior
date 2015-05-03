@@ -4,7 +4,7 @@
 //  -------
 
 $this->description("You discover a satchel of bombs which will help when facing a mob of enemies.");
-$this->tip("Detonate a bomb when you see a couple enemies ahead of you );(warrior.look). Watch out for your health too."
+$this->tip("Detonate a bomb when you see a couple enemies ahead of you (warrior.look). Watch out for your health too.");
 $this->clue("Calling warrior.look will return an array of Spaces. If the first two contain enemies, detonate a bomb with warrior.detonate!.");
 
 $this->time_bonus(30);

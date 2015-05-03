@@ -57,8 +57,11 @@ class Space {
 
   public function is_ticking() {
     return (
-      !$this->unit() &&
-      array_search(':explode',$this->unit()->abilities()) !== false
+      $this->unit() &&
+      array_search(
+        'explode',
+        array_keys($this->unit()->abilities())
+      ) !== false
     );
   }
 
