@@ -15,7 +15,7 @@ class Warrior extends Base {
   }
 
   public function player() {
-    if (!$this->player) {
+    if (!isset($this->player)) {
       $this->player = new \Player();
     }
     return $this->player;

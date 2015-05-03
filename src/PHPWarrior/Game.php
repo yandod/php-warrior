@@ -49,6 +49,7 @@ class Game {
       $this->play_current_level();
     } else {
       $playing = true;
+      $this->profile->level_number = 0;
       while ($playing) {
         $this->current_level = $this->next_level = null;
         $this->profile->level_number += 1;

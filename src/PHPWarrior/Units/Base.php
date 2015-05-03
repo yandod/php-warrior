@@ -20,7 +20,7 @@ class Base {
   }
 
   public function health() {
-    if (is_null($this->health)) {
+    if (!isset($this->health)) {
       $this->health = $this->max_health();
     }
     return $this->health;
@@ -62,7 +62,8 @@ class Base {
   }
 
   public function name() {
-    return array_pop(explode('\\',get_class($this)));
+    $slice_name = explode('\\',get_class($this));
+    return array_pop($slice_name);
   }
 
   public function __ToString(){
