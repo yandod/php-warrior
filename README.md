@@ -13,29 +13,31 @@ First install the package.
 
     composer install yandod/php-warrior
 
-Then run the "phpwarrior" command to setup your profile. This will create a phpwarrior directory in your current location where you will find a player.rb file in your profile's directory containing this:
+Then run the "phpwarrior" command to setup your profile. This will create a phpwarrior directory in your current location where you will find a player.php file in your profile's directory containing this:
 
-    class Player
-      def play_turn(warrior)
+    <?php
+    class Player {
+      public function play_turn($warrior){
         # your code goes here
-      end
-    end
+      }
+    }
 
 Your objective is to fill this "play_turn" method with commands to instruct the warrior what to do. With each level your abilities will grow along with the difficulty. See the README in your profile's directory for details on what abilities your warrior has available on the current level.
 
 Here is a simple example which will instruct the warrior to attack if he feels an enemy, otherwise he will walk forward.
 
-    class Player
-      def play_turn(warrior)
-        if warrior.feel.enemy?
-          warrior.attack!
-        else
-          warrior.walk!
-        end
-      end
-    end
+    <?php
+    class Player {
+      public function play_turn($warrior) {
+        if ($warrior->feel()->is_enemy()) {
+          $warrior->attack();
+        } else {
+          $warrior->walk();
+        }
+      }
+    }
 
-Once you are done editing player.rb, save the file and run the "php-warrior" command again to start playing the level. The play happens through a series of turns. On each one, your "play_turn" method is called along with any enemy's.
+Once you are done editing player.php, save the file and run the "php-warrior" command again to start playing the level. The play happens through a series of turns. On each one, your "play_turn" method is called along with any enemy's.
 
 You cannot change your code in the middle of a level. You must take into account everything that may happen on that level and give your warrior the proper instructions from the start.
 
@@ -81,34 +83,34 @@ When you first start, your warrior will only have a few abilities, but with each
 
 An action is something that effects the game in some way. You can easily tell an action because it ends in an exclamation mark. Only one action can be performed per turn, so choose wisely. Here are some examples of actions.
 
-    warrior.walk!
+    $warrior->walk()
       Move in given direction (forward by default).
 
-    warrior.attack!
+    $warrior->attack()
       Attack the unit in given direction (forward by default).
 
-    warrior.rest!
+    $warrior->rest()
       Gain 10% of max health back, but do nothing more.
 
-    warrior.bind!
+    $warrior->bind()
       Bind unit in given direction to keep him from moving (forward by default).
 
-    warrior.rescue!
+    $warrior->rescue()
       Rescue a captive from his chains (earning 50 points) in given direction (forward by default).
 
 
 A sense is something which gathers information about the floor. You can perform senses as often as you want per turn to gather information about your surroundings and to aid you in choosing the proper action. Senses do NOT end in an exclamation mark.
 
-    warrior.feel
+    $warrior->feel()
       Returns a Space for the given direction (forward by default).
 
-    warrior.health
+    $warrior->health()
       Returns an integer representing your health.
 
-    warrior.distance
+    $warrior->distance()
       Returns the number of spaces the stairs are away.
 
-    warrior.listen
+    $warrior->listen()
       Returns an array of all spaces which have units in them.
 
 
@@ -119,39 +121,41 @@ Since what you sense will change each turn, you should record what information y
 
 Whenever you sense an area, often one or multiple spaces (in an array) will be returned. A space is an object representing a square in the level. You can call methods on a space to gather information about what is there. Here are the various methods you can call on a space.
 
-    space.empty?
+    space->is_empty()
       If true, this means that nothing (except maybe stairs) is at this location and you can walk here.
 
-    space.stairs?
+    space->is_stairs()
       Determine if stairs are at that location
 
-    space.enemy?
+    space->is_enemy()
       Determine if an enemy unit is at this location.
 
-    space.captive?
+    space->captive()
       Determine if a captive is at this location.
 
-    space.wall?
+    space->is_wall()
       Returns true if this is the edge of the level. You can't walk here.
 
-    space.ticking?
+    space->is_ticking()
       Returns true if this space contains a bomb which will explode in time.
 
-    space.golem?
+    space->is_golem()
       Returns true if a golem is occupying this space.
 
 You will often call these methods directly after a sense. For example, the "feel" sense returns one space. You can call "captive?" on this to determine if a captive is in front of you.
 
-  warrior.feel.captive?
+  $warrior->feel()->is_captive()
 
 
 ## Golem
 
 Along your journey you may discover the ability to create a golem. This is a separate unit which you also control. The turn handling is done through a block. Here is an example.
 
-    warrior.form! do |golem|
-      golem.attack! if golem.feel.enemy?
-    end
+    $warrior->form(function($golem) {
+      if ($golem->feel()->is_enemy()) {
+        $golem->attack();
+      }
+    });
 
 Complex logic can be placed in this block just like in the player turn method. You may want to move the logic into its own class or create multiple classes for different types of golems. You can create multiple golems in a level, but each one will take half of the warrior's health.
 
