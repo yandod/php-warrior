@@ -14,8 +14,9 @@ class Game {
     } elseif (!is_dir(Config::$path_prefix . '/phpwarrior')) {
       $this->make_game_directory();
     }
-    $this->profile = $this->choose_profile();
-
+    if (is_null($this->profile)) {
+      $this->profile = $this->choose_profile();
+    }
     if ($this->profile->is_epic()) {
       if ($this->profile->is_level_after_epic()) {
         $this->go_back_to_normal_mode();
