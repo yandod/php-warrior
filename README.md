@@ -144,7 +144,7 @@ Whenever you sense an area, often one or multiple spaces (in an array) will be r
 
 You will often call these methods directly after a sense. For example, the "feel" sense returns one space. You can call "captive?" on this to determine if a captive is in front of you.
 
-  $warrior->feel()->is_captive()
+    $warrior->feel()->is_captive()
 
 
 ## Golem
