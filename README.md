@@ -37,7 +37,7 @@ Here is a simple example which will instruct the warrior to attack if he feels a
       }
     }
 
-Once you are done editing player.php, save the file and run the "php-warrior" command again to start playing the level. The play happens through a series of turns. On each one, your "play_turn" method is called along with any enemy's.
+Once you are done editing player.php, save the file and run the "phpwarrior" command again to start playing the level. The play happens through a series of turns. On each one, your "play_turn" method is called along with any enemy's.
 
 You cannot change your code in the middle of a level. You must take into account everything that may happen on that level and give your warrior the proper instructions from the start.
 
@@ -181,8 +181,8 @@ Remember, you're working in PHP here. Don't simply fill up the "play_turn" metho
 
 Senses are cheap, so use them liberally. Store the sensed information to help you better determine what actions to take in the future.
 
-Running "php-warrior" while you are in your profile directory will auto-select that profile so you don't have to each time.
+Running "phpwarrior" while you are in your profile directory will auto-select that profile so you don't have to each time.
 
 If you're aiming for points, remember to sweep the area. Even if you're close to the stairs, don't go in until you've gotten everything (if you have the health). Use far-ranged senses (such as look and listen) to determine if there are any enemies left.
 
-Make sure to try the different options you can pass to the php-warrior command. Run "php-warrior --help" to see them all.
+Make sure to try the different options you can pass to the phpwarrior command. Run "phpwarrior --help" to see them all.
