@@ -17,5 +17,5 @@
     "autoload": {
         "psr-4": { "PHPWarrior\\": "src/PHPWarrior/" }
     },
-    "bin": ["php-warrior"]
+    "bin": ["bin/phpwarrior"]
 }
