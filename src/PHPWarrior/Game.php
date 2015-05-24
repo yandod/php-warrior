@@ -9,8 +9,8 @@ class Game {
   public function start() {
     UI::puts('Welcome to PHP Warrior');
 
-    if (file_exists(Config::$path_prefix . '/.profile')) {
-      $this->profile = Profile::load(Config::$path_prefix . '/.profile');
+    if (file_exists(Config::$path_prefix . '/.pwprofile')) {
+      $this->profile = Profile::load(Config::$path_prefix . '/.pwprofile');
     } elseif (!is_dir(Config::$path_prefix . '/phpwarrior')) {
       $this->make_game_directory();
     }
@@ -141,7 +141,7 @@ class Game {
   }
 
   public function profile_paths() {
-    return glob(Config::$path_prefix . '/phpwarrior/**/.profile');
+    return glob(Config::$path_prefix . '/phpwarrior/**/.pwprofile');
   }
 
   public function new_profile() {

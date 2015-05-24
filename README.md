@@ -186,3 +186,13 @@ Running "phpwarrior" while you are in your profile directory will auto-select th
 If you're aiming for points, remember to sweep the area. Even if you're close to the stairs, don't go in until you've gotten everything (if you have the health). Use far-ranged senses (such as look and listen) to determine if there are any enemies left.
 
 Make sure to try the different options you can pass to the phpwarrior command. Run "phpwarrior --help" to see them all.
+
+## FAQ
+
+### How to install dev version?
+
+    composer global require "yandod/php-warrior=dev-master"
+
+### How to uninstall php-warrior?
+
+    composer global remove "yandod/php-warrior"

@@ -25,7 +25,7 @@ class Profile {
   public function save() {
     // update_epic_score
     // @level_number = 0 if epic?
-    file_put_contents($this->player_path() . '/.profile', self::encode($this));
+    file_put_contents($this->player_path() . '/.pwprofile', self::encode($this));
   }
 
   public static function decode($str) {
