@@ -12,6 +12,7 @@ You play as a warrior climbing a tall tower to reach the precious PHP at the top
 First install the package.
 
     composer global require "yandod/php-warrior=*"
+    export PATH=$HOME/.composer/vendor/bin:$PATH
 
 Then run the "phpwarrior" command to setup your profile. This will create a phpwarrior directory in your current location where you will find a player.php file in your profile's directory containing this:
 

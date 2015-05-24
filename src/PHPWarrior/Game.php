@@ -160,7 +160,7 @@ class Game {
   }
 
   public function tower_paths() {
-    return glob('./towers/*');
+    return glob(__DIR__ .'/../../towers/*');
   }
 
   public function current_level() {
