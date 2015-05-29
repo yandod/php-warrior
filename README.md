@@ -42,9 +42,9 @@ Once you are done editing player.php, save the file and run the "phpwarrior" com
 
 You cannot change your code in the middle of a level. You must take into account everything that may happen on that level and give your warrior the proper instructions from the start.
 
-Losing all of your health will cause you to fail the level. You are not punished by this, you simply need to go back to your player.rb, improve your code, and try again.
+Losing all of your health will cause you to fail the level. You are not punished by this, you simply need to go back to your player.php, improve your code, and try again.
 
-Once you pass a level (by reaching the stairs), the profile README will be updated for the next level. Alter the player.rb file and run php-warrior again to play the next level.
+Once you pass a level (by reaching the stairs), the profile README will be updated for the next level. Alter the player.php file and run php-warrior again to play the next level.
 
 
 ## Scoring
@@ -163,7 +163,7 @@ Complex logic can be placed in this block just like in the player turn method. Y
 
 ## Epic Mode
 
-Once you reach the top of the tower, you will enter epic mode. When running php-warrior again it will run your current player.rb through all levels in the tower without stopping.
+Once you reach the top of the tower, you will enter epic mode. When running php-warrior again it will run your current player.php through all levels in the tower without stopping.
 
 Your warrior will most likely not succeed the first time around, so use the -l option on levels you are having difficulty or want to fine-tune the scoring.
 
@@ -178,7 +178,7 @@ Note: I'm in the process of fine-tuning the grading system. If you find the "S" 
 
 If you ever get stuck on a level, review the README documentation and be sure you're trying each ability out. If you can't keep your health up, be sure to "rest" when no enemy is around (while keeping an eye on your health). Also, try to use far-ranged weapons whenever possible (such as the bow).
 
-Remember, you're working in PHP here. Don't simply fill up the "play_turn" method with a lot of code. Organize it with methods and classes. The player directory is set up as a load path so you can include other php files from your player.rb file.
+Remember, you're working in PHP here. Don't simply fill up the "play_turn" method with a lot of code. Organize it with methods and classes. The player directory is set up as a load path so you can include other php files from your player.php file.
 
 Senses are cheap, so use them liberally. Store the sensed information to help you better determine what actions to take in the future.
 
