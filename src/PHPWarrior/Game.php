@@ -164,7 +164,7 @@ class Game {
   }
 
   public function current_level() {
-    if (is_null($this->current_level)) {
+    if (!isset($this->current_level)) {
       $this->current_level = $this->profile->current_level();
     }
 
@@ -172,7 +172,7 @@ class Game {
   }
 
   public function next_level() {
-    if (is_null($this->next_level)) {
+    if (!isset($this->next_level)) {
       $this->next_level = $this->profile->next_level();
     }
 
