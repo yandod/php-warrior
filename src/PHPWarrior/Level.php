@@ -87,7 +87,7 @@ class Level {
     UI::puts("Time Bonus: {$this->time_bonus}");
     $score += $this->time_bonus;
 
-    if (empty($this->floor->other_units())) {
+    if (count($this->floor->other_units()) == 0) {
       UI::puts("Clear Bonus: {$this->clear_bonus()}");
       $score += $this->clear_bonus();
     }
