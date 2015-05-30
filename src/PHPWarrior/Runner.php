@@ -1,6 +1,6 @@
 <?php
-use Ulrichsg\Getopt\Getopt;
-use Ulrichsg\Getopt\Option;
+use \Ulrichsg\Getopt\Getopt;
+use \Ulrichsg\Getopt\Option;
 
 namespace PHPWarrior;
 
