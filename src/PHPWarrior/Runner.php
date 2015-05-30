@@ -48,7 +48,7 @@ class Runner {
     if ($getopt->getOption('s')) {
       Config::$skip_input = true;
     }
-    if ($getopt->getOption('t')) {
+    if (!is_null($getopt->getOption('t'))) {
       Config::$delay = $getopt->getOption('t');
     }
   }
