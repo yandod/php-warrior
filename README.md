@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/yandod/php-warrior.svg?branch=master)](https://travis-ci.org/yandod/php-warrior)
+
 # PHP Warrior
 
 This is a game designed to teach the PHP language and artificial intelligence in a fun, interactive way.
