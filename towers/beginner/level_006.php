@@ -6,7 +6,7 @@
 
 $this->description("The wall behind you feels a bit further away in this room. And you hear more cries for help.");
 $this->tip("You can walk backward by passing ':backward' as an argument to walk!. Same goes for feel, rescue! and attack!. Archers have a limited attack distance.");
-$this->clue("Walk backward if you are taking damage from afar and do not have enough health to attack. You may also want to consider walking backward until warrior.feel(:backward).wall?.");
+$this->clue("Walk backward if you are taking damage from afar and do not have enough health to attack. You may also want to consider walking backward until \$warrior->feel(':backward')->is_wall().");
 
 $this->time_bonus(55);
 $this->ace_score(105);
