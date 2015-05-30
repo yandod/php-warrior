@@ -22,7 +22,7 @@ class Runner {
   }
 
   public function parse_options() {
-    $getopt = new \Ulrichsg\Getopt\GetOpt([
+    $getopt = new \Ulrichsg\Getopt\Getopt([
       ['d', 'directory', \Ulrichsg\Getopt\Getopt::REQUIRED_ARGUMENT,'Run under given directory'],
       ['l', 'level', \Ulrichsg\Getopt\Getopt::REQUIRED_ARGUMENT, 'Practice level on epic'],
       ['s', 'skip', \Ulrichsg\Getopt\Getopt::NO_ARGUMENT, 'Skip user input'],
