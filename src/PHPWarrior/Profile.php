@@ -39,7 +39,7 @@ class Profile {
 
   public function player_path() {
     if (!$this->player_path) {
-      $this->player_path = Config::$path_prefix . '/phpwarrior/' . $this->directory_name();
+      $this->player_path = realpath(Config::$path_prefix) . '/phpwarrior/' . $this->directory_name();
     }
     return $this->player_path;
   }
