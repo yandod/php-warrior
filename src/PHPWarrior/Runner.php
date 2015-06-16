@@ -1,6 +1,7 @@
 <?php
 use \Ulrichsg\Getopt\Getopt;
 use \Ulrichsg\Getopt\Option;
+use \Gettext\Translator;
 
 namespace PHPWarrior;
 
@@ -18,6 +19,7 @@ class Runner {
     Config::$out_stream = $this->stdout;
     Config::$delay = 0.6;
     $this->parse_options();
+    $this->load_translation();
     $this->game->start();
   }
 
@@ -27,6 +29,7 @@ class Runner {
       ['l', 'level', \Ulrichsg\Getopt\Getopt::REQUIRED_ARGUMENT, 'Practice level on epic'],
       ['s', 'skip', \Ulrichsg\Getopt\Getopt::NO_ARGUMENT, 'Skip user input'],
       ['t', 'time', \Ulrichsg\Getopt\Getopt::REQUIRED_ARGUMENT, 'Delay each turn by seconds'],
+      ['L', 'locale', \Ulrichsg\Getopt\Getopt::REQUIRED_ARGUMENT, 'Specify locale like en_US'],
       ['h', 'help', \Ulrichsg\Getopt\Getopt::NO_ARGUMENT, 'Show this message'],
     ]);
     try {
@@ -51,5 +54,18 @@ class Runner {
     if (!is_null($getopt->getOption('t'))) {
       Config::$delay = $getopt->getOption('t');
     }
+    if ($getopt->getOption('L')) {
+      Config::$locale = $getopt->getOption('L');
+    }
+  }
+
+  public function load_translation() {
+    $translator = new \Gettext\Translator();
+    $i18n_path = realpath(__DIR__ . '/../../i18n/' . Config::$locale . '.po');
+    if (file_exists($i18n_path)) {
+      $translations = \Gettext\Translations::fromPoFile($i18n_path);
+      $translator->loadTranslations($translations);
+    }
+    \Gettext\Translator::initGettextFunctions($translator);
   }
 }

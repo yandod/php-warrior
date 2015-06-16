@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/PHPWarrior/Game.php:143
+msgid "Another level has been added since you started epic, going back to normal mode."
+msgstr ""
+
+#: src/PHPWarrior/Game.php:87
+msgid "CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden PHP."
+msgstr ""
+
+#: towers/beginner/level_001.php:7
+msgid "Call $warrior->walk() to walk forward in the Player 'play_turn' method."
+msgstr ""
+
+#: src/PHPWarrior/Game.php:162
+msgid "Enter a name for your warrior: "
+msgstr ""
+
+#: src/PHPWarrior/Game.php:67
+msgid "First level has been generated. See the phpwarrior/%s/README for instructions."
+msgstr ""
+
+#: templates/README.php:1
+msgid "Level"
+msgstr ""
+
+#: src/PHPWarrior/Game.php:209
+msgid "New Profile"
+msgstr ""
+
+#: src/PHPWarrior/Game.php:32
+msgid "No phpwarrior directory found, would you like to create one?"
+msgstr ""
+
+#: src/PHPWarrior/Game.php:121
+msgid "Run rubywarrior again to play epic mode."
+msgstr ""
+
+#: src/PHPWarrior/Game.php:116
+msgid "See the updated README in the phpwarrior/%s directory."
+msgstr ""
+
+#: src/PHPWarrior/Game.php:144
+msgid "See the updated README in the rubywarrior/#{profile.directory_name} directory."
+msgstr ""
+
+#: src/PHPWarrior/Game.php:101
+msgid "Sorry, you failed level %s. Change your script and try again."
+msgstr ""
+
+#: templates/README.php:12
+msgid "Stairs"
+msgstr ""
+
+#: src/PHPWarrior/Game.php:79
+msgid "Starting Level %s"
+msgstr ""
+
+#: src/PHPWarrior/Game.php:124
+msgid "Staying on current level. Try to earn more points next time."
+msgstr ""
+
+#: src/PHPWarrior/Game.php:85
+msgid "Success! You have found the stairs."
+msgstr ""
+
+#: templates/README.php:7
+msgid "Tip"
+msgstr ""
+
+#: src/PHPWarrior/Game.php:35
+msgid "Unable to continue without directory."
+msgstr ""
+
+#: templates/README.php:17
+msgid "Warrior Abilities"
+msgstr ""
+
+#: src/PHPWarrior/Game.php:10
+msgid "Welcome to PHP Warrior"
+msgstr ""
+
+#: templates/README.php:25
+msgid "When you're done editing player.php, run the php-warrior command again."
+msgstr ""
+
+#: src/PHPWarrior/Game.php:112
+msgid "Would you like to continue on to epic mode?"
+msgstr ""
+
+#: src/PHPWarrior/Game.php:112
+msgid "Would you like to continue on to the next level?"
+msgstr ""
+
+#: src/PHPWarrior/Game.php:104
+msgid "Would you like to read the additional clues for this level?"
+msgstr ""
+
+#: towers/beginner/level_001.php:6
+msgid "You see before yourself a long hallway with stairs at the end. There is nothing in the way."
+msgstr ""

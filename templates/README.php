@@ -1,20 +1,20 @@
-Level <?= $this->level->number ?>
+<?php __('Level'); ?> <?= $this->level->number ?>
 
 
 <?= $this->level->description ?>
 
 
-Tip: <?= $this->level->tip ?>
+<?php __('Tip'); ?>: <?= $this->level->tip ?>
 
 
 <?= $this->level->floor->character() ?>
 
-  > = Stairs
+  > = <?php echo __('Stairs'); ?>
 <?php foreach ($this->level->floor->unique_units() as $unit): ?>
   <?= $unit->character(); ?> = <?= $unit->name(); ?> (<?= $unit->max_health() ?> HP)
 <?php endforeach; ?>
 
-Warrior Abilities:
+<?php echo __('Warrior Abilities');?>:
 <?php foreach ($this->level->warrior->abilities() as $name => $ability): ?>
 
   $warrior-><?= $name ?>();
@@ -22,4 +22,4 @@ Warrior Abilities:
 <?php endforeach; ?>
 
 
-When you're done editing player.php, run the php-warrior command again.
+<?php echo __("When you're done editing player.php, run the php-warrior command again.");?>

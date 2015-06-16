@@ -9,4 +9,5 @@ class Config {
   public static $practice_level;
   public static $path_prefix = '.';
   public static $skip_input = false;
+  public static $locale = 'en_US';
 }

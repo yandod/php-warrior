@@ -10,13 +10,17 @@
     ],
     "require": {
       "php": ">=5.4.0",
-      "ulrichsg/getopt-php": "2.3"
+      "ulrichsg/getopt-php": "2.3",
+      "gettext/gettext": "3.4.*"
     },
     "require-dev": {
         "phpunit/phpunit": "~4"
     },
     "autoload": {
         "psr-4": { "PHPWarrior\\": "src/PHPWarrior/" }
+    },
+    "scripts": {
+      "i18n-extract": "xgettext.pl -D src/ -D templates/ -D towers/ -o i18n/default.pot"
     },
     "bin": ["bin/phpwarrior"]
 }
