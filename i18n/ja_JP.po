@@ -41,7 +41,7 @@ msgstr ""
 
 #: src/PHPWarrior/Game.php:209
 msgid "New Profile"
-msgstr ""
+msgstr "新しいプロファイル"
 
 #: src/PHPWarrior/Game.php:32
 msgid "No phpwarrior directory found, would you like to create one?"

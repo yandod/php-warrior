@@ -87,9 +87,9 @@ class Space {
     if ($this->unit()) {
       return (string) $this->unit();
     } elseif ($this->is_wall()) {
-      return 'wall';
+      return __('wall');
     } else {
-      return 'nothing';
+      return __('nothing');
     }
   }
 }

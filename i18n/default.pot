@@ -27,6 +27,10 @@ msgstr ""
 msgid "Call $warrior->walk() to walk forward in the Player 'play_turn' method."
 msgstr ""
 
+#: src/PHPWarrior/UI.php:58
+msgid "Choose %s by typing the number: "
+msgstr ""
+
 #: src/PHPWarrior/Game.php:162
 msgid "Enter a name for your warrior: "
 msgstr ""
@@ -35,7 +39,7 @@ msgstr ""
 msgid "First level has been generated. See the phpwarrior/%s/README for instructions."
 msgstr ""
 
-#: templates/README.php:1
+#: src/PHPWarrior/Profile.php:58 templates/README.php:1
 msgid "Level"
 msgstr ""
 
@@ -45,6 +49,10 @@ msgstr ""
 
 #: src/PHPWarrior/Game.php:32
 msgid "No phpwarrior directory found, would you like to create one?"
+msgstr ""
+
+#: src/PHPWarrior/Turn.php:17
+msgid "Only one action can be performed per turn."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:121
@@ -113,4 +121,16 @@ msgstr ""
 
 #: towers/beginner/level_001.php:6
 msgid "You see before yourself a long hallway with stairs at the end. There is nothing in the way."
+msgstr ""
+
+#: src/PHPWarrior/Space.php:92
+msgid "nothing"
+msgstr ""
+
+#: src/PHPWarrior/Profile.php:59
+msgid "score"
+msgstr ""
+
+#: src/PHPWarrior/Space.php:90
+msgid "wall"
 msgstr ""

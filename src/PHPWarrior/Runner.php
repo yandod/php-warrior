@@ -54,6 +54,8 @@ class Runner {
     if (!is_null($getopt->getOption('t'))) {
       Config::$delay = $getopt->getOption('t');
     }
+    // get locale from $LANG like en_US.UTF8
+    list(Config::$locale) = explode('.',getenv('LANG'));
     if ($getopt->getOption('L')) {
       Config::$locale = $getopt->getOption('L');
     }
