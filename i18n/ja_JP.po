@@ -3,49 +3,70 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2015-06-19 23:43+0900\n"
+"Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
+"Language-Team: Japanese <yandod@gmail.com>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: src/PHPWarrior/Game.php:143
-msgid "Another level has been added since you started epic, going back to normal mode."
+msgid ""
+"Another level has been added since you started epic, going back to normal "
+"mode."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:87
-msgid "CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden PHP."
-msgstr ""
+msgid ""
+"CONGRATULATIONS! You have climbed to the top of the tower and rescued the "
+"fair maiden PHP."
+msgstr "おめでとう! きみは塔の頂上に到達し、麗しいPHP姫を救出した。"
 
 #: towers/beginner/level_001.php:7
 msgid "Call $warrior->walk() to walk forward in the Player 'play_turn' method."
 msgstr ""
+"Playerの 'play_turn' メソッドの中で $warrior->walk() を呼び出して前に歩こう。"
+
+#: src/PHPWarrior/UI.php:58
+msgid "Choose %s by typing the number: "
+msgstr "番号で %s を選択してください:"
 
 #: src/PHPWarrior/Game.php:162
 msgid "Enter a name for your warrior: "
-msgstr ""
+msgstr "きみの戦士の名前を入力せよ:"
 
 #: src/PHPWarrior/Game.php:67
-msgid "First level has been generated. See the phpwarrior/%s/README for instructions."
-msgstr ""
+msgid ""
+"First level has been generated. See the phpwarrior/%s/README for "
+"instructions."
+msgstr "最初のレベルが生成された。phpwarrior/%s/README の説明を見てください。"
 
-#: templates/README.php:1
+#: src/PHPWarrior/Profile.php:58 templates/README.php:1
 msgid "Level"
-msgstr ""
+msgstr "レベル"
 
-#: src/PHPWarrior/Game.php:209
+#: src/PHPWarrior/Abilities/Walk.php:8
+msgid "Move in the given direction (forward by default)."
+msgstr "指定された方向へ歩く。 (forward がデフォルト)"
+
+#: src/PHPWarrior/Game.php:212
 msgid "New Profile"
 msgstr "新しいプロファイル"
 
 #: src/PHPWarrior/Game.php:32
 msgid "No phpwarrior directory found, would you like to create one?"
-msgstr ""
+msgstr "phpwarrior ディレクトリが見つかりません。新しく作りますか?"
+
+#: src/PHPWarrior/Turn.php:17
+msgid "Only one action can be performed per turn."
+msgstr "各ターンでは一回しか行動できない。"
 
 #: src/PHPWarrior/Game.php:121
 msgid "Run rubywarrior again to play epic mode."
@@ -53,43 +74,52 @@ msgstr ""
 
 #: src/PHPWarrior/Game.php:116
 msgid "See the updated README in the phpwarrior/%s directory."
-msgstr ""
+msgstr "phpwarrior/%s ディレクトリの更新された README を見てください。"
 
 #: src/PHPWarrior/Game.php:144
-msgid "See the updated README in the rubywarrior/#{profile.directory_name} directory."
+msgid ""
+"See the updated README in the rubywarrior/#{profile.directory_name} "
+"directory."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:101
 msgid "Sorry, you failed level %s. Change your script and try again."
-msgstr ""
+msgstr "残念。君はレベル %s に失敗した。スクリプトを変更し再挑戦してください。"
 
 #: templates/README.php:12
 msgid "Stairs"
-msgstr ""
+msgstr "階段"
 
 #: src/PHPWarrior/Game.php:79
 msgid "Starting Level %s"
-msgstr ""
+msgstr "レベル %s を開始"
 
 #: src/PHPWarrior/Game.php:124
 msgid "Staying on current level. Try to earn more points next time."
-msgstr ""
+msgstr "同じレベルに留まります。次はさらに高得点を目指しましょう。"
 
 #: src/PHPWarrior/Game.php:85
 msgid "Success! You have found the stairs."
-msgstr ""
+msgstr "成功! きみは階段を発見した。"
 
 #: templates/README.php:7
 msgid "Tip"
+msgstr "ヒント"
+
+#: src/PHPWarrior/Game.php:204
+msgid ""
+"To practice a level, use the -l option:\n"
+"\n"
+"  php-warrior -l 3"
 msgstr ""
 
 #: src/PHPWarrior/Game.php:35
 msgid "Unable to continue without directory."
-msgstr ""
+msgstr "ディレクトリ無しでは継続できません。"
 
 #: templates/README.php:17
 msgid "Warrior Abilities"
-msgstr ""
+msgstr "戦士の能力"
 
 #: src/PHPWarrior/Game.php:10
 msgid "Welcome to PHP Warrior"
@@ -98,19 +128,58 @@ msgstr "PHP Warrior へようこそ"
 #: templates/README.php:25
 msgid "When you're done editing player.php, run the php-warrior command again."
 msgstr ""
+"player.phpを編集したら、 phpwarrior コマンドをもう一度実行してください。"
 
 #: src/PHPWarrior/Game.php:112
 msgid "Would you like to continue on to epic mode?"
-msgstr ""
+msgstr "エピックモードで続けますか?"
 
 #: src/PHPWarrior/Game.php:112
 msgid "Would you like to continue on to the next level?"
-msgstr ""
+msgstr "次のレベルに進みますか?"
 
 #: src/PHPWarrior/Game.php:104
 msgid "Would you like to read the additional clues for this level?"
-msgstr ""
+msgstr "このレベルの追加ヒントを読みますか?"
 
 #: towers/beginner/level_001.php:6
-msgid "You see before yourself a long hallway with stairs at the end. There is nothing in the way."
-msgstr ""
+msgid ""
+"You see before yourself a long hallway with stairs at the end. There is "
+"nothing in the way."
+msgstr "きみの前には長い廊下があり奥には階段が見える。他には何もない。"
+
+#: src/PHPWarrior/Game.php:199
+msgid "Your average grade for this tower is: %s"
+msgstr "あなたのこの塔の平均評価は: %s"
+
+#: src/PHPWarrior/Abilities/Walk.php:23
+msgid "bumps into %s"
+msgstr "%s に衝突した"
+
+#: src/PHPWarrior/Units/Base.php:42
+msgid "dies"
+msgstr "死亡"
+
+#: src/PHPWarrior/Space.php:92
+msgid "nothing"
+msgstr "何もない"
+
+#: src/PHPWarrior/Units/Base.php:56
+msgid "released from bonds"
+msgstr "拘束から解放された"
+
+#: src/PHPWarrior/Profile.php:59
+msgid "score"
+msgstr "点数"
+
+#: src/PHPWarrior/Units/Base.php:36
+msgid "takes %1$s damage, %2$s health power left"
+msgstr "%1$s のダメージを受け、残りヘルスパワー %2$s"
+
+#: src/PHPWarrior/Abilities/Walk.php:15
+msgid "walks %s"
+msgstr "%s に歩いた"
+
+#: src/PHPWarrior/Space.php:90
+msgid "wall"
+msgstr "壁"

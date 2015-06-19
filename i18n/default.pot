@@ -43,6 +43,10 @@ msgstr ""
 msgid "Level"
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Walk.php:8
+msgid "Move in the given direction (forward by default)."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:212
 msgid "New Profile"
 msgstr ""
@@ -134,6 +138,10 @@ msgstr ""
 msgid "Your average grade for this tower is: %s"
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Walk.php:23
+msgid "bumps into %s"
+msgstr ""
+
 #: src/PHPWarrior/Units/Base.php:42
 msgid "dies"
 msgstr ""
@@ -152,6 +160,10 @@ msgstr ""
 
 #: src/PHPWarrior/Units/Base.php:36
 msgid "takes %1$s damage, %2$s health power left"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Walk.php:15
+msgid "walks %s"
 msgstr ""
 
 #: src/PHPWarrior/Space.php:90
