@@ -43,7 +43,7 @@ msgstr ""
 msgid "Level"
 msgstr ""
 
-#: src/PHPWarrior/Game.php:209
+#: src/PHPWarrior/Game.php:212
 msgid "New Profile"
 msgstr ""
 
@@ -91,6 +91,13 @@ msgstr ""
 msgid "Tip"
 msgstr ""
 
+#: src/PHPWarrior/Game.php:204
+msgid ""
+"To practice a level, use the -l option:\n"
+"\n"
+"  php-warrior -l 3"
+msgstr ""
+
 #: src/PHPWarrior/Game.php:35
 msgid "Unable to continue without directory."
 msgstr ""
@@ -123,12 +130,28 @@ msgstr ""
 msgid "You see before yourself a long hallway with stairs at the end. There is nothing in the way."
 msgstr ""
 
+#: src/PHPWarrior/Game.php:199
+msgid "Your average grade for this tower is: %s"
+msgstr ""
+
+#: src/PHPWarrior/Units/Base.php:42
+msgid "dies"
+msgstr ""
+
 #: src/PHPWarrior/Space.php:92
 msgid "nothing"
 msgstr ""
 
+#: src/PHPWarrior/Units/Base.php:56
+msgid "released from bonds"
+msgstr ""
+
 #: src/PHPWarrior/Profile.php:59
 msgid "score"
+msgstr ""
+
+#: src/PHPWarrior/Units/Base.php:36
+msgid "takes %1$s damage, %2$s health power left"
 msgstr ""
 
 #: src/PHPWarrior/Space.php:90

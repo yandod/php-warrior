@@ -32,10 +32,14 @@ class Base {
     }
     if ($this->health()) {
       $this->health -= $amount;
-      $this->say("takes {$amount} damage, {$this->health()} health power left");
+      $this->say(sprintf(
+        __('takes %1$s damage, %2$s health power left'),
+        $amount,
+        $this->health()
+      ));
       if ($this->health() <= 0) {
         $this->position = null;
-        $this->say("dies");
+        $this->say(__("dies"));
       }
     }
   }
@@ -49,7 +53,7 @@ class Base {
   }
 
   public function unbind() {
-    $this->say("released from bonds");
+    $this->say(__("released from bonds"));
     $this->bound = false;
   }
 
