@@ -195,12 +195,15 @@ class Game {
     if ($this->profile->calculate_average_grade() && !Config::$practice_level) {
       $report = "";
       $letter = Level::grade_letter($this->profile->calculate_average_grade());
-      $report .= "Your average grade for this tower is: {$letter}\n\n";
+      $report .= sprintf(
+        __("Your average grade for this tower is: %s"),
+        $letter
+      )."\n\n";
       foreach ($this->profile->current_epic_grades as $key => $level) {
         $letter = Level::grade_letter($level);
         $report .= "  Level {$key}: {$letter}\n";
       }
-      $report .= "\nTo practice a level, use the -l option:\n\n  php-warrior -l 3";
+      $report .= "\n". __("To practice a level, use the -l option:\n\n  php-warrior -l 3");
       return $report;
     }
   }
