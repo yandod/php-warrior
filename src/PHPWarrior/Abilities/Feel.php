@@ -7,7 +7,7 @@ class Feel extends Base {
   public $is_sense = true;
 
   public function description() {
-    return 'Returns a Space for the given direction (forward by default).';
+    return __('Returns a Space for the given direction (forward by default).');
   }
 
   public function perform($direction = ':forward') {

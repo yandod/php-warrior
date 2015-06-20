@@ -79,6 +79,10 @@ msgstr ""
 msgid "Only one action can be performed per turn."
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Feel.php:10
+msgid "Returns a Space for the given direction (forward by default)."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:121
 msgid "Run rubywarrior again to play epic mode."
 msgstr ""
@@ -174,7 +178,7 @@ msgstr ""
 msgid "attacks %s and hits nothing"
 msgstr ""
 
-#: src/PHPWarrior/Position.php:115
+#: src/PHPWarrior/Position.php:122
 msgid "backward"
 msgstr ""
 
@@ -186,19 +190,19 @@ msgstr ""
 msgid "dies"
 msgstr ""
 
-#: src/PHPWarrior/Position.php:110
+#: src/PHPWarrior/Position.php:117
 msgid "east"
 msgstr ""
 
-#: src/PHPWarrior/Position.php:113
+#: src/PHPWarrior/Position.php:120
 msgid "forward"
 msgstr ""
 
-#: src/PHPWarrior/Position.php:116
+#: src/PHPWarrior/Position.php:123
 msgid "left"
 msgstr ""
 
-#: src/PHPWarrior/Position.php:109
+#: src/PHPWarrior/Position.php:116
 msgid "north"
 msgstr ""
 
@@ -210,7 +214,7 @@ msgstr ""
 msgid "released from bonds"
 msgstr ""
 
-#: src/PHPWarrior/Position.php:114
+#: src/PHPWarrior/Position.php:121
 msgid "right"
 msgstr ""
 
@@ -218,7 +222,7 @@ msgstr ""
 msgid "score"
 msgstr ""
 
-#: src/PHPWarrior/Position.php:112
+#: src/PHPWarrior/Position.php:119
 msgid "south"
 msgstr ""
 
@@ -234,6 +238,6 @@ msgstr ""
 msgid "wall"
 msgstr ""
 
-#: src/PHPWarrior/Position.php:111
+#: src/PHPWarrior/Position.php:118
 msgid "west"
 msgstr ""

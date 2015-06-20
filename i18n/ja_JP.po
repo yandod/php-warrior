@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-20 23:59+0900\n"
+"PO-Revision-Date: 2015-06-21 01:40+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -87,6 +87,10 @@ msgstr "phpwarrior ディレクトリが見つかりません。新しく作り�
 #: src/PHPWarrior/Turn.php:17
 msgid "Only one action can be performed per turn."
 msgstr "各ターンでは一回しか行動できない。"
+
+#: src/PHPWarrior/Abilities/Feel.php:10
+msgid "Returns a Space for the given direction (forward by default)."
+msgstr "指定された方向の空間を取得する。 (forward がデフォルト)"
 
 #: src/PHPWarrior/Game.php:121
 msgid "Run rubywarrior again to play epic mode."
@@ -186,33 +190,33 @@ msgstr "%1$sを攻撃し、%2$sに命中。"
 
 #: src/PHPWarrior/Abilities/Attack.php:27
 msgid "attacks %s and hits nothing"
-msgstr "%s を攻撃し、空振りした。"
+msgstr "%sを攻撃し、空振りした。"
 
-#: src/PHPWarrior/Position.php:115
+#: src/PHPWarrior/Position.php:122
 msgid "backward"
 msgstr "後方"
 
 #: src/PHPWarrior/Abilities/Walk.php:23
 msgid "bumps into %s"
-msgstr "%s に衝突した"
+msgstr "%sに衝突した"
 
 #: src/PHPWarrior/Units/Base.php:42
 msgid "dies"
 msgstr "死亡"
 
-#: src/PHPWarrior/Position.php:110
+#: src/PHPWarrior/Position.php:117
 msgid "east"
 msgstr "東"
 
-#: src/PHPWarrior/Position.php:113
+#: src/PHPWarrior/Position.php:120
 msgid "forward"
 msgstr "前方"
 
-#: src/PHPWarrior/Position.php:116
+#: src/PHPWarrior/Position.php:123
 msgid "left"
 msgstr "左"
 
-#: src/PHPWarrior/Position.php:109
+#: src/PHPWarrior/Position.php:116
 msgid "north"
 msgstr "北"
 
@@ -224,7 +228,7 @@ msgstr "何もない"
 msgid "released from bonds"
 msgstr "拘束から解放された"
 
-#: src/PHPWarrior/Position.php:114
+#: src/PHPWarrior/Position.php:121
 msgid "right"
 msgstr "右"
 
@@ -232,7 +236,7 @@ msgstr "右"
 msgid "score"
 msgstr "点数"
 
-#: src/PHPWarrior/Position.php:112
+#: src/PHPWarrior/Position.php:119
 msgid "south"
 msgstr "南"
 
@@ -248,6 +252,6 @@ msgstr "%sに歩いた。"
 msgid "wall"
 msgstr "壁"
 
-#: src/PHPWarrior/Position.php:111
+#: src/PHPWarrior/Position.php:118
 msgid "west"
 msgstr "西"
