@@ -23,6 +23,10 @@ msgstr ""
 msgid "Another level has been added since you started epic, going back to normal mode."
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Attack.php:7
+msgid "Attacks a unit in given direction (forward by default)."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:87
 msgid "CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden PHP."
 msgstr ""
@@ -160,6 +164,14 @@ msgstr ""
 
 #: src/PHPWarrior/Game.php:199
 msgid "Your average grade for this tower is: %s"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Attack.php:15
+msgid "attacks %1$s and hits %2$s"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Attack.php:27
+msgid "attacks %s and hits nothing"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Walk.php:23
