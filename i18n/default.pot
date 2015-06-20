@@ -15,6 +15,10 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: src/PHPWarrior/Level.php:67
+msgid "- turn %s -"
+msgstr ""
+
 #: src/PHPWarrior/Game.php:143
 msgid "Another level has been added since you started epic, going back to normal mode."
 msgstr ""
@@ -31,6 +35,10 @@ msgstr ""
 msgid "Choose %s by typing the number: "
 msgstr ""
 
+#: src/PHPWarrior/Level.php:98
+msgid "Clear Bonus: %s"
+msgstr ""
+
 #: src/PHPWarrior/Game.php:162
 msgid "Enter a name for your warrior: "
 msgstr ""
@@ -41,6 +49,14 @@ msgstr ""
 
 #: src/PHPWarrior/Profile.php:58 templates/README.php:1
 msgid "Level"
+msgstr ""
+
+#: src/PHPWarrior/Level.php:107
+msgid "Level Grade: %s"
+msgstr ""
+
+#: src/PHPWarrior/Level.php:85
+msgid "Level Score: %s"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Walk.php:8
@@ -91,6 +107,10 @@ msgstr ""
 msgid "Success! You have found the stairs."
 msgstr ""
 
+#: src/PHPWarrior/Level.php:91
+msgid "Time Bonus: %s"
+msgstr ""
+
 #: templates/README.php:7
 msgid "Tip"
 msgstr ""
@@ -100,6 +120,10 @@ msgid ""
 "To practice a level, use the -l option:\n"
 "\n"
 "  php-warrior -l 3"
+msgstr ""
+
+#: src/PHPWarrior/Level.php:112 src/PHPWarrior/Level.php:121
+msgid "Total Score: %s"
 msgstr ""
 
 #: src/PHPWarrior/Game.php:35

@@ -64,7 +64,7 @@ class Level {
         return;
       }
       $num = $n+1;
-      UI::puts("- turn {$num} -");
+      UI::puts(sprintf(__("- turn %s -"), $num));
       UI::put($this->floor->character());
       foreach ($this->floor->units() as $unit) {
         $unit->prepare_turn();
@@ -81,28 +81,46 @@ class Level {
   public function tally_points() {
     $score = 0;
 
-    UI::puts("Level Score: {$this->warrior->score}");
+    UI::puts(sprintf(
+      __("Level Score: %s"),
+      $this->warrior->score
+    ));
     $score += $this->warrior->score;
 
-    UI::puts("Time Bonus: {$this->time_bonus}");
+    UI::puts(sprintf(
+      __("Time Bonus: %s"),
+      $this->time_bonus
+    ));
     $score += $this->time_bonus;
 
     if (count($this->floor->other_units()) == 0) {
-      UI::puts("Clear Bonus: {$this->clear_bonus()}");
+      UI::puts(sprintf(
+        __("Clear Bonus: %s"),
+        $this->clear_bonus()
+      ));
       $score += $this->clear_bonus();
     }
 
     if ($this->profile->is_epic()) {
       if ($this->grade_for($score)) {
-        UI::puts("Level Grade: {$this->grade_for($score)}");
+        UI::puts(sprintf(
+          __("Level Grade: %s"),
+          $this->grade_for($score)
+        ));
       }
-      UI::puts("Total Score: " . $this->score_calculation($this->profile->current_epic_score, $score));
+      UI::puts(sprintf(
+        __("Total Score: %s"),
+        $this->score_calculation($this->profile->current_epic_score, $score)
+      ));
       if ($this->ace_score) {
         $this->profile->current_epic_grades[$this->number] = ($score / $this->ace_score);
       }
       $this->profile->current_epic_score += $score;
     } else {
-      UI::puts("Total Score: " . $this->score_calculation($this->profile->score, $score));
+      UI::puts(sprintf(
+        __("Total Score: %s"),
+        $this->score_calculation($this->profile->score, $score)
+      ));
       $this->profile->score += $score;
       $this->profile->abilities = array_keys($this->warrior->abilities);
     }
