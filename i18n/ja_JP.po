@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-20 18:40+0900\n"
+"PO-Revision-Date: 2015-06-20 23:59+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -188,6 +188,10 @@ msgstr "%1$sを攻撃し、%2$sに命中。"
 msgid "attacks %s and hits nothing"
 msgstr "%s を攻撃し、空振りした。"
 
+#: src/PHPWarrior/Position.php:115
+msgid "backward"
+msgstr "後方"
+
 #: src/PHPWarrior/Abilities/Walk.php:23
 msgid "bumps into %s"
 msgstr "%s に衝突した"
@@ -195,6 +199,22 @@ msgstr "%s に衝突した"
 #: src/PHPWarrior/Units/Base.php:42
 msgid "dies"
 msgstr "死亡"
+
+#: src/PHPWarrior/Position.php:110
+msgid "east"
+msgstr "東"
+
+#: src/PHPWarrior/Position.php:113
+msgid "forward"
+msgstr "前方"
+
+#: src/PHPWarrior/Position.php:116
+msgid "left"
+msgstr "左"
+
+#: src/PHPWarrior/Position.php:109
+msgid "north"
+msgstr "北"
 
 #: src/PHPWarrior/Space.php:92
 msgid "nothing"
@@ -204,9 +224,17 @@ msgstr "何もない"
 msgid "released from bonds"
 msgstr "拘束から解放された"
 
+#: src/PHPWarrior/Position.php:114
+msgid "right"
+msgstr "右"
+
 #: src/PHPWarrior/Profile.php:59
 msgid "score"
 msgstr "点数"
+
+#: src/PHPWarrior/Position.php:112
+msgid "south"
+msgstr "南"
 
 #: src/PHPWarrior/Units/Base.php:36
 msgid "takes %1$s damage, %2$s health power left"
@@ -214,8 +242,12 @@ msgstr "%1$s のダメージを受け、残り生命力 %2$s"
 
 #: src/PHPWarrior/Abilities/Walk.php:15
 msgid "walks %s"
-msgstr "%s に歩いた。"
+msgstr "%sに歩いた。"
 
 #: src/PHPWarrior/Space.php:90
 msgid "wall"
 msgstr "壁"
+
+#: src/PHPWarrior/Position.php:111
+msgid "west"
+msgstr "西"

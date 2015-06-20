@@ -174,12 +174,32 @@ msgstr ""
 msgid "attacks %s and hits nothing"
 msgstr ""
 
+#: src/PHPWarrior/Position.php:115
+msgid "backward"
+msgstr ""
+
 #: src/PHPWarrior/Abilities/Walk.php:23
 msgid "bumps into %s"
 msgstr ""
 
 #: src/PHPWarrior/Units/Base.php:42
 msgid "dies"
+msgstr ""
+
+#: src/PHPWarrior/Position.php:110
+msgid "east"
+msgstr ""
+
+#: src/PHPWarrior/Position.php:113
+msgid "forward"
+msgstr ""
+
+#: src/PHPWarrior/Position.php:116
+msgid "left"
+msgstr ""
+
+#: src/PHPWarrior/Position.php:109
+msgid "north"
 msgstr ""
 
 #: src/PHPWarrior/Space.php:92
@@ -190,8 +210,16 @@ msgstr ""
 msgid "released from bonds"
 msgstr ""
 
+#: src/PHPWarrior/Position.php:114
+msgid "right"
+msgstr ""
+
 #: src/PHPWarrior/Profile.php:59
 msgid "score"
+msgstr ""
+
+#: src/PHPWarrior/Position.php:112
+msgid "south"
 msgstr ""
 
 #: src/PHPWarrior/Units/Base.php:36
@@ -204,4 +232,8 @@ msgstr ""
 
 #: src/PHPWarrior/Space.php:90
 msgid "wall"
+msgstr ""
+
+#: src/PHPWarrior/Position.php:111
+msgid "west"
 msgstr ""

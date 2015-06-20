@@ -105,4 +105,14 @@ class Position {
         break;
     }
   }
+  public function direction_stub() {
+    __('north');
+    __('east');
+    __('west');
+    __('south');
+    __('forward');
+    __('right');
+    __('backward');
+    __('left');  
+  }
 }

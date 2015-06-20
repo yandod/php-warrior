@@ -11,7 +11,7 @@ class Walk extends Base {
   public function perform($direction = ':forward') {
     $this->verify_direction($direction);
     if ($this->unit->position) {
-      $s_direction = str_replace(':','',$direction);
+      $s_direction = __(str_replace(':','',$direction));
       $this->unit->say(sprintf(__("walks %s"),$s_direction));
       if ($this->space($direction)->is_empty()) {
         call_user_func_array(
