@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-21 01:40+0900\n"
+"PO-Revision-Date: 2015-06-21 01:49+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -59,6 +59,10 @@ msgid ""
 "First level has been generated. See the phpwarrior/%s/README for "
 "instructions."
 msgstr "最初のレベルが生成された。phpwarrior/%s/README の説明を見てください。"
+
+#: src/PHPWarrior/Abilities/Rest.php:7
+msgid "Gain 10% of max health back, but do nothing more."
+msgstr "生命力が最大の10%回復。ただし他の行動は出来ない。"
 
 #: src/PHPWarrior/Profile.php:58 templates/README.php:1
 msgid "Level"
@@ -212,6 +216,10 @@ msgstr "東"
 msgid "forward"
 msgstr "前方"
 
+#: src/PHPWarrior/Abilities/Rest.php:23
+msgid "is already fit as a fiddle"
+msgstr "すでにとても元気だ。"
+
 #: src/PHPWarrior/Position.php:123
 msgid "left"
 msgstr "左"
@@ -223,6 +231,10 @@ msgstr "北"
 #: src/PHPWarrior/Space.php:92
 msgid "nothing"
 msgstr "何もない"
+
+#: src/PHPWarrior/Abilities/Rest.php:18
+msgid "receives %1$s health from resting, up to %2$s health"
+msgstr "休息により%1$sの生命力が%2$sを上限に回復。"
 
 #: src/PHPWarrior/Units/Base.php:56
 msgid "released from bonds"

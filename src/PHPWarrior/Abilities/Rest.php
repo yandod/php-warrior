@@ -4,7 +4,7 @@ namespace PHPWarrior\Abilities;
 
 class Rest extends Base {
   public function description() {
-    return 'Gain 10% of max health back, but do nothing more.';
+    return __('Gain 10% of max health back, but do nothing more.');
   }
 
   public function perform() {
@@ -14,9 +14,13 @@ class Rest extends Base {
         $amount = $this->unit->max_health() - $this->unit->health;
       }
       $this->unit->health += $amount;
-      $this->unit->say("receives {$amount} health from resting, up to {$this->unit->health()} health");
+      $this->unit->say(sprintf(
+        __('receives %1$s health from resting, up to %2$s health'),
+        $amount,
+        $this->unit->health()
+      ));
     } else {
-      $this->unit->say('is already fit as a fiddle');
+      $this->unit->say(__('is already fit as a fiddle'));
     }
   }
 }

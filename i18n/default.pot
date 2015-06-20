@@ -51,6 +51,10 @@ msgstr ""
 msgid "First level has been generated. See the phpwarrior/%s/README for instructions."
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Rest.php:7
+msgid "Gain 10% of max health back, but do nothing more."
+msgstr ""
+
 #: src/PHPWarrior/Profile.php:58 templates/README.php:1
 msgid "Level"
 msgstr ""
@@ -198,6 +202,10 @@ msgstr ""
 msgid "forward"
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Rest.php:23
+msgid "is already fit as a fiddle"
+msgstr ""
+
 #: src/PHPWarrior/Position.php:123
 msgid "left"
 msgstr ""
@@ -208,6 +216,10 @@ msgstr ""
 
 #: src/PHPWarrior/Space.php:92
 msgid "nothing"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Rest.php:18
+msgid "receives %1$s health from resting, up to %2$s health"
 msgstr ""
 
 #: src/PHPWarrior/Units/Base.php:56
