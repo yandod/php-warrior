@@ -54,7 +54,10 @@ class UI {
           self::puts("[{$num}] {$option}");
         }
       }
-      $choice = self::request("Choose {$item} by typing the number: ");
+      $choice = self::request(sprintf(
+      __("Choose %s by typing the number: "),
+      $item
+      ));
       $response = $options[$choice-1];
     }
     return $response;

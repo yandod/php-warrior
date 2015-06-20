@@ -7,7 +7,7 @@ class Game {
   public $profile;
 
   public function start() {
-    UI::puts('Welcome to PHP Warrior');
+    UI::puts(__('Welcome to PHP Warrior'));
 
     if (file_exists(Config::$path_prefix . '/.pwprofile')) {
       $this->profile = Profile::load(Config::$path_prefix . '/.pwprofile');
@@ -29,10 +29,10 @@ class Game {
   }
 
   public function make_game_directory() {
-    if (UI::ask('No phpwarrior directory found, would you like to create one?')) {
+    if (UI::ask(__('No phpwarrior directory found, would you like to create one?'))) {
       mkdir(Config::$path_prefix . '/phpwarrior');
     } else {
-      UI::puts('Unable to continue without directory.');
+      UI::puts(__('Unable to continue without directory.'));
       exit;
     }
   }
@@ -63,7 +63,10 @@ class Game {
   public function play_normal_mode() {
     if ($this->profile->current_level()->number == 0) {
       $this->prepare_next_level();
-      UI::puts("First level has been generated. See the phpwarrior/{$this->profile->directory_name()}/README for instructions.");
+      UI::puts(sprintf(
+        __("First level has been generated. See the phpwarrior/%s/README for instructions."),
+        $this->profile->directory_name()
+        ));
     } else {
       $this->play_current_level();
     }
@@ -72,13 +75,16 @@ class Game {
   public function play_current_level() {
     $continue = true;
     $this->current_level()->load_player();
-    UI::puts("Starting Level {$this->current_level()->number}");
+    UI::puts(sprintf(
+      __("Starting Level %s"),
+      $this->current_level()->number
+    ));
     $this->current_level()->play();
     if ($this->current_level()->is_passed()) {
       if ($this->next_level()->is_exists()) {
-        UI::puts('Success! You have found the stairs.');
+        UI::puts(__('Success! You have found the stairs.'));
       } else {
-        UI::puts('CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden PHP.');
+        UI::puts(__('CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden PHP.'));
         $continue = false;
       }
       $this->current_level()->tally_points();
@@ -91,8 +97,11 @@ class Game {
       }
     } else {
       $continue = false;
-      UI::puts("Sorry, you failed level {$this->current_level()->number}. Change your script and try again.");
-      if (!Config::$skip_input && $this->current_level()->clue && UI::ask("Would you like to read the additional clues for this level?")) {
+      UI::puts(sprintf(
+        __("Sorry, you failed level %s. Change your script and try again."),
+        $this->current_level()->number
+      ));
+      if (!Config::$skip_input && $this->current_level()->clue && UI::ask(__("Would you like to read the additional clues for this level?"))) {
         UI::puts($this->current_level()->clue);
       }
     }
@@ -100,16 +109,19 @@ class Game {
   }
 
   public function request_next_level() {
-    if (!Config::$skip_input && ($this->next_level()->is_exists() ? UI::ask("Would you like to continue on to the next level?") : UI::ask("Would you like to continue on to epic mode?"))) {
+    if (!Config::$skip_input && ($this->next_level()->is_exists() ? UI::ask(__("Would you like to continue on to the next level?")) : UI::ask(__("Would you like to continue on to epic mode?")))) {
       if ($this->next_level()->is_exists()) {
         $this->prepare_next_level();
-        UI::puts("See the updated README in the phpwarrior/{$this->profile->directory_name()} directory.");
+        UI::puts(sprintf(
+          __("See the updated README in the phpwarrior/%s directory."),
+            $this->profile->directory_name()
+        ));
       } else {
         $this->prepare_epic_mode();
-        UI::puts("Run rubywarrior again to play epic mode.");
+        UI::puts(__("Run rubywarrior again to play epic mode."));
       }
     } else {
-      UI::puts("Staying on current level. Try to earn more points next time.");
+      UI::puts(__("Staying on current level. Try to earn more points next time."));
     }
   }
 
@@ -128,8 +140,8 @@ class Game {
   public function go_back_to_normal_mode() {
     $this->profile->enable_normal_mode();
     $this->prepare_next_level();
-    UI::puts("Another level has been added since you started epic, going back to normal mode.");
-    UI::puts("See the updated README in the rubywarrior/#{profile.directory_name} directory.");
+    UI::puts(__("Another level has been added since you started epic, going back to normal mode."));
+    UI::puts(__("See the updated README in the rubywarrior/#{profile.directory_name} directory."));
   }
 
   public function profiles() {
@@ -147,7 +159,7 @@ class Game {
   public function new_profile() {
     $profile = new Profile();
     $profile->tower_path = UI::choose('tower', $this->towers())->path;
-    $profile->warrior_name = UI::request('Enter a name for your warrior: ');
+    $profile->warrior_name = UI::request(__('Enter a name for your warrior: '));
     return $profile;
   }
 
@@ -183,18 +195,21 @@ class Game {
     if ($this->profile->calculate_average_grade() && !Config::$practice_level) {
       $report = "";
       $letter = Level::grade_letter($this->profile->calculate_average_grade());
-      $report .= "Your average grade for this tower is: {$letter}\n\n";
+      $report .= sprintf(
+        __("Your average grade for this tower is: %s"),
+        $letter
+      )."\n\n";
       foreach ($this->profile->current_epic_grades as $key => $level) {
         $letter = Level::grade_letter($level);
         $report .= "  Level {$key}: {$letter}\n";
       }
-      $report .= "\nTo practice a level, use the -l option:\n\n  php-warrior -l 3";
+      $report .= "\n". __("To practice a level, use the -l option:\n\n  php-warrior -l 3");
       return $report;
     }
   }
 
   public function choose_profile() {
-    $profile = UI::choose('profile', array_merge($this->profiles(),[[':new','New Profile']]));
+    $profile = UI::choose('profile', array_merge($this->profiles(),[[':new',__('New Profile')]]));
     if (is_array($profile) && $profile[0] == ':new') {
       $profile = $this->new_profile();
     }

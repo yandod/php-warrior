@@ -55,8 +55,8 @@ class Profile {
     return implode('-', [
       $this->warrior_name,
       $this->tower->name(),
-      "Level ".$this->level_number,
-      "score ".$this->score
+      __("Level").' '.$this->level_number,
+      __("score").' '.$this->score
     ]);
   }
 

@@ -5,15 +5,16 @@ namespace PHPWarrior;
 class Position {
 
   public $floor;
-  public static $DIRECTIONS = [':north', ':east', ':south', ':west'];
-  public static $RELATIVE_DIRECTIONS = [':forward', ':right', ':backward', ':left'];
+  public static $DIRECTIONS = ['north', 'east', 'south', 'west'];
+  public static $RELATIVE_DIRECTIONS = ['forward', 'right', 'backward', 'left'];
 
   public function __construct($floor, $x, $y, $direction = null) {
     $this->floor = $floor;
     $this->x = $x;
     $this->y = $y;
+    $direction = Position::normalize_direction($direction);
     $this->direction_index = array_search(
-      is_null($direction) ? ':north' : $direction,
+      is_null($direction) ? 'north' : $direction,
       self::$DIRECTIONS
     );
   }
@@ -71,13 +72,14 @@ class Position {
   public function direction_of($space) {
     list ($space_x, $space_y) = $space->location();
     if (abs($this->x - $space_x) > abs($this->y - $space_y)) {
-      return $space_x > $this->x ? ':east' : ':west';
+      return $space_x > $this->x ? 'east' : 'west';
     } else {
-      return $space_y > $this->y ? ':south' : ':north';
+      return $space_y > $this->y ? 'south' : 'north';
     }
   }
 
   public function relative_direction($direction) {
+    $direction = self::normalize_direction($direction);
     $offset = array_search($direction,self::$DIRECTIONS) - $this->direction_index;
     while ($offset > 3) {
       $offset -= 4;
@@ -89,20 +91,35 @@ class Position {
   }
 
   public function translate_offset($forward, $right) {
-    $direction = $this->direction();
+    $direction = Position::normalize_direction($this->direction());
     switch ($direction) {
-      case ':north':
+      case 'north':
         return [$this->x + (int)$right, $this->y - (int)$forward];
         break;
-      case ':east':
+      case 'east':
         return [$this->x + (int)$forward, $this->y + (int)$right];
         break;
-      case ':south':
+      case 'south':
         return [$this->x - (int)$right, $this->y + (int)$forward];
         break;
-      case ':west':
+      case 'west':
         return [$this->x - (int)$forward, $this->y - (int)$right];
         break;
     }
+  }
+
+  public static function normalize_direction($direction) {
+    return str_replace(':', '', $direction);
+  }
+
+  public function direction_stub() {
+    __('north');
+    __('east');
+    __('west');
+    __('south');
+    __('forward');
+    __('right');
+    __('backward');
+    __('left');
   }
 }
