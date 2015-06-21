@@ -9,7 +9,7 @@ class Archer extends Base {
   }
 
   public function play_turn($turn) {
-    $directions = [':forward', ':left', ':right'];
+    $directions = ['forward', 'left', 'right'];
     foreach ($directions as $direction) {
       foreach ($turn->look($direction) as $space) {
         if ($space->is_player()) {

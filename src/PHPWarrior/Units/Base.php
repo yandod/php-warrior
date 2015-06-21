@@ -71,7 +71,7 @@ class Base {
   }
 
   public function __ToString(){
-    return $this->name();
+    return __($this->name());
   }
 
   public function add_abilities($new_abbilities) {

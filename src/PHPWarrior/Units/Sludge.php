@@ -8,7 +8,7 @@ class Sludge extends Base {
   }
 
   public function play_turn($turn) {
-    $directions = [':forward', ':left', ':right', ':backward'];
+    $directions = ['forward', 'left', 'right', 'backward'];
     foreach ($directions as $direction) {
       if ($turn->feel($direction)->is_player()) {
         $turn->attack($direction);

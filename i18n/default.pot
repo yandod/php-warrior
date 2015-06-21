@@ -142,6 +142,10 @@ msgstr ""
 msgid "Unable to continue without directory."
 msgstr ""
 
+#: src/PHPWarrior/Units/Warrior.php:48
+msgid "Warrior"
+msgstr ""
+
 #: templates/README.php:17
 msgid "Warrior Abilities"
 msgstr ""
@@ -192,6 +196,14 @@ msgstr ""
 
 #: src/PHPWarrior/Units/Base.php:42
 msgid "dies"
+msgstr ""
+
+#: src/PHPWarrior/Units/Warrior.php:58
+msgid "does nothing"
+msgstr ""
+
+#: src/PHPWarrior/Units/Warrior.php:27
+msgid "earns %s points"
 msgstr ""
 
 #: src/PHPWarrior/Position.php:117

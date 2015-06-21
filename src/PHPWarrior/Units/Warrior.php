@@ -23,7 +23,10 @@ class Warrior extends Base {
 
   public function earn_points($points) {
     $this->score += $points;
-    $this->say("earns {$points} points");
+    $this->say(sprintf(
+      __("earns %s points"),
+      $points
+    ));
   }
 
   public function attack_power() {
@@ -42,7 +45,7 @@ class Warrior extends Base {
     if ($this->name && !empty($this->name)) {
       return $this->name;
     }  else {
-      return 'Warrior';
+      return __('Warrior');
     }
   }
 
@@ -52,7 +55,7 @@ class Warrior extends Base {
 
   public function perform_turn() {
     if (is_null($this->current_turn->action)) {
-      $this->say("does nothing");
+      $this->say(__("does nothing"));
     }
     return parent::perform_turn();
   }
