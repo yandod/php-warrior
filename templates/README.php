@@ -9,9 +9,9 @@
 
 <?= $this->level->floor->character() ?>
 
-  > = <?php echo __('Stairs'); ?>
+  > = <?php echo __('Stairs'); ?> 
 <?php foreach ($this->level->floor->unique_units() as $unit): ?>
-  <?= $unit->character(); ?> = <?= $unit->name(); ?> (<?= $unit->max_health() ?> HP) 
+  <?= $unit->character(); ?> = <?= $unit->name(); ?> (<?= $unit->max_health() ?> HP)
 <?php endforeach; ?>
 
 <?php echo __('Warrior Abilities');?>:

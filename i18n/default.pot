@@ -19,12 +19,20 @@ msgstr ""
 msgid "- turn %s -"
 msgstr ""
 
+#: towers/beginner/level_002.php:8
+msgid "Add an if/else condition using $warrior->feel()->is_empty() to decide whether to $warrior->attack() or $warrior->walk()."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:143
 msgid "Another level has been added since you started epic, going back to normal mode."
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Attack.php:7
 msgid "Attacks a unit in given direction (forward by default)."
+msgstr ""
+
+#: towers/beginner/level_003.php:7
+msgid "Be careful not to die! Use warrior.health to keep an eye on your health, and warrior.rest! to earn 10% of max health back."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:87
@@ -43,6 +51,14 @@ msgstr ""
 msgid "Clear Bonus: %s"
 msgstr ""
 
+#: towers/beginner/level_005.php:8
+msgid "Don't forget to constantly check if you're taking damage. Rest until your health is full if you aren't taking damage."
+msgstr ""
+
+#: towers/beginner/level_009.php:8
+msgid "Don't just keep shooting the bow while you are being attacked from behind."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:162
 msgid "Enter a name for your warrior: "
 msgstr ""
@@ -53,6 +69,10 @@ msgstr ""
 
 #: src/PHPWarrior/Abilities/Rest.php:7
 msgid "Gain 10% of max health back, but do nothing more."
+msgstr ""
+
+#: towers/beginner/level_002.php:6
+msgid "It is too dark to see anything, but you smell sludge nearby."
 msgstr ""
 
 #: src/PHPWarrior/Profile.php:58 templates/README.php:1
@@ -73,6 +93,10 @@ msgstr ""
 
 #: src/PHPWarrior/Game.php:212
 msgid "New Profile"
+msgstr ""
+
+#: towers/beginner/level_004.php:7
+msgid "No new abilities this time, but you must be careful not to rest while taking damage. Save a @health instance variable and compare it on each turn to see if you\\re taking damage."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:32
@@ -103,6 +127,10 @@ msgstr ""
 msgid "See the updated README in the rubywarrior/#{profile.directory_name} directory."
 msgstr ""
 
+#: towers/beginner/level_004.php:8
+msgid "Set $this->health to your current health at the end of the turn. If this is greater than your current health next turn then you know you're taking damage and shouldn't rest."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:101
 msgid "Sorry, you failed level %s. Change your script and try again."
 msgstr ""
@@ -123,8 +151,20 @@ msgstr ""
 msgid "Success! You have found the stairs."
 msgstr ""
 
+#: towers/beginner/level_003.php:6
+msgid "The air feels thicker than before. There must be a horde of sludge."
+msgstr ""
+
+#: towers/beginner/level_006.php:7
+msgid "The wall behind you feels a bit further away in this room. And you hear more cries for help."
+msgstr ""
+
 #: src/PHPWarrior/Level.php:91
 msgid "Time Bonus: %s"
+msgstr ""
+
+#: towers/beginner/level_009.php:6
+msgid "Time to hone your skills and apply all of the abilities that you have learned."
 msgstr ""
 
 #: templates/README.php:7
@@ -146,6 +186,22 @@ msgstr ""
 msgid "Unable to continue without directory."
 msgstr ""
 
+#: towers/beginner/level_005.php:7
+msgid "Use $warrior->feel()->is_captive() to see if there is a captive and $warrior->rescue() to rescue him. Don't attack captives."
+msgstr ""
+
+#: towers/beginner/level_002.php:7
+msgid "Use warrior.feel.empty? to see if there is anything in front of you, and warrior.attack! to fight it. Remember, you can only do one action (ending in !) per turn."
+msgstr ""
+
+#: towers/beginner/level_008.php:7
+msgid "Use warrior.look to determine your surroundings, and warrior.shoot! to fire an arrow."
+msgstr ""
+
+#: towers/beginner/level_006.php:9
+msgid "Walk backward if you are taking damage from afar and do not have enough health to attack. You may also want to consider walking backward until $warrior->feel(':backward')->is_wall()."
+msgstr ""
+
 #: src/PHPWarrior/Units/Warrior.php:48
 msgid "Warrior"
 msgstr ""
@@ -154,12 +210,24 @@ msgstr ""
 msgid "Warrior Abilities"
 msgstr ""
 
+#: towers/beginner/level_009.php:7
+msgid "Watch your back."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:10
 msgid "Welcome to PHP Warrior"
 msgstr ""
 
+#: towers/beginner/level_003.php:8
+msgid "When there is no enemy ahead of you call \\$warrior->rest() until health is full before walking forward."
+msgstr ""
+
 #: templates/README.php:25
 msgid "When you're done editing player.php, run the php-warrior command again."
+msgstr ""
+
+#: towers/beginner/level_008.php:8
+msgid "Wizards are deadly but low in health. Kill them before they have time to attack."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:112
@@ -172,6 +240,30 @@ msgstr ""
 
 #: src/PHPWarrior/Game.php:104
 msgid "Would you like to read the additional clues for this level?"
+msgstr ""
+
+#: towers/beginner/level_007.php:7
+msgid "You are not as effective at attacking backward. Use $warrior->feel()->is_wall() and $warrior->pivot() to turn around."
+msgstr ""
+
+#: towers/beginner/level_004.php:6
+msgid "You can hear bow strings being stretched."
+msgstr ""
+
+#: towers/beginner/level_006.php:8
+msgid "You can walk backward by passing ':backward' as an argument to walk!. Same goes for feel, rescue! and attack!. Archers have a limited attack distance."
+msgstr ""
+
+#: towers/beginner/level_007.php:6
+msgid "You feel a wall right in front of you and an opening behind you."
+msgstr ""
+
+#: towers/beginner/level_005.php:6
+msgid "You hear cries for help. Captives must need rescuing."
+msgstr ""
+
+#: towers/beginner/level_008.php:6
+msgid "You hear the mumbling of wizards. Beware of their deadly wands! Good thing you found a bow."
 msgstr ""
 
 #: towers/beginner/level_001.php:6
