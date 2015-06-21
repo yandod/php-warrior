@@ -174,11 +174,11 @@ msgstr ""
 msgid "Your average grade for this tower is: %s"
 msgstr ""
 
-#: src/PHPWarrior/Abilities/Attack.php:15
+#: src/PHPWarrior/Abilities/Attack.php:16
 msgid "attacks %1$s and hits %2$s"
 msgstr ""
 
-#: src/PHPWarrior/Abilities/Attack.php:27
+#: src/PHPWarrior/Abilities/Attack.php:28
 msgid "attacks %s and hits nothing"
 msgstr ""
 

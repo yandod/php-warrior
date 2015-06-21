@@ -7,13 +7,14 @@ class Attack extends Base {
     return __('Attacks a unit in given direction (forward by default).');
   }
 
-  public function perform($direction = ':forward') {
+  public function perform($direction = 'forward') {
+    $direction = \PHPWarrior\Position::normalize_direction($direction);
     $this->verify_direction($direction);
     $receiver = $this->unit($direction);
     if ($receiver) {
       $this->unit->say(sprintf(
         __('attacks %1$s and hits %2$s'),
-        $direction,
+        __($direction),
         $receiver
       ));
       if ($direction === ':backward') {
