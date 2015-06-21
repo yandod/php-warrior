@@ -87,6 +87,10 @@ msgstr ""
 msgid "Returns a Space for the given direction (forward by default)."
 msgstr ""
 
+#: src/PHPWarrior/Abilities/DirectionOfStairs.php:10
+msgid "Returns the direction (left, right, forward, backward) the stairs are from your location."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:121
 msgid "Run rubywarrior again to play epic mode."
 msgstr ""

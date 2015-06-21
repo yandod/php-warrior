@@ -7,7 +7,7 @@ class DirectionOfStairs extends Base {
   public $is_sense = true;
 
   public function description() {
-    return "Returns the direction (:left, :right, :forward, :backward) the stairs are from your location.";
+    return __("Returns the direction (left, right, forward, backward) the stairs are from your location.");
   }
 
   public function perform() {

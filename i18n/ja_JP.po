@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-21 11:54+0900\n"
+"PO-Revision-Date: 2015-06-21 13:06+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -95,6 +95,12 @@ msgstr "各ターンでは一回しか行動できない。"
 #: src/PHPWarrior/Abilities/Feel.php:10
 msgid "Returns a Space for the given direction (forward by default)."
 msgstr "指定された方向の空間を取得する。 (forward がデフォルト)"
+
+#: src/PHPWarrior/Abilities/DirectionOfStairs.php:10
+msgid ""
+"Returns the direction (left, right, forward, backward) the stairs are from "
+"your location."
+msgstr "現在の位置から階段への方向を得る。(left, right, forward, backward)"
 
 #: src/PHPWarrior/Game.php:121
 msgid "Run rubywarrior again to play epic mode."
