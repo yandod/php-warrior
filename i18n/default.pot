@@ -35,6 +35,10 @@ msgstr ""
 msgid "Be careful not to die! Use warrior.health to keep an eye on your health, and warrior.rest! to earn 10% of max health back."
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Bind.php:8
+msgid "Binds a unit in given direction to keep him from moving (forward by default)."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:87
 msgid "CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden PHP."
 msgstr ""
@@ -284,6 +288,14 @@ msgstr ""
 
 #: src/PHPWarrior/Position.php:122
 msgid "backward"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Bind.php:17
+msgid "binds %$1s and restricts %$2s"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Bind.php:24
+msgid "binds %s and restricts nothing"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Walk.php:23

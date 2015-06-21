@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-21 18:34+0900\n"
+"PO-Revision-Date: 2015-06-22 00:35+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -42,6 +42,11 @@ msgid ""
 "Be careful not to die! Use warrior.health to keep an eye on your health, and "
 "warrior.rest! to earn 10% of max health back."
 msgstr ""
+
+#: src/PHPWarrior/Abilities/Bind.php:8
+msgid ""
+"Binds a unit in given direction to keep him from moving (forward by default)."
+msgstr "指定された方向のユニットを束縛する。 (forward がデフォルト)"
 
 #: src/PHPWarrior/Game.php:87
 msgid ""
@@ -338,6 +343,14 @@ msgstr "%sを攻撃し、空振りした。"
 #: src/PHPWarrior/Position.php:122
 msgid "backward"
 msgstr "後方"
+
+#: src/PHPWarrior/Abilities/Bind.php:17
+msgid "binds %$1s and restricts %$2s"
+msgstr "%1$sを束縛し、%2$sを拘束。"
+
+#: src/PHPWarrior/Abilities/Bind.php:24
+msgid "binds %s and restricts nothing"
+msgstr "%sを束縛し、空振りした。"
 
 #: src/PHPWarrior/Abilities/Walk.php:23
 msgid "bumps into %s"
