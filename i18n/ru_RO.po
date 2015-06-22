@@ -1,0 +1,427 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: php-warrior\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-06-22 22:50+0900\n"
+"Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"Language: ru_RO\n"
+
+#: src/PHPWarrior/Level.php:67
+msgid "- turn %s -"
+msgstr "- Поворот %s -"
+
+#: towers/beginner/level_002.php:8
+msgid ""
+"Add an if/else condition using $warrior->feel()->is_empty() to decide "
+"whether to $warrior->attack() or $warrior->walk()."
+msgstr "Добавить если / другое состояние, используя $ Warrior-> чувство () -> IS_EMPTY (), чтобы решить, следует ли $ Warrior-> атаки () или $ Warrior-> прогулку ()."
+
+#: src/PHPWarrior/Game.php:143
+msgid ""
+"Another level has been added since you started epic, going back to normal "
+"mode."
+msgstr "Другой уровень был добавлен, так как Вы начали эпос, возвращаясь к нормальному режиму."
+
+#: src/PHPWarrior/Abilities/Attack.php:7
+msgid "Attacks a unit in given direction (forward by default)."
+msgstr "Атакует устройство в заданном направлении (вперед по умолчанию)."
+
+#: towers/beginner/level_003.php:7
+msgid ""
+"Be careful not to die! Use warrior.health to keep an eye on your health, and "
+"warrior.rest! to earn 10% of max health back."
+msgstr "Будьте осторожны, чтобы не умереть! Используйте warrior.health держать глаз на вашем здоровье, и warrior.rest! заработать 10% от максимального здоровья спины."
+
+#: src/PHPWarrior/Abilities/Bind.php:8
+msgid ""
+"Binds a unit in given direction to keep him from moving (forward by default)."
+msgstr "Связывает устройство в заданном направлении, чтобы держать его от переезда (вперед по умолчанию)."
+
+#: src/PHPWarrior/Game.php:87
+msgid ""
+"CONGRATULATIONS! You have climbed to the top of the tower and rescued the "
+"fair maiden PHP."
+msgstr "ПОЗДРАВЛЯЕМ! Вы поднялись на вершину башни и спас девица PHP."
+
+#: towers/beginner/level_001.php:7
+msgid "Call $warrior->walk() to walk forward in the Player 'play_turn' method."
+msgstr "Позвоните $ Warrior-> прогулку (), чтобы идти вперед в методе Игрока 'play_turn »."
+
+#: src/PHPWarrior/UI.php:58
+msgid "Choose %s by typing the number: "
+msgstr "Выберите %s , введя номер: "
+
+#: src/PHPWarrior/Level.php:98
+msgid "Clear Bonus: %s"
+msgstr "Ясно Бонус: %s"
+
+#: towers/beginner/level_005.php:8
+msgid ""
+"Don't forget to constantly check if you're taking damage. Rest until your "
+"health is full if you aren't taking damage."
+msgstr "Не забудьте постоянно проверять, если вы принимаете ущерб. Отдых до Вашего здоровья полном объеме, если вы не принимаете повреждения."
+
+#: towers/beginner/level_009.php:8
+msgid ""
+"Don't just keep shooting the bow while you are being attacked from behind."
+msgstr "Не просто продолжать стрелять из лука, а на тебя нападают сзади."
+
+#: src/PHPWarrior/Game.php:162
+msgid "Enter a name for your warrior: "
+msgstr "Введите имя для вашего воина: "
+
+#: src/PHPWarrior/Game.php:67
+msgid ""
+"First level has been generated. See the phpwarrior/%s/README for "
+"instructions."
+msgstr "Была сформирована Первый уровень. См phpwarrior / %s / README для получения инструкций."
+
+#: src/PHPWarrior/Abilities/Rest.php:7
+msgid "Gain 10% of max health back, but do nothing more."
+msgstr "Получите 10% от максимального здоровья спины, но ничего не делают больше."
+
+#: towers/beginner/level_002.php:6
+msgid "It is too dark to see anything, but you smell sludge nearby."
+msgstr "Это слишком темно, чтобы увидеть что-либо, но вы чувствуете запах ила поблизости."
+
+#: src/PHPWarrior/Profile.php:58 templates/README.php:1
+msgid "Level"
+msgstr "Уровень"
+
+#: src/PHPWarrior/Level.php:107
+msgid "Level Grade: %s"
+msgstr "Уровень Оценка: %s"
+
+#: src/PHPWarrior/Level.php:85
+msgid "Level Score: %s"
+msgstr "Уровень Счет: %s"
+
+#: src/PHPWarrior/Abilities/Walk.php:8
+msgid "Move in the given direction (forward by default)."
+msgstr "Перемещение в данном направлении (вперед по умолчанию)."
+
+#: src/PHPWarrior/Game.php:212
+msgid "New Profile"
+msgstr "Новый Профиль"
+
+#: towers/beginner/level_004.php:7
+msgid ""
+"No new abilities this time, but you must be careful not to rest while taking "
+"damage. Save a @health instance variable and compare it on each turn to see "
+"if you\\re taking damage."
+msgstr "Нет новых способностей в этот раз, но вы не должны быть осторожны, чтобы не отдыхать, принимая ущерб. Сохранитьhealth переменную экземпляра и сравнить его на каждом повороте, чтобы увидеть, если вы \\ вновь получении урона."
+
+#: src/PHPWarrior/Game.php:32
+msgid "No phpwarrior directory found, would you like to create one?"
+msgstr "Нет phpwarrior каталог найден, вы хотели бы создать?"
+
+#: src/PHPWarrior/Turn.php:17
+msgid "Only one action can be performed per turn."
+msgstr "Только одно действие может быть выполнено за ход."
+
+#: src/PHPWarrior/Abilities/Feel.php:10
+msgid "Returns a Space for the given direction (forward by default)."
+msgstr "Возвращает пространство для данного направления (вперед по умолчанию)."
+
+#: src/PHPWarrior/Abilities/DirectionOfStairs.php:10
+msgid ""
+"Returns the direction (left, right, forward, backward) the stairs are from "
+"your location."
+msgstr "Возвращает направление (влево, вправо, вперед, назад) Лестницы от вашего местоположения."
+
+#: src/PHPWarrior/Game.php:121
+msgid "Run rubywarrior again to play epic mode."
+msgstr "Запустите rubywarrior снова играть эпический режим."
+
+#: src/PHPWarrior/Game.php:116
+msgid "See the updated README in the phpwarrior/%s directory."
+msgstr "Смотрите обновленную README в phpwarrior / %s каталоге."
+
+#: src/PHPWarrior/Game.php:144
+msgid ""
+"See the updated README in the rubywarrior/#{profile.directory_name} "
+"directory."
+msgstr "Смотрите обновленную README в rubywarrior / # {} profile.directory_name каталоге."
+
+#: towers/beginner/level_004.php:8
+msgid ""
+"Set $this->health to your current health at the end of the turn. If this is "
+"greater than your current health next turn then you know you're taking "
+"damage and shouldn't rest."
+msgstr "Установить $ this-> здоровье вашего текущего здоровья в конце хода. Если это больше, чем ваш текущий здравоохранения следующем повороте, то вы знаете, вы принимаете ущерб и не должны отдыхать."
+
+#: src/PHPWarrior/Game.php:101
+msgid "Sorry, you failed level %s. Change your script and try again."
+msgstr "К сожалению, вам не удалось уровень %s . Изменить сценарий и попробуйте еще раз."
+
+#: templates/README.php:12
+msgid "Stairs"
+msgstr "Лестница"
+
+#: src/PHPWarrior/Game.php:79
+msgid "Starting Level %s"
+msgstr "Начиная Уровень %s"
+
+#: src/PHPWarrior/Game.php:124
+msgid "Staying on current level. Try to earn more points next time."
+msgstr "Пребывание на текущем уровне. Попробуйте заработать больше очков в следующий раз."
+
+#: src/PHPWarrior/Game.php:85
+msgid "Success! You have found the stairs."
+msgstr "Удачи! Вы нашли по лестнице."
+
+#: towers/beginner/level_003.php:6
+msgid "The air feels thicker than before. There must be a horde of sludge."
+msgstr "Воздух считает толще, чем раньше. Там должны быть орда ила."
+
+#: towers/beginner/level_006.php:7
+msgid ""
+"The wall behind you feels a bit further away in this room. And you hear more "
+"cries for help."
+msgstr "Стена позади вас чувствует себя немного дальше в этой комнате. И вы услышите больше крики о помощи."
+
+#: src/PHPWarrior/Level.php:91
+msgid "Time Bonus: %s"
+msgstr "Время Бонус: %s"
+
+#: towers/beginner/level_009.php:6
+msgid ""
+"Time to hone your skills and apply all of the abilities that you have "
+"learned."
+msgstr "Время, чтобы отточить свои навыки и применять все способности, которые вы узнали."
+
+#: templates/README.php:7
+msgid "Tip"
+msgstr "Наконечник"
+
+#: src/PHPWarrior/Game.php:204
+msgid ""
+"To practice a level, use the -l option:\n"
+"\n"
+"  php-warrior -l 3"
+msgstr "Чтобы практиковать уровень, используйте опцию -l: \ N \ N PHP-воина -l 3"
+
+#: src/PHPWarrior/Level.php:112 src/PHPWarrior/Level.php:121
+msgid "Total Score: %s"
+msgstr "Общая оценка: %s"
+
+#: src/PHPWarrior/Game.php:35
+msgid "Unable to continue without directory."
+msgstr "Невозможно продолжить без каталога."
+
+#: towers/beginner/level_005.php:7
+msgid ""
+"Use $warrior->feel()->is_captive() to see if there is a captive and $warrior-"
+">rescue() to rescue him. Don't attack captives."
+msgstr "Используйте $ Warrior-> чувство () -> is_captive (), чтобы увидеть, если есть в плен и $ Warrior-> спасательные (), чтобы спасти его. Не нападайте на пленных."
+
+#: towers/beginner/level_002.php:7
+msgid ""
+"Use warrior.feel.empty? to see if there is anything in front of you, and "
+"warrior.attack! to fight it. Remember, you can only do one action (ending "
+"in !) per turn."
+msgstr "Используйте warrior.feel.empty? чтобы увидеть, если есть что-нибудь перед вами, и warrior.attack! для борьбы с ней. Помните, что вы можете сделать только одно действие (окончание в!) За свою."
+
+#: towers/beginner/level_008.php:7
+msgid ""
+"Use warrior.look to determine your surroundings, and warrior.shoot! to fire "
+"an arrow."
+msgstr "Используйте warrior.look определить ваше окружение, и warrior.shoot! стрелять стрелку."
+
+#: towers/beginner/level_006.php:9
+msgid ""
+"Walk backward if you are taking damage from afar and do not have enough "
+"health to attack. You may also want to consider walking backward until "
+"$warrior->feel(':backward')->is_wall()."
+msgstr "Прогулка назад, если вы принимаете повреждения издалека и не хватает здоровья для атаки. Вы также можете рассмотреть ходьбе назад, пока $ Warrior-> чувство ('': назад) -> is_wall ()."
+
+#: src/PHPWarrior/Units/Warrior.php:48
+msgid "Warrior"
+msgstr "Воин"
+
+#: templates/README.php:17
+msgid "Warrior Abilities"
+msgstr "Воин Способности"
+
+#: towers/beginner/level_009.php:7
+msgid "Watch your back."
+msgstr "Следите за спиной."
+
+#: src/PHPWarrior/Game.php:10
+msgid "Welcome to PHP Warrior"
+msgstr "Добро пожаловать в PHP Warrior"
+
+#: towers/beginner/level_003.php:8
+msgid ""
+"When there is no enemy ahead of you call \\$warrior->rest() until health is "
+"full before walking forward."
+msgstr "Когда нет врагов впереди вы звоните \\ $ Warrior-> Остальные () до тех пор, пока здоровье полна прежде, чем идти вперед."
+
+#: templates/README.php:25
+msgid "When you're done editing player.php, run the php-warrior command again."
+msgstr "Когда вы закончите редактирование player.php, выполните команду PHP-воин снова."
+
+#: towers/beginner/level_008.php:8
+msgid ""
+"Wizards are deadly but low in health. Kill them before they have time to "
+"attack."
+msgstr "Мастера смертельно, но с низким здоровьем. Убейте их, прежде чем они успели атаковать."
+
+#: src/PHPWarrior/Game.php:112
+msgid "Would you like to continue on to epic mode?"
+msgstr "Хотите продолжить на эпическом режиме?"
+
+#: src/PHPWarrior/Game.php:112
+msgid "Would you like to continue on to the next level?"
+msgstr "Хотите продолжить на следующий уровень?"
+
+#: src/PHPWarrior/Game.php:104
+msgid "Would you like to read the additional clues for this level?"
+msgstr "Хотите, чтобы прочитать дополнительные ключи для этого уровня?"
+
+#: towers/beginner/level_007.php:7
+msgid ""
+"You are not as effective at attacking backward. Use $warrior->feel()->is_wall"
+"() and $warrior->pivot() to turn around."
+msgstr "Вы не так эффективны при нападении назад. Используйте $ Warrior-> чувство () -> is_wall () и $ Warrior-> стержнем (), чтобы повернуть."
+
+#: towers/beginner/level_004.php:6
+msgid "You can hear bow strings being stretched."
+msgstr "Вы можете услышать лук строки растягивается."
+
+#: towers/beginner/level_006.php:8
+msgid ""
+"You can walk backward by passing ':backward' as an argument to walk!. Same "
+"goes for feel, rescue! and attack!. Archers have a limited attack distance."
+msgstr "Вы можете ходить назад, передавая ": назад" в качестве аргумента, чтобы идти !. То же самое касается чувства, помощь! и атака !. Лучники имеют ограниченное расстояние атаки."
+
+#: towers/beginner/level_007.php:6
+msgid "You feel a wall right in front of you and an opening behind you."
+msgstr "Вы чувствуете правой стене перед вами и отверстие позади вас."
+
+#: towers/beginner/level_005.php:6
+msgid "You hear cries for help. Captives must need rescuing."
+msgstr "Вы слышите крики о помощи. Пленники должны нуждаться для спасения."
+
+#: towers/beginner/level_008.php:6
+msgid ""
+"You hear the mumbling of wizards. Beware of their deadly wands! Good thing "
+"you found a bow."
+msgstr "Вы слышите бормотание мастеров. Остерегайтесь их смертельных палочки! Хорошо, что вы нашли лук."
+
+#: towers/beginner/level_001.php:6
+msgid ""
+"You see before yourself a long hallway with stairs at the end. There is "
+"nothing in the way."
+msgstr "Вы видите перед собой длинный коридор с лестницей в конце. Там нет ничего в пути."
+
+#: src/PHPWarrior/Game.php:199
+msgid "Your average grade for this tower is: %s"
+msgstr "Ваш средний балл для этой башни является: %s"
+
+#: src/PHPWarrior/Abilities/Attack.php:16
+msgid "attacks %1$s and hits %2$s"
+msgstr "атаки %1$s и парад %2$s"
+
+#: src/PHPWarrior/Abilities/Attack.php:28
+msgid "attacks %s and hits nothing"
+msgstr "атаки %s и не парад ничего"
+
+#: src/PHPWarrior/Position.php:122
+msgid "backward"
+msgstr "назад"
+
+#: src/PHPWarrior/Abilities/Bind.php:17
+msgid "binds %$1s and restricts %$2s"
+msgstr "связывает% $ 1s и ограничивает% $ 2s"
+
+#: src/PHPWarrior/Abilities/Bind.php:24
+msgid "binds %s and restricts nothing"
+msgstr "связывает %s и не ограничивает ничего"
+
+#: src/PHPWarrior/Abilities/Walk.php:23
+msgid "bumps into %s"
+msgstr "врезается в %s"
+
+#: src/PHPWarrior/Units/Base.php:42
+msgid "dies"
+msgstr "умирает"
+
+#: src/PHPWarrior/Units/Warrior.php:58
+msgid "does nothing"
+msgstr "ничего не делает"
+
+#: src/PHPWarrior/Units/Warrior.php:27
+msgid "earns %s points"
+msgstr "зарабатывает %s точек"
+
+#: src/PHPWarrior/Position.php:117
+msgid "east"
+msgstr "восток"
+
+#: src/PHPWarrior/Position.php:120
+msgid "forward"
+msgstr "вперед"
+
+#: src/PHPWarrior/Abilities/Rest.php:23
+msgid "is already fit as a fiddle"
+msgstr "уже как огурчик"
+
+#: src/PHPWarrior/Position.php:123
+msgid "left"
+msgstr "слева"
+
+#: src/PHPWarrior/Position.php:116
+msgid "north"
+msgstr "север"
+
+#: src/PHPWarrior/Space.php:92
+msgid "nothing"
+msgstr "ничего"
+
+#: src/PHPWarrior/Abilities/Rest.php:18
+msgid "receives %1$s health from resting, up to %2$s health"
+msgstr "получает %1$s здоровья от отдыха, до %2$s здоровья"
+
+#: src/PHPWarrior/Units/Base.php:56
+msgid "released from bonds"
+msgstr "освобожден от облигаций"
+
+#: src/PHPWarrior/Position.php:121
+msgid "right"
+msgstr "право"
+
+#: src/PHPWarrior/Profile.php:59
+msgid "score"
+msgstr "Гол"
+
+#: src/PHPWarrior/Position.php:119
+msgid "south"
+msgstr "на юг"
+
+#: src/PHPWarrior/Units/Base.php:36
+msgid "takes %1$s damage, %2$s health power left"
+msgstr "занимает %1$s ущерб, %2$s питания здоровья левый"
+
+#: src/PHPWarrior/Abilities/Walk.php:15
+msgid "walks %s"
+msgstr "прогулки %s"
+
+#: src/PHPWarrior/Space.php:90
+msgid "wall"
+msgstr "стена"
+
+#: src/PHPWarrior/Position.php:118
+msgid "west"
+msgstr "запад"
+
