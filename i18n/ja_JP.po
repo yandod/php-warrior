@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-22 00:35+0900\n"
+"PO-Revision-Date: 2015-06-23 22:37+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -94,7 +94,7 @@ msgstr "生命力が最大の10%回復。ただし他の行動は出来ない。
 
 #: towers/beginner/level_002.php:6
 msgid "It is too dark to see anything, but you smell sludge nearby."
-msgstr ""
+msgstr "真っ暗で何も見えない。しかしスライムが近くにいる臭いがする。"
 
 #: src/PHPWarrior/Profile.php:58 templates/README.php:1
 msgid "Level"
@@ -257,7 +257,7 @@ msgstr "戦士の能力"
 
 #: towers/beginner/level_009.php:7
 msgid "Watch your back."
-msgstr ""
+msgstr "背後に注意。"
 
 #: src/PHPWarrior/Game.php:10
 msgid "Welcome to PHP Warrior"
@@ -310,7 +310,7 @@ msgstr ""
 
 #: towers/beginner/level_007.php:6
 msgid "You feel a wall right in front of you and an opening behind you."
-msgstr ""
+msgstr "正面は壁のようだ。そして背後が開けている。"
 
 #: towers/beginner/level_005.php:6
 msgid "You hear cries for help. Captives must need rescuing."
