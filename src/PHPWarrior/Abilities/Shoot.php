@@ -21,7 +21,7 @@ class Shoot extends Base {
       $this->unit->say(sprintf(
         __('shoots %1$s and hits %2$s'),
         __($direction),
-        __($receiver)
+        $receiver
       ));
       $this->damage($receiver, $this->unit->shoot_power());
     } else {

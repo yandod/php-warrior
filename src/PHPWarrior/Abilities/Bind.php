@@ -16,7 +16,7 @@ class Bind extends Base {
       $this->unit->say(sprintf(
         __('binds %1$s and restricts %2$s'),
         __($direction),
-        __($receiver)
+        $receiver
       ));
       $receiver->bind();
     } else {

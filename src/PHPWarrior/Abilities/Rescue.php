@@ -16,7 +16,7 @@ class Rescue extends Base {
       $this->unit->say(sprintf(
         __('unbinds %1$s and rescues %2$s'),
         __($direction),
-        __($recipient)
+        $recipient
       ));
       $recipient->unbind();
       if (is_a($recipient, 'PHPWarrior\Units\Captive')) {
