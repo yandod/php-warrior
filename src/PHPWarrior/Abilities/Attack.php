@@ -17,7 +17,7 @@ class Attack extends Base {
         __($direction),
         $receiver
       ));
-      if ($direction === ':backward') {
+      if ($direction === 'backward') {
         $power = ceil($this->unit->attack_power()/2.0);
       } else {
         $power = $this->unit->attack_power();

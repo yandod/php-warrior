@@ -55,6 +55,10 @@ msgstr ""
 msgid "Clear Bonus: %s"
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Detonate.php:7
+msgid "Detonate a bomb in a given direction (forward by default) which damages that space and surrounding 4 spaces (including yourself)."
+msgstr ""
+
 #: towers/beginner/level_005.php:8
 msgid "Don't forget to constantly check if you're taking damage. Rest until your health is full if you aren't taking damage."
 msgstr ""
@@ -300,6 +304,14 @@ msgstr ""
 
 #: src/PHPWarrior/Abilities/Walk.php:23
 msgid "bumps into %s"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Detonate.php:30
+msgid "caught in bomb's flames which detonates ticking explosive"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Detonate.php:15
+msgid "detonates a bomb %s launching a deadly explosion."
 msgstr ""
 
 #: src/PHPWarrior/Units/Base.php:42
