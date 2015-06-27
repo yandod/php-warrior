@@ -8,7 +8,7 @@ class Listen extends Base {
   public $is_sense = true;
 
   public function description() {
-    return "Returns an array of all spaces which have units in them.";
+    return __("Returns an array of all spaces which have units in them.");
   }
 
   public function perform() {

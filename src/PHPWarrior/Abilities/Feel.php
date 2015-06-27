@@ -10,7 +10,8 @@ class Feel extends Base {
     return __('Returns a Space for the given direction (forward by default).');
   }
 
-  public function perform($direction = ':forward') {
+  public function perform($direction = 'forward') {
+    $direction = \PHPWarrior\Position::normalize_direction($direction);
     $this->verify_direction($direction);
     return $this->space($direction);
   }

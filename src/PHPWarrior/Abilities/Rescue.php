@@ -5,10 +5,11 @@ namespace PHPWarrior\Abilities;
 
 class Rescue extends Base {
   public function description() {
-    return "Rescue a captive from his chains (earning 20 points) in given direction (forward by default).";
+    return __("Rescue a captive from his chains (earning 20 points) in given direction (forward by default).");
   }
 
-  public function perform($direction = ':forward') {
+  public function perform($direction = 'forward') {
+    $direction = \PHPWarrior\Position::normalize_direction($direction);
     $this->verify_direction($direction);
     if ($this->space($direction)->is_captive()) {
       $recipient = $this->unit($direction);

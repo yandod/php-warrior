@@ -8,7 +8,8 @@ class Walk extends Base {
     return __("Move in the given direction (forward by default).");
   }
 
-  public function perform($direction = ':forward') {
+  public function perform($direction = 'forward') {
+    $direction = \PHPWarrior\Position::normalize_direction($direction);
     $this->verify_direction($direction);
     if ($this->unit->position) {
       $s_direction = __(str_replace(':','',$direction));

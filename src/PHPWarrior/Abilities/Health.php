@@ -7,7 +7,7 @@ class Health extends Base {
   public $is_sense = true;
 
   public function description() {
-    return 'Returns an integer representing your health.';
+    return __('Returns an integer representing your health.');
   }
 
   public function perform() {

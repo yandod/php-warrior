@@ -83,6 +83,10 @@ msgstr ""
 msgid "It is too dark to see anything, but you smell sludge nearby."
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Explode.php:10
+msgid "Kills you and all surrounding units. You probably don't want to do this intentionally."
+msgstr ""
+
 #: src/PHPWarrior/Profile.php:58 templates/README.php:1
 msgid "Level"
 msgstr ""
@@ -115,12 +119,40 @@ msgstr ""
 msgid "Only one action can be performed per turn."
 msgstr ""
 
+#: src/PHPWarrior/Abilities/DistanceOf.php:11
+msgid "Pass a Space as an argument, and it will return an integer representing the distance to that space."
+msgstr ""
+
+#: src/PHPWarrior/Abilities/DirectionOf.php:10
+msgid "Pass a Space as an argument, and the direction (left, right, forward, backward) to that space will be returned."
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Rescue.php:8
+msgid "Rescue a captive from his chains (earning 20 points) in given direction (forward by default)."
+msgstr ""
+
 #: src/PHPWarrior/Abilities/Feel.php:10
 msgid "Returns a Space for the given direction (forward by default)."
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Listen.php:11
+msgid "Returns an array of all spaces which have units in them."
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Look.php:10
+msgid "Returns an array of up to three Spaces in the given direction (forward by public functionault)."
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Health.php:10
+msgid "Returns an integer representing your health."
+msgstr ""
+
 #: src/PHPWarrior/Abilities/DirectionOfStairs.php:10
 msgid "Returns the direction (left, right, forward, backward) the stairs are from your location."
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Pivot.php:9
+msgid "Rotate left, right or backward (default)"
 msgstr ""
 
 #: src/PHPWarrior/Game.php:121
@@ -137,6 +169,10 @@ msgstr ""
 
 #: towers/beginner/level_004.php:8
 msgid "Set $this->health to your current health at the end of the turn. If this is greater than your current health next turn then you know you're taking damage and shouldn't rest."
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Shoot.php:7
+msgid "Shoot your bow & arrow in given direction (forward by default)."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:101
@@ -302,7 +338,7 @@ msgstr ""
 msgid "binds %s and restricts nothing"
 msgstr ""
 
-#: src/PHPWarrior/Abilities/Walk.php:23
+#: src/PHPWarrior/Abilities/Walk.php:24
 msgid "bumps into %s"
 msgstr ""
 
@@ -330,12 +366,20 @@ msgstr ""
 msgid "east"
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Explode.php:15
+msgid "explodes, collapsing the ceiling and damanging every unit."
+msgstr ""
+
 #: src/PHPWarrior/Position.php:120
 msgid "forward"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Rest.php:23
 msgid "is already fit as a fiddle"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Explode.php:24
+msgid "is ticking"
 msgstr ""
 
 #: src/PHPWarrior/Position.php:123
@@ -374,7 +418,7 @@ msgstr ""
 msgid "takes %1$s damage, %2$s health power left"
 msgstr ""
 
-#: src/PHPWarrior/Abilities/Walk.php:15
+#: src/PHPWarrior/Abilities/Walk.php:16
 msgid "walks %s"
 msgstr ""
 

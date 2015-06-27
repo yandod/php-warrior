@@ -4,10 +4,11 @@ namespace PHPWarrior\Abilities;
 
 class Shoot extends Base {
   public function description() {
-    return "Shoot your bow & arrow in given direction (forward by default).";
+    return __("Shoot your bow & arrow in given direction (forward by default).");
   }
 
-  public function perform($direction = ':forward') {
+  public function perform($direction = 'forward') {
+    $direction = \PHPWarrior\Position::normalize_direction($direction);
     $this->verify_direction($direction);
     $receiver = null;
     foreach ($this->multi_unit($direction, range(1,3)) as $row) {

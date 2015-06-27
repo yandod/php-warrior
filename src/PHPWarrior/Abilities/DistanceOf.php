@@ -8,7 +8,7 @@ class DistanceOf extends Base {
   public $is_sense = true;
 
   public function description() {
-    return "Pass a Space as an argument, and it will return an integer representing the distance to that space.";
+    return __("Pass a Space as an argument, and it will return an integer representing the distance to that space.");
   }
 
   public function perform($space) {
