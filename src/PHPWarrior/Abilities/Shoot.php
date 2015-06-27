@@ -19,7 +19,7 @@ class Shoot extends Base {
     }
     if ($receiver) {
       $this->unit->say(sprintf(
-        __("shoots %$1s and hits %$2s"),
+        __('shoots %1$s and hits %2$s'),
         __($direction),
         __($receiver)
       ));

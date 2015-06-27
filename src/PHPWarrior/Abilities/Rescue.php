@@ -14,7 +14,7 @@ class Rescue extends Base {
     if ($this->space($direction)->is_captive()) {
       $recipient = $this->unit($direction);
       $this->unit->say(sprintf(
-        __("unbinds %$1s and rescues  %$2s"),
+        __('unbinds %1$s and rescues %2$s'),
         __($direction),
         __($recipient)
       ));

@@ -331,7 +331,7 @@ msgid "backward"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Bind.php:17
-msgid "binds %$1s and restricts %$2s"
+msgid "binds %1$s and restricts %2$s"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Bind.php:24
@@ -415,7 +415,7 @@ msgid "score"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Shoot.php:22
-msgid "shoots %$1s and hits %$2s"
+msgid "shoots %1$s and hits %2$s"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Shoot.php:28
@@ -431,7 +431,7 @@ msgid "takes %1$s damage, %2$s health power left"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Rescue.php:17
-msgid "unbinds %$1s and rescues  %$2s"
+msgid "unbinds %1$s and rescues %2$s"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Rescue.php:28
