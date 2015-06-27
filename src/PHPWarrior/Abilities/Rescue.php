@@ -13,14 +13,21 @@ class Rescue extends Base {
     $this->verify_direction($direction);
     if ($this->space($direction)->is_captive()) {
       $recipient = $this->unit($direction);
-      $this->unit->say("unbinds {$direction} and rescues {$recipient}");
+      $this->unit->say(sprintf(
+        __("unbinds %$1s and rescues  %$2s"),
+        __($direction),
+        __($recipient)
+      ));
       $recipient->unbind();
       if (is_a($recipient, 'PHPWarrior\Units\Captive')) {
         $recipient->position = null;
         $this->unit->earn_points(20);
       }
     } else {
-      $this->unit->say("unbinds {$direction} and rescues nothing");
+      $this->unit->say(sprintf(
+        __("unbinds %s and rescues nothing"),
+        __($direction)
+      ));
     }
   }
 }

@@ -394,6 +394,10 @@ msgstr ""
 msgid "nothing"
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Pivot.php:19
+msgid "pivots %s"
+msgstr ""
+
 #: src/PHPWarrior/Abilities/Rest.php:18
 msgid "receives %1$s health from resting, up to %2$s health"
 msgstr ""
@@ -410,12 +414,28 @@ msgstr ""
 msgid "score"
 msgstr ""
 
+#: src/PHPWarrior/Abilities/Shoot.php:22
+msgid "shoots %$1s and hits %$2s"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Shoot.php:28
+msgid "shoots and hits nothing"
+msgstr ""
+
 #: src/PHPWarrior/Position.php:119
 msgid "south"
 msgstr ""
 
 #: src/PHPWarrior/Units/Base.php:36
 msgid "takes %1$s damage, %2$s health power left"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Rescue.php:17
+msgid "unbinds %$1s and rescues  %$2s"
+msgstr ""
+
+#: src/PHPWarrior/Abilities/Rescue.php:28
+msgid "unbinds %s and rescues nothing"
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Walk.php:16

@@ -15,6 +15,9 @@ class Pivot extends Base {
     $this->unit->position->rotate(
       array_search($direction, self::$ROTATION_DIRECTIONS)
     );
-    $this->unit->say("pivots {$direction}");
+    $this->unit->say(sprintf(
+      __("pivots %s"),
+      __($direction)
+    ));
   }
 }

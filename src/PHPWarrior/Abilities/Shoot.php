@@ -18,10 +18,14 @@ class Shoot extends Base {
       }
     }
     if ($receiver) {
-      $this->unit->say("shoots {$direction} and hits {$receiver}");
+      $this->unit->say(sprintf(
+        __("shoots %$1s and hits %$2s"),
+        __($direction),
+        __($receiver)
+      ));
       $this->damage($receiver, $this->unit->shoot_power());
     } else {
-      $this->unit->say("shoots and hits nothing");
+      $this->unit->say(__("shoots and hits nothing"));
     }
   }
 
