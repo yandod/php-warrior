@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-28 13:45+0900\n"
+"PO-Revision-Date: 2015-06-28 14:04+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -27,20 +27,47 @@ msgid ""
 "whether to $warrior->attack() or $warrior->walk()."
 msgstr ""
 
+#: towers/intermediate/level_002.php:7
+msgid ""
+"Another large room, but with several enemies blocking your way to the stairs."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:143
 msgid ""
 "Another level has been added since you started epic, going back to normal "
 "mode."
 msgstr ""
 
+#: towers/intermediate/level_007.php:8
+msgid "Another ticking sound, but some sludge is blocking the way."
+msgstr ""
+
 #: src/PHPWarrior/Abilities/Attack.php:7
 msgid "Attacks a unit in given direction (forward by default)."
 msgstr "指定された方向のユニットを攻撃する。 (forward がデフォルト)"
+
+#: towers/intermediate/level_006.php:9
+msgid ""
+"Avoid fighting enemies at first. Use warrior.listen and space.ticking? and "
+"quickly rescue those captives."
+msgstr ""
 
 #: towers/beginner/level_003.php:7
 msgid ""
 "Be careful not to die! Use warrior.health to keep an eye on your health, and "
 "warrior.rest! to earn 10% of max health back."
+msgstr ""
+
+#: towers/intermediate/level_009.php:9
+msgid ""
+"Be careful not to let the ticking captive get caught in the flames. Use "
+"warrior.distance_of to avoid the captives."
+msgstr ""
+
+#: towers/intermediate/level_009.php:10
+msgid ""
+"Be sure to bind the surrounding enemies before fighting. Check your health "
+"before detonating explosives."
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Bind.php:8
@@ -54,10 +81,29 @@ msgid ""
 "fair maiden PHP."
 msgstr "おめでとう! きみは塔の頂上に到達し、麗しいPHP姫を救出した。"
 
+#: towers/intermediate/level_002.php:9
+msgid ""
+"Call $warrior->feel($direction)->is_enemy() in each direction to make sure "
+"there isn't an enemy beside you (attack if there is). Call warrior.rest! if "
+"you're low and health when there are no enemies around."
+msgstr ""
+
 #: towers/beginner/level_001.php:7
 msgid "Call $warrior->walk() to walk forward in the Player 'play_turn' method."
 msgstr ""
 "Playerの 'play_turn' メソッドの中で $warrior->walk() を呼び出して前に歩こう。"
+
+#: towers/intermediate/level_003.php:9
+msgid ""
+"Call warrior.bind!(direction) to bind an enemy to keep him from attacking. "
+"Bound enemies look like captives."
+msgstr ""
+
+#: towers/intermediate/level_008.php:8
+msgid ""
+"Calling warrior.look will return an array of Spaces. If the first two "
+"contain enemies, detonate a bomb with warrior.detonate!."
+msgstr ""
 
 #: src/PHPWarrior/UI.php:58
 msgid "Choose %s by typing the number: "
@@ -67,10 +113,28 @@ msgstr "番号で %s を選択してください:"
 msgid "Clear Bonus: %s"
 msgstr "クリアボーナス: %s"
 
+#: towers/intermediate/level_003.php:10
+msgid ""
+"Count the number of enemies around you. Bind an enemy if there are two or "
+"more."
+msgstr ""
+
+#: towers/intermediate/level_007.php:10
+msgid ""
+"Determine the direction of the ticking captive and kill any enemies blocking "
+"that path. You may need to bind surrounding enemies first."
+msgstr ""
+
 #: src/PHPWarrior/Abilities/Detonate.php:7
 msgid ""
 "Detonate a bomb in a given direction (forward by default) which damages that "
 "space and surrounding 4 spaces (including yourself)."
+msgstr ""
+
+#: towers/intermediate/level_008.php:7
+msgid ""
+"Detonate a bomb when you see a couple enemies ahead of you (warrior.look). "
+"Watch out for your health too."
 msgstr ""
 
 #: towers/beginner/level_005.php:8
@@ -98,9 +162,26 @@ msgstr "最初のレベルが生成された。phpwarrior/%s/README の説明を
 msgid "Gain 10% of max health back, but do nothing more."
 msgstr "生命力が最大の10%回復。ただし他の行動は出来ない。"
 
+#: towers/intermediate/level_006.php:8
+msgid ""
+"Hurry and rescue captives first that have space.ticking?, they'll soon go!"
+msgstr ""
+
+#: towers/intermediate/level_005.php:9
+msgid ""
+"If going towards a unit is the same direction as the stairs, try moving "
+"another empty direction until you can safely move toward the enemies."
+msgstr ""
+
 #: towers/beginner/level_002.php:6
 msgid "It is too dark to see anything, but you smell sludge nearby."
 msgstr "真っ暗で何も見えない。しかしスライムが近くにいる臭いがする。"
+
+#: towers/intermediate/level_002.php:8
+msgid ""
+"Just like walking, you can attack() and feel in multiple directions "
+"(forward, left, right, backward)."
+msgstr ""
 
 #: src/PHPWarrior/Abilities/Explode.php:10
 msgid ""
@@ -123,6 +204,11 @@ msgstr "レベル得点: %s"
 #: src/PHPWarrior/Abilities/Walk.php:8
 msgid "Move in the given direction (forward by default)."
 msgstr "指定された方向へ歩く。 (forward がデフォルト)"
+
+#: towers/intermediate/level_009.php:8
+msgid ""
+"Never before have you seen a room so full of sludge. Start the fireworks!"
+msgstr ""
 
 #: src/PHPWarrior/Game.php:212
 msgid "New Profile"
@@ -154,6 +240,12 @@ msgid ""
 "Pass a Space as an argument, and the direction (left, right, forward, "
 "backward) to that space will be returned."
 msgstr "与えられた空間への方向を得る。(left, right, forwardm backword)"
+
+#: towers/intermediate/level_007.php:9
+msgid ""
+"Quickly kill the sludge and rescue the captive before the bomb goes off. You "
+"can't simply go around them."
+msgstr ""
 
 #: src/PHPWarrior/Abilities/Rescue.php:8
 msgid ""
@@ -214,6 +306,12 @@ msgstr ""
 msgid "Shoot your bow & arrow in given direction (forward by default)."
 msgstr "指定された方向へ射撃する。 (forward がデフォルト)"
 
+#: towers/intermediate/level_001.php:9
+msgid ""
+"Silence. The room feels large, but empty. Luckily you have a map of this "
+"tower to help find the stairs."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:101
 msgid "Sorry, you failed level %s. Change your script and try again."
 msgstr "残念。君はレベル %s に失敗した。スクリプトを変更し再挑戦してください。"
@@ -273,6 +371,12 @@ msgstr "総合得点: %s"
 msgid "Unable to continue without directory."
 msgstr "ディレクトリ無しでは継続できません。"
 
+#: towers/intermediate/level_001.php:10
+msgid ""
+"Use $warrior->direction_of_stairs() to determine which direction stairs are "
+"located. Pass this to warrior.walk! to walk in that direction."
+msgstr ""
+
 #: towers/beginner/level_005.php:7
 msgid ""
 "Use $warrior->feel()->is_captive() to see if there is a captive and $warrior-"
@@ -286,6 +390,12 @@ msgid ""
 "in !) per turn."
 msgstr ""
 
+#: towers/intermediate/level_004.php:9
+msgid ""
+"Use warrior.listen to find spaces with other units, and warrior.direction_of "
+"to determine what direction they're in."
+msgstr ""
+
 #: towers/beginner/level_008.php:7
 msgid ""
 "Use warrior.look to determine your surroundings, and warrior.shoot! to fire "
@@ -297,6 +407,13 @@ msgid ""
 "Walk backward if you are taking damage from afar and do not have enough "
 "health to attack. You may also want to consider walking backward until "
 "$warrior->feel(':backward')->is_wall()."
+msgstr ""
+
+#: towers/intermediate/level_004.php:10
+msgid ""
+"Walk towards an enemy or captive with $warrior->walk($warrior->direction_of"
+"($warrior->listen()[0])), once empty($warrior->listen()) then head for the "
+"stairs."
 msgstr ""
 
 #: src/PHPWarrior/Units/Warrior.php:48
@@ -314,6 +431,10 @@ msgstr "背後に注意。"
 #: src/PHPWarrior/Game.php:10
 msgid "Welcome to PHP Warrior"
 msgstr "PHP Warrior へようこそ"
+
+#: towers/intermediate/level_006.php:7
+msgid "What's that ticking? Some captives have a timed bomb at their feet!"
+msgstr ""
 
 #: towers/beginner/level_003.php:8
 msgid ""
@@ -350,6 +471,12 @@ msgid ""
 "() and $warrior->pivot() to turn around."
 msgstr ""
 
+#: towers/intermediate/level_005.php:7
+msgid ""
+"You can feel the stairs right next to you, but are you sure you want to go "
+"up them right away?"
+msgstr ""
+
 #: towers/beginner/level_004.php:6
 msgid "You can hear bow strings being stretched."
 msgstr ""
@@ -360,9 +487,18 @@ msgid ""
 "goes for feel, rescue! and attack!. Archers have a limited attack distance."
 msgstr ""
 
+#: towers/intermediate/level_008.php:6
+msgid ""
+"You discover a satchel of bombs which will help when facing a mob of enemies."
+msgstr ""
+
 #: towers/beginner/level_007.php:6
 msgid "You feel a wall right in front of you and an opening behind you."
 msgstr "正面は壁のようだ。そして背後が開けている。"
+
+#: towers/intermediate/level_003.php:8
+msgid "You feel slime on all sides, you're surrounded!"
+msgstr ""
 
 #: towers/beginner/level_005.php:6
 msgid "You hear cries for help. Captives must need rescuing."
@@ -380,9 +516,21 @@ msgid ""
 "nothing in the way."
 msgstr "きみの前には長い廊下があり奥には階段が見える。他には何もない。"
 
+#: towers/intermediate/level_005.php:8
+msgid ""
+"You'll get more points for clearing the level first. Use warrior.feel."
+"stairs? and warrior.feel.empty? to determine where to go."
+msgstr ""
+
 #: src/PHPWarrior/Game.php:199
 msgid "Your average grade for this tower is: %s"
 msgstr "あなたのこの塔の平均評価は: %s"
+
+#: towers/intermediate/level_004.php:8
+msgid ""
+"Your ears become more in tune with the surroundings. Listen to find enemies "
+"and captives!"
+msgstr ""
 
 #: src/PHPWarrior/Abilities/Attack.php:16
 msgid "attacks %1$s and hits %2$s"
