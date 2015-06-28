@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-27 23:48+0900\n"
+"PO-Revision-Date: 2015-06-28 13:45+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -150,18 +150,16 @@ msgid ""
 msgstr ""
 
 #: src/PHPWarrior/Abilities/DirectionOf.php:10
-#, fuzzy
 msgid ""
 "Pass a Space as an argument, and the direction (left, right, forward, "
 "backward) to that space will be returned."
-msgstr "現在の位置から階段への方向を得る。(left, right, forward, backward)"
+msgstr "与えられた空間への方向を得る。(left, right, forwardm backword)"
 
 #: src/PHPWarrior/Abilities/Rescue.php:8
-#, fuzzy
 msgid ""
 "Rescue a captive from his chains (earning 20 points) in given direction "
 "(forward by default)."
-msgstr "指定された方向のユニットを攻撃する。 (forward がデフォルト)"
+msgstr "指定された方向の捕虜を鎖から救助する。(20点を獲得)"
 
 #: src/PHPWarrior/Abilities/Feel.php:10
 msgid "Returns a Space for the given direction (forward by default)."
@@ -172,11 +170,10 @@ msgid "Returns an array of all spaces which have units in them."
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Look.php:10
-#, fuzzy
 msgid ""
 "Returns an array of up to three Spaces in the given direction (forward by "
 "public functionault)."
-msgstr "指定された方向の空間を取得する。 (forward がデフォルト)"
+msgstr "指定された方向の空間3つまで取得する。 (forward がデフォルト)"
 
 #: src/PHPWarrior/Abilities/Health.php:10
 msgid "Returns an integer representing your health."
@@ -214,9 +211,8 @@ msgid ""
 msgstr ""
 
 #: src/PHPWarrior/Abilities/Shoot.php:7
-#, fuzzy
 msgid "Shoot your bow & arrow in given direction (forward by default)."
-msgstr "指定された方向へ歩く。 (forward がデフォルト)"
+msgstr "指定された方向へ射撃する。 (forward がデフォルト)"
 
 #: src/PHPWarrior/Game.php:101
 msgid "Sorry, you failed level %s. Change your script and try again."
@@ -401,7 +397,8 @@ msgid "backward"
 msgstr "後方"
 
 #: src/PHPWarrior/Abilities/Bind.php:17
-msgid "binds %$1s and restricts %$2s"
+#, fuzzy
+msgid "binds %1$s and restricts %2$s"
 msgstr "%1$sを束縛し、%2$sを拘束。"
 
 #: src/PHPWarrior/Abilities/Bind.php:24
@@ -466,11 +463,11 @@ msgstr "何もない"
 
 #: src/PHPWarrior/Abilities/Pivot.php:19
 msgid "pivots %s"
-msgstr ""
+msgstr "%sを向いた。"
 
 #: src/PHPWarrior/Abilities/Rest.php:18
 msgid "receives %1$s health from resting, up to %2$s health"
-msgstr "休息により%1$sの生命力が%2$sを上限に回復。"
+msgstr "休息により%1$sの生命力を得て、%2$sに回復。"
 
 #: src/PHPWarrior/Units/Base.php:56
 msgid "released from bonds"
@@ -485,14 +482,12 @@ msgid "score"
 msgstr "点数"
 
 #: src/PHPWarrior/Abilities/Shoot.php:22
-#, fuzzy
-msgid "shoots %$1s and hits %$2s"
-msgstr "%1$sを攻撃し、%2$sに命中。"
+msgid "shoots %1$s and hits %2$s"
+msgstr "%1$sを射撃し、%2$sに命中。"
 
 #: src/PHPWarrior/Abilities/Shoot.php:28
-#, fuzzy
 msgid "shoots and hits nothing"
-msgstr "%sを攻撃し、空振りした。"
+msgstr "%sを射撃し、空振りした。"
 
 #: src/PHPWarrior/Position.php:119
 msgid "south"
@@ -503,14 +498,12 @@ msgid "takes %1$s damage, %2$s health power left"
 msgstr "%1$s のダメージを受け、残り生命力 %2$s"
 
 #: src/PHPWarrior/Abilities/Rescue.php:17
-#, fuzzy
-msgid "unbinds %$1s and rescues  %$2s"
-msgstr "%1$sを束縛し、%2$sを拘束。"
+msgid "unbinds %1$s and rescues %2$s"
+msgstr "%1$sを救助し、%2$sを解放した。"
 
 #: src/PHPWarrior/Abilities/Rescue.php:28
-#, fuzzy
 msgid "unbinds %s and rescues nothing"
-msgstr "%sを束縛し、空振りした。"
+msgstr "%sを救助し、空振りした。"
 
 #: src/PHPWarrior/Abilities/Walk.php:16
 msgid "walks %s"
