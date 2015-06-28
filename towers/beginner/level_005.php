@@ -3,9 +3,9 @@
 // |@ CaaSC|
 //  -------
 
-$this->description(__("You hear cries for help. Captives must need rescuing."));
-$this->tip(__("Use \$warrior->feel()->is_captive() to see if there is a captive and \$warrior->rescue() to rescue him. Don't attack captives."));
-$this->clue(__("Don't forget to constantly check if you're taking damage. Rest until your health is full if you aren't taking damage."));
+$this->description(__('You hear cries for help. Captives must need rescuing.'));
+$this->tip(__('Use $warrior->feel()->is_captive() to see if there is a captive and $warrior->rescue() to rescue him. Don\'t attack captives.'));
+$this->clue(__('Don\'t forget to constantly check if you\'re taking damage. Rest until your health is full if you aren\'t taking damage.'));
 
 $this->time_bonus(45);
 $this->ace_score(123);

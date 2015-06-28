@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-28 14:04+0900\n"
+"PO-Revision-Date: 2015-06-28 18:43+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -54,8 +54,8 @@ msgstr ""
 
 #: towers/beginner/level_003.php:7
 msgid ""
-"Be careful not to die! Use warrior.health to keep an eye on your health, and "
-"warrior.rest! to earn 10% of max health back."
+"Be careful not to die! Use $warrior->health() to keep an eye on your health, "
+"and $warrior->rest() to earn 10% of max health back."
 msgstr ""
 
 #: towers/intermediate/level_009.php:9
@@ -217,8 +217,8 @@ msgstr "新しいプロファイル"
 #: towers/beginner/level_004.php:7
 msgid ""
 "No new abilities this time, but you must be careful not to rest while taking "
-"damage. Save a @health instance variable and compare it on each turn to see "
-"if you\\re taking damage."
+"damage. Save a $this->health instance variable and compare it on each turn "
+"to see if you're taking damage."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:32
@@ -385,9 +385,15 @@ msgstr ""
 
 #: towers/beginner/level_002.php:7
 msgid ""
-"Use warrior.feel.empty? to see if there is anything in front of you, and "
-"warrior.attack! to fight it. Remember, you can only do one action (ending "
-"in !) per turn."
+"Use $warrior->feel()->is_empty() to see if there is anything in front of "
+"you, and $warrior->attack() to fight it. Remember, you can only do one "
+"action per turn."
+msgstr ""
+
+#: towers/beginner/level_008.php:7
+msgid ""
+"Use $warrior->look() to determine your surroundings, and $warrior->shoot() "
+"to fire an arrow."
 msgstr ""
 
 #: towers/intermediate/level_004.php:9
@@ -396,17 +402,11 @@ msgid ""
 "to determine what direction they're in."
 msgstr ""
 
-#: towers/beginner/level_008.php:7
-msgid ""
-"Use warrior.look to determine your surroundings, and warrior.shoot! to fire "
-"an arrow."
-msgstr ""
-
 #: towers/beginner/level_006.php:9
 msgid ""
 "Walk backward if you are taking damage from afar and do not have enough "
 "health to attack. You may also want to consider walking backward until "
-"$warrior->feel(':backward')->is_wall()."
+"$warrior->feel('backward')->is_wall()."
 msgstr ""
 
 #: towers/intermediate/level_004.php:10
@@ -438,7 +438,7 @@ msgstr ""
 
 #: towers/beginner/level_003.php:8
 msgid ""
-"When there is no enemy ahead of you call \\$warrior->rest() until health is "
+"When there is no enemy ahead of you call $warrior->rest() until health is "
 "full before walking forward."
 msgstr ""
 
@@ -483,8 +483,9 @@ msgstr ""
 
 #: towers/beginner/level_006.php:8
 msgid ""
-"You can walk backward by passing ':backward' as an argument to walk!. Same "
-"goes for feel, rescue! and attack!. Archers have a limited attack distance."
+"You can walk backward by passing 'backward' as an argument to walk(). Same "
+"goes for feel(), rescue() and attack(). Archers have a limited attack "
+"distance."
 msgstr ""
 
 #: towers/intermediate/level_008.php:6
@@ -545,7 +546,6 @@ msgid "backward"
 msgstr "後方"
 
 #: src/PHPWarrior/Abilities/Bind.php:17
-#, fuzzy
 msgid "binds %1$s and restricts %2$s"
 msgstr "%1$sを束縛し、%2$sを拘束。"
 
@@ -595,7 +595,7 @@ msgstr "すでにとても元気だ。"
 
 #: src/PHPWarrior/Abilities/Explode.php:24
 msgid "is ticking"
-msgstr ""
+msgstr "カチカチと音を立てている。"
 
 #: src/PHPWarrior/Position.php:123
 msgid "left"

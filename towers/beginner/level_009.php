@@ -3,9 +3,9 @@
 // |>Ca  @ S wC|
 //  -----------
 
-$this->description(__("Time to hone your skills and apply all of the abilities that you have learned."));
-$this->tip(__("Watch your back."));
-$this->clue(__("Don't just keep shooting the bow while you are being attacked from behind."));
+$this->description(__('Time to hone your skills and apply all of the abilities that you have learned.'));
+$this->tip(__('Watch your back.'));
+$this->clue(__('Don\'t just keep shooting the bow while you are being attacked from behind.'));
 
 $this->time_bonus(40);
 $this->ace_score(100);

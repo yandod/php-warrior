@@ -44,7 +44,7 @@ msgid "Avoid fighting enemies at first. Use warrior.listen and space.ticking? an
 msgstr ""
 
 #: towers/beginner/level_003.php:7
-msgid "Be careful not to die! Use warrior.health to keep an eye on your health, and warrior.rest! to earn 10% of max health back."
+msgid "Be careful not to die! Use $warrior->health() to keep an eye on your health, and $warrior->rest() to earn 10% of max health back."
 msgstr ""
 
 #: towers/intermediate/level_009.php:9
@@ -168,7 +168,7 @@ msgid "New Profile"
 msgstr ""
 
 #: towers/beginner/level_004.php:7
-msgid "No new abilities this time, but you must be careful not to rest while taking damage. Save a @health instance variable and compare it on each turn to see if you\\re taking damage."
+msgid "No new abilities this time, but you must be careful not to rest while taking damage. Save a $this->health instance variable and compare it on each turn to see if you're taking damage."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:32
@@ -307,19 +307,19 @@ msgid "Use $warrior->feel()->is_captive() to see if there is a captive and $warr
 msgstr ""
 
 #: towers/beginner/level_002.php:7
-msgid "Use warrior.feel.empty? to see if there is anything in front of you, and warrior.attack! to fight it. Remember, you can only do one action (ending in !) per turn."
+msgid "Use $warrior->feel()->is_empty() to see if there is anything in front of you, and $warrior->attack() to fight it. Remember, you can only do one action per turn."
+msgstr ""
+
+#: towers/beginner/level_008.php:7
+msgid "Use $warrior->look() to determine your surroundings, and $warrior->shoot() to fire an arrow."
 msgstr ""
 
 #: towers/intermediate/level_004.php:9
 msgid "Use warrior.listen to find spaces with other units, and warrior.direction_of to determine what direction they're in."
 msgstr ""
 
-#: towers/beginner/level_008.php:7
-msgid "Use warrior.look to determine your surroundings, and warrior.shoot! to fire an arrow."
-msgstr ""
-
 #: towers/beginner/level_006.php:9
-msgid "Walk backward if you are taking damage from afar and do not have enough health to attack. You may also want to consider walking backward until $warrior->feel(':backward')->is_wall()."
+msgid "Walk backward if you are taking damage from afar and do not have enough health to attack. You may also want to consider walking backward until $warrior->feel('backward')->is_wall()."
 msgstr ""
 
 #: towers/intermediate/level_004.php:10
@@ -347,7 +347,7 @@ msgid "What's that ticking? Some captives have a timed bomb at their feet!"
 msgstr ""
 
 #: towers/beginner/level_003.php:8
-msgid "When there is no enemy ahead of you call \\$warrior->rest() until health is full before walking forward."
+msgid "When there is no enemy ahead of you call $warrior->rest() until health is full before walking forward."
 msgstr ""
 
 #: templates/README.php:25
@@ -383,7 +383,7 @@ msgid "You can hear bow strings being stretched."
 msgstr ""
 
 #: towers/beginner/level_006.php:8
-msgid "You can walk backward by passing ':backward' as an argument to walk!. Same goes for feel, rescue! and attack!. Archers have a limited attack distance."
+msgid "You can walk backward by passing 'backward' as an argument to walk(). Same goes for feel(), rescue() and attack(). Archers have a limited attack distance."
 msgstr ""
 
 #: towers/intermediate/level_008.php:6
