@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-28 18:43+0900\n"
+"PO-Revision-Date: 2015-06-28 19:13+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -48,8 +48,8 @@ msgstr "指定された方向のユニットを攻撃する。 (forward がデ�
 
 #: towers/intermediate/level_006.php:9
 msgid ""
-"Avoid fighting enemies at first. Use warrior.listen and space.ticking? and "
-"quickly rescue those captives."
+"Avoid fighting enemies at first. Use $warrior->listen() and space->is_ticking"
+"() and quickly rescue those captives."
 msgstr ""
 
 #: towers/beginner/level_003.php:7
@@ -61,7 +61,7 @@ msgstr ""
 #: towers/intermediate/level_009.php:9
 msgid ""
 "Be careful not to let the ticking captive get caught in the flames. Use "
-"warrior.distance_of to avoid the captives."
+"$warrior->distance_of() to avoid the captives."
 msgstr ""
 
 #: towers/intermediate/level_009.php:10
@@ -81,6 +81,12 @@ msgid ""
 "fair maiden PHP."
 msgstr "おめでとう! きみは塔の頂上に到達し、麗しいPHP姫を救出した。"
 
+#: towers/intermediate/level_003.php:9
+msgid ""
+"Call $warrior->bind($direction) to bind an enemy to keep him from attacking. "
+"Bound enemies look like captives."
+msgstr ""
+
 #: towers/intermediate/level_002.php:9
 msgid ""
 "Call $warrior->feel($direction)->is_enemy() in each direction to make sure "
@@ -93,16 +99,10 @@ msgid "Call $warrior->walk() to walk forward in the Player 'play_turn' method."
 msgstr ""
 "Playerの 'play_turn' メソッドの中で $warrior->walk() を呼び出して前に歩こう。"
 
-#: towers/intermediate/level_003.php:9
-msgid ""
-"Call warrior.bind!(direction) to bind an enemy to keep him from attacking. "
-"Bound enemies look like captives."
-msgstr ""
-
 #: towers/intermediate/level_008.php:8
 msgid ""
-"Calling warrior.look will return an array of Spaces. If the first two "
-"contain enemies, detonate a bomb with warrior.detonate!."
+"Calling $warrior->look() will return an array of Spaces. If the first two "
+"contain enemies, detonate a bomb with $warrior->detonate()."
 msgstr ""
 
 #: src/PHPWarrior/UI.php:58
@@ -133,8 +133,8 @@ msgstr ""
 
 #: towers/intermediate/level_008.php:7
 msgid ""
-"Detonate a bomb when you see a couple enemies ahead of you (warrior.look). "
-"Watch out for your health too."
+"Detonate a bomb when you see a couple enemies ahead of you ($warrior->look"
+"()). Watch out for your health too."
 msgstr ""
 
 #: towers/beginner/level_005.php:8
@@ -164,7 +164,8 @@ msgstr "生命力が最大の10%回復。ただし他の行動は出来ない。
 
 #: towers/intermediate/level_006.php:8
 msgid ""
-"Hurry and rescue captives first that have space.ticking?, they'll soon go!"
+"Hurry and rescue captives first that have space->is_ticking(), they'll soon "
+"go!"
 msgstr ""
 
 #: towers/intermediate/level_005.php:9
@@ -374,7 +375,7 @@ msgstr "ディレクトリ無しでは継続できません。"
 #: towers/intermediate/level_001.php:10
 msgid ""
 "Use $warrior->direction_of_stairs() to determine which direction stairs are "
-"located. Pass this to warrior.walk! to walk in that direction."
+"located. Pass this to $warrior->walk() to walk in that direction."
 msgstr ""
 
 #: towers/beginner/level_005.php:7
@@ -390,16 +391,16 @@ msgid ""
 "action per turn."
 msgstr ""
 
+#: towers/intermediate/level_004.php:9
+msgid ""
+"Use $warrior->listen() to find spaces with other units, and $warrior-"
+">direction_of() to determine what direction they're in."
+msgstr ""
+
 #: towers/beginner/level_008.php:7
 msgid ""
 "Use $warrior->look() to determine your surroundings, and $warrior->shoot() "
 "to fire an arrow."
-msgstr ""
-
-#: towers/intermediate/level_004.php:9
-msgid ""
-"Use warrior.listen to find spaces with other units, and warrior.direction_of "
-"to determine what direction they're in."
 msgstr ""
 
 #: towers/beginner/level_006.php:9
@@ -519,8 +520,8 @@ msgstr "きみの前には長い廊下があり奥には階段が見える。他
 
 #: towers/intermediate/level_005.php:8
 msgid ""
-"You'll get more points for clearing the level first. Use warrior.feel."
-"stairs? and warrior.feel.empty? to determine where to go."
+"You'll get more points for clearing the level first. Use $warrior->feel()-"
+">is_stairs() and $warrior->feel()->is_empty() to determine where to go."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:199

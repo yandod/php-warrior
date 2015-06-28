@@ -4,9 +4,9 @@
 // |@  sC |
 //  ------
 
-$this->description(__("What's that ticking? Some captives have a timed bomb at their feet!"));
-$this->tip(__("Hurry and rescue captives first that have space.ticking?, they'll soon go!"));
-$this->clue(__("Avoid fighting enemies at first. Use warrior.listen and space.ticking? and quickly rescue those captives."));
+$this->description(__('What\'s that ticking? Some captives have a timed bomb at their feet!'));
+$this->tip(__('Hurry and rescue captives first that have space->is_ticking(), they\'ll soon go!'));
+$this->clue(__('Avoid fighting enemies at first. Use $warrior->listen() and space->is_ticking() and quickly rescue those captives.'));
 
 $this->time_bonus(50);
 $this->ace_score(108);

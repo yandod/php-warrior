@@ -3,9 +3,9 @@
 // |@ Ss C>|
 //  -------
 
-$this->description(__("You discover a satchel of bombs which will help when facing a mob of enemies."));
-$this->tip(__("Detonate a bomb when you see a couple enemies ahead of you (warrior.look). Watch out for your health too."));
-$this->clue(__("Calling warrior.look will return an array of Spaces. If the first two contain enemies, detonate a bomb with warrior.detonate!."));
+$this->description(__('You discover a satchel of bombs which will help when facing a mob of enemies.'));
+$this->tip(__('Detonate a bomb when you see a couple enemies ahead of you ($warrior->look()). Watch out for your health too.'));
+$this->clue(__('Calling $warrior->look() will return an array of Spaces. If the first two contain enemies, detonate a bomb with $warrior->detonate().'));
 
 $this->time_bonus(30);
 $this->size(7, 1);

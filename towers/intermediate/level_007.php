@@ -5,9 +5,9 @@
 // | s   |
 //  -----
 
-$this->description(__("Another ticking sound, but some sludge is blocking the way."));
-$this->tip(__("Quickly kill the sludge and rescue the captive before the bomb goes off. You can't simply go around them."));
-$this->clue(__("Determine the direction of the ticking captive and kill any enemies blocking that path. You may need to bind surrounding enemies first."));
+$this->description(__('Another ticking sound, but some sludge is blocking the way.'));
+$this->tip(__('Quickly kill the sludge and rescue the captive before the bomb goes off. You can\'t simply go around them.'));
+$this->clue(__('Determine the direction of the ticking captive and kill any enemies blocking that path. You may need to bind surrounding enemies first.'));
 
 $this->time_bonus(70);
 $this->ace_score(134);

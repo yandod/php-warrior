@@ -5,9 +5,9 @@
 // | C |
 //  ---
 
-$this->description(__("You feel slime on all sides, you're surrounded!"));
-$this->tip(__('Call warrior.bind!(direction) to bind an enemy to keep him from attacking. Bound enemies look like captives.'));
-$this->clue(__("Count the number of enemies around you. Bind an enemy if there are two or more."));
+$this->description(__('You feel slime on all sides, you\'re surrounded!'));
+$this->tip(__('Call $warrior->bind($direction) to bind an enemy to keep him from attacking. Bound enemies look like captives.'));
+$this->clue(__('Count the number of enemies around you. Bind an enemy if there are two or more.'));
 
 $this->time_bonus(50);
 $this->ace_score(101);

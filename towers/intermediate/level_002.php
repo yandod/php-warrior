@@ -4,8 +4,8 @@
 // | sS>|
 //  ----
 
-$this->description(__("Another large room, but with several enemies blocking your way to the stairs."));
-$this->tip(__("Just like walking, you can attack() and feel in multiple directions (forward, left, right, backward)."));
+$this->description(__('Another large room, but with several enemies blocking your way to the stairs.'));
+$this->tip(__('Just like walking, you can attack() and feel in multiple directions (forward, left, right, backward).'));
 $this->clue(__('Call $warrior->feel($direction)->is_enemy() in each direction to make sure there isn\'t an enemy beside you (attack if there is). Call warrior.rest! if you\'re low and health when there are no enemies around.'));
 
 $this->time_bonus(40);

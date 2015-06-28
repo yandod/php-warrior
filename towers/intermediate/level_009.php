@@ -5,9 +5,9 @@
 // |ssC |
 //  ----
 
-$this->description(__("Never before have you seen a room so full of sludge. Start the fireworks!"));
-$this->tip(__("Be careful not to let the ticking captive get caught in the flames. Use warrior.distance_of to avoid the captives."));
-$this->clue(__("Be sure to bind the surrounding enemies before fighting. Check your health before detonating explosives."));
+$this->description(__('Never before have you seen a room so full of sludge. Start the fireworks!'));
+$this->tip(__('Be careful not to let the ticking captive get caught in the flames. Use $warrior->distance_of() to avoid the captives.'));
+$this->clue(__('Be sure to bind the surrounding enemies before fighting. Check your health before detonating explosives.'));
 
 $this->time_bonus(70);
 $this->size(4, 3);

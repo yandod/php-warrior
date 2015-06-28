@@ -5,8 +5,8 @@
 // |C s>|
 //  ----
 
-$this->description(__("Your ears become more in tune with the surroundings. Listen to find enemies and captives!"));
-$this->tip(__("Use warrior.listen to find spaces with other units, and warrior.direction_of to determine what direction they're in."));
+$this->description(__('Your ears become more in tune with the surroundings. Listen to find enemies and captives!'));
+$this->tip(__('Use $warrior->listen() to find spaces with other units, and $warrior->direction_of() to determine what direction they\'re in.'));
 $this->clue(__('Walk towards an enemy or captive with $warrior->walk($warrior->direction_of($warrior->listen()[0])), once empty($warrior->listen()) then head for the stairs.'));
 
 $this->time_bonus(55);

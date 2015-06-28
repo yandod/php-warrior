@@ -40,7 +40,7 @@ msgid "Attacks a unit in given direction (forward by default)."
 msgstr ""
 
 #: towers/intermediate/level_006.php:9
-msgid "Avoid fighting enemies at first. Use warrior.listen and space.ticking? and quickly rescue those captives."
+msgid "Avoid fighting enemies at first. Use $warrior->listen() and space->is_ticking() and quickly rescue those captives."
 msgstr ""
 
 #: towers/beginner/level_003.php:7
@@ -48,7 +48,7 @@ msgid "Be careful not to die! Use $warrior->health() to keep an eye on your heal
 msgstr ""
 
 #: towers/intermediate/level_009.php:9
-msgid "Be careful not to let the ticking captive get caught in the flames. Use warrior.distance_of to avoid the captives."
+msgid "Be careful not to let the ticking captive get caught in the flames. Use $warrior->distance_of() to avoid the captives."
 msgstr ""
 
 #: towers/intermediate/level_009.php:10
@@ -63,6 +63,10 @@ msgstr ""
 msgid "CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden PHP."
 msgstr ""
 
+#: towers/intermediate/level_003.php:9
+msgid "Call $warrior->bind($direction) to bind an enemy to keep him from attacking. Bound enemies look like captives."
+msgstr ""
+
 #: towers/intermediate/level_002.php:9
 msgid "Call $warrior->feel($direction)->is_enemy() in each direction to make sure there isn't an enemy beside you (attack if there is). Call warrior.rest! if you're low and health when there are no enemies around."
 msgstr ""
@@ -71,12 +75,8 @@ msgstr ""
 msgid "Call $warrior->walk() to walk forward in the Player 'play_turn' method."
 msgstr ""
 
-#: towers/intermediate/level_003.php:9
-msgid "Call warrior.bind!(direction) to bind an enemy to keep him from attacking. Bound enemies look like captives."
-msgstr ""
-
 #: towers/intermediate/level_008.php:8
-msgid "Calling warrior.look will return an array of Spaces. If the first two contain enemies, detonate a bomb with warrior.detonate!."
+msgid "Calling $warrior->look() will return an array of Spaces. If the first two contain enemies, detonate a bomb with $warrior->detonate()."
 msgstr ""
 
 #: src/PHPWarrior/UI.php:58
@@ -100,7 +100,7 @@ msgid "Detonate a bomb in a given direction (forward by default) which damages t
 msgstr ""
 
 #: towers/intermediate/level_008.php:7
-msgid "Detonate a bomb when you see a couple enemies ahead of you (warrior.look). Watch out for your health too."
+msgid "Detonate a bomb when you see a couple enemies ahead of you ($warrior->look()). Watch out for your health too."
 msgstr ""
 
 #: towers/beginner/level_005.php:8
@@ -124,7 +124,7 @@ msgid "Gain 10% of max health back, but do nothing more."
 msgstr ""
 
 #: towers/intermediate/level_006.php:8
-msgid "Hurry and rescue captives first that have space.ticking?, they'll soon go!"
+msgid "Hurry and rescue captives first that have space->is_ticking(), they'll soon go!"
 msgstr ""
 
 #: towers/intermediate/level_005.php:9
@@ -299,7 +299,7 @@ msgid "Unable to continue without directory."
 msgstr ""
 
 #: towers/intermediate/level_001.php:10
-msgid "Use $warrior->direction_of_stairs() to determine which direction stairs are located. Pass this to warrior.walk! to walk in that direction."
+msgid "Use $warrior->direction_of_stairs() to determine which direction stairs are located. Pass this to $warrior->walk() to walk in that direction."
 msgstr ""
 
 #: towers/beginner/level_005.php:7
@@ -310,12 +310,12 @@ msgstr ""
 msgid "Use $warrior->feel()->is_empty() to see if there is anything in front of you, and $warrior->attack() to fight it. Remember, you can only do one action per turn."
 msgstr ""
 
-#: towers/beginner/level_008.php:7
-msgid "Use $warrior->look() to determine your surroundings, and $warrior->shoot() to fire an arrow."
+#: towers/intermediate/level_004.php:9
+msgid "Use $warrior->listen() to find spaces with other units, and $warrior->direction_of() to determine what direction they're in."
 msgstr ""
 
-#: towers/intermediate/level_004.php:9
-msgid "Use warrior.listen to find spaces with other units, and warrior.direction_of to determine what direction they're in."
+#: towers/beginner/level_008.php:7
+msgid "Use $warrior->look() to determine your surroundings, and $warrior->shoot() to fire an arrow."
 msgstr ""
 
 #: towers/beginner/level_006.php:9
@@ -411,7 +411,7 @@ msgid "You see before yourself a long hallway with stairs at the end. There is n
 msgstr ""
 
 #: towers/intermediate/level_005.php:8
-msgid "You'll get more points for clearing the level first. Use warrior.feel.stairs? and warrior.feel.empty? to determine where to go."
+msgid "You'll get more points for clearing the level first. Use $warrior->feel()->is_stairs() and $warrior->feel()->is_empty() to determine where to go."
 msgstr ""
 
 #: src/PHPWarrior/Game.php:199
