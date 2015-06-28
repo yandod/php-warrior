@@ -26,7 +26,7 @@ class Attack extends Base {
     } else {
       $this->unit->say(sprintf(
         __("attacks %s and hits nothing"),
-        $direction
+        __($direction)
       ));
     }
   }
