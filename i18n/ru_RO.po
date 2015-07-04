@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-06-22 22:50+0900\n"
+"PO-Revision-Date: 2015-07-04 18:14+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,15 +21,11 @@ msgid "- turn %s -"
 msgstr "- Поворот %s -"
 
 #: towers/beginner/level_002.php:8
-msgid ""
-"Add an if/else condition using $warrior->feel()->is_empty() to decide "
-"whether to $warrior->attack() or $warrior->walk()."
+msgid "Add an if/else condition using $warrior->feel()->is_empty() to decide whether to $warrior->attack() or $warrior->walk()."
 msgstr "Добавить если / другое состояние, используя $ Warrior-> чувство () -> IS_EMPTY (), чтобы решить, следует ли $ Warrior-> атаки () или $ Warrior-> прогулку ()."
 
 #: src/PHPWarrior/Game.php:143
-msgid ""
-"Another level has been added since you started epic, going back to normal "
-"mode."
+msgid "Another level has been added since you started epic, going back to normal mode."
 msgstr "Другой уровень был добавлен, так как Вы начали эпос, возвращаясь к нормальному режиму."
 
 #: src/PHPWarrior/Abilities/Attack.php:7
@@ -37,20 +33,15 @@ msgid "Attacks a unit in given direction (forward by default)."
 msgstr "Атакует устройство в заданном направлении (вперед по умолчанию)."
 
 #: towers/beginner/level_003.php:7
-msgid ""
-"Be careful not to die! Use warrior.health to keep an eye on your health, and "
-"warrior.rest! to earn 10% of max health back."
+msgid "Be careful not to die! Use warrior.health to keep an eye on your health, and warrior.rest! to earn 10% of max health back."
 msgstr "Будьте осторожны, чтобы не умереть! Используйте warrior.health держать глаз на вашем здоровье, и warrior.rest! заработать 10% от максимального здоровья спины."
 
 #: src/PHPWarrior/Abilities/Bind.php:8
-msgid ""
-"Binds a unit in given direction to keep him from moving (forward by default)."
+msgid "Binds a unit in given direction to keep him from moving (forward by default)."
 msgstr "Связывает устройство в заданном направлении, чтобы держать его от переезда (вперед по умолчанию)."
 
 #: src/PHPWarrior/Game.php:87
-msgid ""
-"CONGRATULATIONS! You have climbed to the top of the tower and rescued the "
-"fair maiden PHP."
+msgid "CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden PHP."
 msgstr "ПОЗДРАВЛЯЕМ! Вы поднялись на вершину башни и спас девица PHP."
 
 #: towers/beginner/level_001.php:7
@@ -66,14 +57,11 @@ msgid "Clear Bonus: %s"
 msgstr "Ясно Бонус: %s"
 
 #: towers/beginner/level_005.php:8
-msgid ""
-"Don't forget to constantly check if you're taking damage. Rest until your "
-"health is full if you aren't taking damage."
+msgid "Don't forget to constantly check if you're taking damage. Rest until your health is full if you aren't taking damage."
 msgstr "Не забудьте постоянно проверять, если вы принимаете ущерб. Отдых до Вашего здоровья полном объеме, если вы не принимаете повреждения."
 
 #: towers/beginner/level_009.php:8
-msgid ""
-"Don't just keep shooting the bow while you are being attacked from behind."
+msgid "Don't just keep shooting the bow while you are being attacked from behind."
 msgstr "Не просто продолжать стрелять из лука, а на тебя нападают сзади."
 
 #: src/PHPWarrior/Game.php:162
@@ -81,9 +69,7 @@ msgid "Enter a name for your warrior: "
 msgstr "Введите имя для вашего воина: "
 
 #: src/PHPWarrior/Game.php:67
-msgid ""
-"First level has been generated. See the phpwarrior/%s/README for "
-"instructions."
+msgid "First level has been generated. See the phpwarrior/%s/README for instructions."
 msgstr "Была сформирована Первый уровень. См phpwarrior / %s / README для получения инструкций."
 
 #: src/PHPWarrior/Abilities/Rest.php:7
@@ -115,10 +101,7 @@ msgid "New Profile"
 msgstr "Новый Профиль"
 
 #: towers/beginner/level_004.php:7
-msgid ""
-"No new abilities this time, but you must be careful not to rest while taking "
-"damage. Save a @health instance variable and compare it on each turn to see "
-"if you\\re taking damage."
+msgid "No new abilities this time, but you must be careful not to rest while taking damage. Save a @health instance variable and compare it on each turn to see if you\\re taking damage."
 msgstr "Нет новых способностей в этот раз, но вы не должны быть осторожны, чтобы не отдыхать, принимая ущерб. Сохранитьhealth переменную экземпляра и сравнить его на каждом повороте, чтобы увидеть, если вы \\ вновь получении урона."
 
 #: src/PHPWarrior/Game.php:32
@@ -134,9 +117,7 @@ msgid "Returns a Space for the given direction (forward by default)."
 msgstr "Возвращает пространство для данного направления (вперед по умолчанию)."
 
 #: src/PHPWarrior/Abilities/DirectionOfStairs.php:10
-msgid ""
-"Returns the direction (left, right, forward, backward) the stairs are from "
-"your location."
+msgid "Returns the direction (left, right, forward, backward) the stairs are from your location."
 msgstr "Возвращает направление (влево, вправо, вперед, назад) Лестницы от вашего местоположения."
 
 #: src/PHPWarrior/Game.php:121
@@ -148,16 +129,11 @@ msgid "See the updated README in the phpwarrior/%s directory."
 msgstr "Смотрите обновленную README в phpwarrior / %s каталоге."
 
 #: src/PHPWarrior/Game.php:144
-msgid ""
-"See the updated README in the rubywarrior/#{profile.directory_name} "
-"directory."
+msgid "See the updated README in the rubywarrior/#{profile.directory_name} directory."
 msgstr "Смотрите обновленную README в rubywarrior / # {} profile.directory_name каталоге."
 
 #: towers/beginner/level_004.php:8
-msgid ""
-"Set $this->health to your current health at the end of the turn. If this is "
-"greater than your current health next turn then you know you're taking "
-"damage and shouldn't rest."
+msgid "Set $this->health to your current health at the end of the turn. If this is greater than your current health next turn then you know you're taking damage and shouldn't rest."
 msgstr "Установить $ this-> здоровье вашего текущего здоровья в конце хода. Если это больше, чем ваш текущий здравоохранения следующем повороте, то вы знаете, вы принимаете ущерб и не должны отдыхать."
 
 #: src/PHPWarrior/Game.php:101
@@ -185,9 +161,7 @@ msgid "The air feels thicker than before. There must be a horde of sludge."
 msgstr "Воздух считает толще, чем раньше. Там должны быть орда ила."
 
 #: towers/beginner/level_006.php:7
-msgid ""
-"The wall behind you feels a bit further away in this room. And you hear more "
-"cries for help."
+msgid "The wall behind you feels a bit further away in this room. And you hear more cries for help."
 msgstr "Стена позади вас чувствует себя немного дальше в этой комнате. И вы услышите больше крики о помощи."
 
 #: src/PHPWarrior/Level.php:91
@@ -195,9 +169,7 @@ msgid "Time Bonus: %s"
 msgstr "Время Бонус: %s"
 
 #: towers/beginner/level_009.php:6
-msgid ""
-"Time to hone your skills and apply all of the abilities that you have "
-"learned."
+msgid "Time to hone your skills and apply all of the abilities that you have learned."
 msgstr "Время, чтобы отточить свои навыки и применять все способности, которые вы узнали."
 
 #: templates/README.php:7
@@ -209,7 +181,7 @@ msgid ""
 "To practice a level, use the -l option:\n"
 "\n"
 "  php-warrior -l 3"
-msgstr "Чтобы практиковать уровень, используйте опцию -l: \ N \ N PHP-воина -l 3"
+msgstr "Чтобы практиковать уровень, используйте опцию -l: \n \n PHP-воина -l 3"
 
 #: src/PHPWarrior/Level.php:112 src/PHPWarrior/Level.php:121
 msgid "Total Score: %s"
@@ -220,29 +192,19 @@ msgid "Unable to continue without directory."
 msgstr "Невозможно продолжить без каталога."
 
 #: towers/beginner/level_005.php:7
-msgid ""
-"Use $warrior->feel()->is_captive() to see if there is a captive and $warrior-"
-">rescue() to rescue him. Don't attack captives."
+msgid "Use $warrior->feel()->is_captive() to see if there is a captive and $warrior->rescue() to rescue him. Don't attack captives."
 msgstr "Используйте $ Warrior-> чувство () -> is_captive (), чтобы увидеть, если есть в плен и $ Warrior-> спасательные (), чтобы спасти его. Не нападайте на пленных."
 
 #: towers/beginner/level_002.php:7
-msgid ""
-"Use warrior.feel.empty? to see if there is anything in front of you, and "
-"warrior.attack! to fight it. Remember, you can only do one action (ending "
-"in !) per turn."
+msgid "Use warrior.feel.empty? to see if there is anything in front of you, and warrior.attack! to fight it. Remember, you can only do one action (ending in !) per turn."
 msgstr "Используйте warrior.feel.empty? чтобы увидеть, если есть что-нибудь перед вами, и warrior.attack! для борьбы с ней. Помните, что вы можете сделать только одно действие (окончание в!) За свою."
 
 #: towers/beginner/level_008.php:7
-msgid ""
-"Use warrior.look to determine your surroundings, and warrior.shoot! to fire "
-"an arrow."
+msgid "Use warrior.look to determine your surroundings, and warrior.shoot! to fire an arrow."
 msgstr "Используйте warrior.look определить ваше окружение, и warrior.shoot! стрелять стрелку."
 
 #: towers/beginner/level_006.php:9
-msgid ""
-"Walk backward if you are taking damage from afar and do not have enough "
-"health to attack. You may also want to consider walking backward until "
-"$warrior->feel(':backward')->is_wall()."
+msgid "Walk backward if you are taking damage from afar and do not have enough health to attack. You may also want to consider walking backward until $warrior->feel(':backward')->is_wall()."
 msgstr "Прогулка назад, если вы принимаете повреждения издалека и не хватает здоровья для атаки. Вы также можете рассмотреть ходьбе назад, пока $ Warrior-> чувство ('': назад) -> is_wall ()."
 
 #: src/PHPWarrior/Units/Warrior.php:48
@@ -262,9 +224,7 @@ msgid "Welcome to PHP Warrior"
 msgstr "Добро пожаловать в PHP Warrior"
 
 #: towers/beginner/level_003.php:8
-msgid ""
-"When there is no enemy ahead of you call \\$warrior->rest() until health is "
-"full before walking forward."
+msgid "When there is no enemy ahead of you call \\$warrior->rest() until health is full before walking forward."
 msgstr "Когда нет врагов впереди вы звоните \\ $ Warrior-> Остальные () до тех пор, пока здоровье полна прежде, чем идти вперед."
 
 #: templates/README.php:25
@@ -272,9 +232,7 @@ msgid "When you're done editing player.php, run the php-warrior command again."
 msgstr "Когда вы закончите редактирование player.php, выполните команду PHP-воин снова."
 
 #: towers/beginner/level_008.php:8
-msgid ""
-"Wizards are deadly but low in health. Kill them before they have time to "
-"attack."
+msgid "Wizards are deadly but low in health. Kill them before they have time to attack."
 msgstr "Мастера смертельно, но с низким здоровьем. Убейте их, прежде чем они успели атаковать."
 
 #: src/PHPWarrior/Game.php:112
@@ -290,9 +248,7 @@ msgid "Would you like to read the additional clues for this level?"
 msgstr "Хотите, чтобы прочитать дополнительные ключи для этого уровня?"
 
 #: towers/beginner/level_007.php:7
-msgid ""
-"You are not as effective at attacking backward. Use $warrior->feel()->is_wall"
-"() and $warrior->pivot() to turn around."
+msgid "You are not as effective at attacking backward. Use $warrior->feel()->is_wall() and $warrior->pivot() to turn around."
 msgstr "Вы не так эффективны при нападении назад. Используйте $ Warrior-> чувство () -> is_wall () и $ Warrior-> стержнем (), чтобы повернуть."
 
 #: towers/beginner/level_004.php:6
@@ -300,10 +256,8 @@ msgid "You can hear bow strings being stretched."
 msgstr "Вы можете услышать лук строки растягивается."
 
 #: towers/beginner/level_006.php:8
-msgid ""
-"You can walk backward by passing ':backward' as an argument to walk!. Same "
-"goes for feel, rescue! and attack!. Archers have a limited attack distance."
-msgstr "Вы можете ходить назад, передавая ": назад" в качестве аргумента, чтобы идти !. То же самое касается чувства, помощь! и атака !. Лучники имеют ограниченное расстояние атаки."
+msgid "You can walk backward by passing ':backward' as an argument to walk!. Same goes for feel, rescue! and attack!. Archers have a limited attack distance."
+msgstr "Вы можете ходить назад, передавая 'backward' в качестве аргумента, чтобы идти !. То же самое касается чувства, помощь! и атака !. Лучники имеют ограниченное расстояние атаки."
 
 #: towers/beginner/level_007.php:6
 msgid "You feel a wall right in front of you and an opening behind you."
@@ -314,15 +268,11 @@ msgid "You hear cries for help. Captives must need rescuing."
 msgstr "Вы слышите крики о помощи. Пленники должны нуждаться для спасения."
 
 #: towers/beginner/level_008.php:6
-msgid ""
-"You hear the mumbling of wizards. Beware of their deadly wands! Good thing "
-"you found a bow."
+msgid "You hear the mumbling of wizards. Beware of their deadly wands! Good thing you found a bow."
 msgstr "Вы слышите бормотание мастеров. Остерегайтесь их смертельных палочки! Хорошо, что вы нашли лук."
 
 #: towers/beginner/level_001.php:6
-msgid ""
-"You see before yourself a long hallway with stairs at the end. There is "
-"nothing in the way."
+msgid "You see before yourself a long hallway with stairs at the end. There is nothing in the way."
 msgstr "Вы видите перед собой длинный коридор с лестницей в конце. Там нет ничего в пути."
 
 #: src/PHPWarrior/Game.php:199
@@ -424,4 +374,3 @@ msgstr "стена"
 #: src/PHPWarrior/Position.php:118
 msgid "west"
 msgstr "запад"
-

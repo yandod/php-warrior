@@ -118,7 +118,7 @@ class Game {
         ));
       } else {
         $this->prepare_epic_mode();
-        UI::puts(__("Run rubywarrior again to play epic mode."));
+        UI::puts(__("Run phpwarrior again to play epic mode."));
       }
     } else {
       UI::puts(__("Staying on current level. Try to earn more points next time."));
@@ -141,7 +141,10 @@ class Game {
     $this->profile->enable_normal_mode();
     $this->prepare_next_level();
     UI::puts(__("Another level has been added since you started epic, going back to normal mode."));
-    UI::puts(__("See the updated README in the rubywarrior/#{profile.directory_name} directory."));
+    UI::puts(sprintf(
+      __("See the updated README in the phpwarrior/%s directory."),
+      $this->profile->directory_name()
+    ));
   }
 
   public function profiles() {

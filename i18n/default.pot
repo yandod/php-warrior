@@ -111,7 +111,7 @@ msgstr ""
 msgid "Don't just keep shooting the bow while you are being attacked from behind."
 msgstr ""
 
-#: src/PHPWarrior/Game.php:162
+#: src/PHPWarrior/Game.php:165
 msgid "Enter a name for your warrior: "
 msgstr ""
 
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Never before have you seen a room so full of sludge. Start the fireworks!"
 msgstr ""
 
-#: src/PHPWarrior/Game.php:212
+#: src/PHPWarrior/Game.php:215
 msgid "New Profile"
 msgstr ""
 
@@ -220,15 +220,11 @@ msgid "Rotate left, right or backward (default)"
 msgstr ""
 
 #: src/PHPWarrior/Game.php:121
-msgid "Run rubywarrior again to play epic mode."
+msgid "Run phpwarrior again to play epic mode."
 msgstr ""
 
-#: src/PHPWarrior/Game.php:116
+#: src/PHPWarrior/Game.php:116 src/PHPWarrior/Game.php:145
 msgid "See the updated README in the phpwarrior/%s directory."
-msgstr ""
-
-#: src/PHPWarrior/Game.php:144
-msgid "See the updated README in the rubywarrior/#{profile.directory_name} directory."
 msgstr ""
 
 #: towers/beginner/level_004.php:8
@@ -283,7 +279,7 @@ msgstr ""
 msgid "Tip"
 msgstr ""
 
-#: src/PHPWarrior/Game.php:204
+#: src/PHPWarrior/Game.php:207
 msgid ""
 "To practice a level, use the -l option:\n"
 "\n"
@@ -414,7 +410,7 @@ msgstr ""
 msgid "You'll get more points for clearing the level first. Use $warrior->feel()->is_stairs() and $warrior->feel()->is_empty() to determine where to go."
 msgstr ""
 
-#: src/PHPWarrior/Game.php:199
+#: src/PHPWarrior/Game.php:202
 msgid "Your average grade for this tower is: %s"
 msgstr ""
 

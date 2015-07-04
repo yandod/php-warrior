@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: php-warrior\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-07-04 17:53+0900\n"
+"PO-Revision-Date: 2015-07-04 18:12+0900\n"
 "Last-Translator: Yusuke Ando <yandod@gmail.com>\n"
 "Language-Team: Japanese <yandod@gmail.com>\n"
 "Language: ja\n"
@@ -172,7 +172,7 @@ msgid ""
 "Don't just keep shooting the bow while you are being attacked from behind."
 msgstr "後方から攻撃されている時は弓を撃ち続けてはいけない。"
 
-#: src/PHPWarrior/Game.php:162
+#: src/PHPWarrior/Game.php:165
 msgid "Enter a name for your warrior: "
 msgstr "きみの戦士の名前を入力せよ:"
 
@@ -242,7 +242,7 @@ msgid ""
 "Never before have you seen a room so full of sludge. Start the fireworks!"
 msgstr "見たこと無いほどスライムだらけの部屋だ。花火の時間だ!"
 
-#: src/PHPWarrior/Game.php:212
+#: src/PHPWarrior/Game.php:215
 msgid "New Profile"
 msgstr "新しいプロファイル"
 
@@ -319,18 +319,12 @@ msgid "Rotate left, right or backward (default)"
 msgstr "左、右または後ろへ回転する。(デフォルトは後方)"
 
 #: src/PHPWarrior/Game.php:121
-msgid "Run rubywarrior again to play epic mode."
-msgstr ""
+msgid "Run phpwarrior again to play epic mode."
+msgstr "phpwarrior を再実行してエピックモードをプレイしてください。"
 
-#: src/PHPWarrior/Game.php:116
+#: src/PHPWarrior/Game.php:116 src/PHPWarrior/Game.php:145
 msgid "See the updated README in the phpwarrior/%s directory."
 msgstr "phpwarrior/%s ディレクトリの更新された README を見てください。"
-
-#: src/PHPWarrior/Game.php:144
-msgid ""
-"See the updated README in the rubywarrior/#{profile.directory_name} "
-"directory."
-msgstr "更新されたREADMEを見てください。"
 
 #: towers/beginner/level_004.php:8
 msgid ""
@@ -396,7 +390,7 @@ msgstr "習得した全ての能力を駆使しよう。"
 msgid "Tip"
 msgstr "ヒント"
 
-#: src/PHPWarrior/Game.php:204
+#: src/PHPWarrior/Game.php:207
 msgid ""
 "To practice a level, use the -l option:\n"
 "\n"
@@ -589,7 +583,7 @@ msgstr ""
 "レベル内を先に探索すればさらに得点できる。 $warrior->feel()->is_stairs()と"
 "$warrior->feel()->is_empty()で行き先を決めよう。"
 
-#: src/PHPWarrior/Game.php:199
+#: src/PHPWarrior/Game.php:202
 msgid "Your average grade for this tower is: %s"
 msgstr "あなたのこの塔の平均評価は: %s"
 
@@ -730,3 +724,8 @@ msgstr "壁"
 #: src/PHPWarrior/Position.php:118
 msgid "west"
 msgstr "西"
+
+#~ msgid ""
+#~ "See the updated README in the rubywarrior/#{profile.directory_name} "
+#~ "directory."
+#~ msgstr "更新されたREADMEを見てください。"
