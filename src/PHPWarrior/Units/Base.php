@@ -2,122 +2,142 @@
 
 namespace PHPWarrior\Units;
 
-class Base {
+class Base
+{
 
-  public $position;
-  public $abilities = [];
-  public $bound;
+    public $position;
+    public $abilities = [];
+    public $bound;
 
-  public function attack_power() {
-    return 0;
-  }
-
-  public function max_health() {
-    return 0;
-  }
-
-  public function earn_points($points) {
-  }
-
-  public function health() {
-    if (!isset($this->health)) {
-      $this->health = $this->max_health();
+    public function attack_power()
+    {
+        return 0;
     }
-    return $this->health;
-  }
 
-  public function take_damage($amount) {
-    if ($this->is_bound()) {
-      $this->unbind();
+    public function max_health()
+    {
+        return 0;
     }
-    if ($this->health()) {
-      $this->health -= $amount;
-      $this->say(sprintf(
-        __('takes %1$s damage, %2$s health power left'),
-        $amount,
-        $this->health()
-      ));
-      if ($this->health() <= 0) {
-        $this->position = null;
-        $this->say(__("dies"));
-      }
+
+    public function earn_points($points)
+    {
     }
-  }
 
-  public function is_alive() {
-    return !is_null($this->position);
-  }
-
-  public function is_bound() {
-    return $this->bound;
-  }
-
-  public function unbind() {
-    $this->say(__("released from bonds"));
-    $this->bound = false;
-  }
-
-  public function bind() {
-    $this->bound = true;
-  }
-
-  public function say($msg) {
-    \PHPWarrior\UI::puts_with_delay("{$this->name()} {$msg}");
-  }
-
-  public function name() {
-    $slice_name = explode('\\',get_class($this));
-    return array_pop($slice_name);
-  }
-
-  public function __ToString(){
-    return __($this->name());
-  }
-
-  public function add_abilities($new_abbilities) {
-    foreach ($new_abbilities as $abbility_str) {
-      $camel = '';
-      $abbility_str = str_replace(':', '', $abbility_str);
-      foreach(explode('_', $abbility_str) as $str)  {
-        $camel .= ucfirst($str);
-      }
-      $class_name = 'PHPWarrior\Abilities\\' . $camel;
-      $this->abilities[$abbility_str] = new $class_name($this);
+    public function health()
+    {
+        if (!isset($this->health)) {
+            $this->health = $this->max_health();
+        }
+        return $this->health;
     }
-    return $this;
-  }
 
-  public function next_turn() {
-    return new \PHPWarrior\Turn($this->abilities());
-  }
-
-  public function prepare_turn() {
-    $this->current_turn = $this->next_turn();
-    return $this->play_turn($this->current_turn);
-  }
-
-  public function perform_turn() {
-    if ($this->position) {
-      foreach ($this->abilities as $ability) {
-        $ability->pass_turn();
-      }
-      if ($this->current_turn->action && !$this->is_bound()) {
-        list ($name, $args) = $this->current_turn->action;
-        call_user_func_array([$this->abilities[$name], 'perform'], $args);
-        //$this->abilities[$name]->perform($args);
-      }
+    public function take_damage($amount)
+    {
+        if ($this->is_bound()) {
+            $this->unbind();
+        }
+        if ($this->health()) {
+            $this->health -= $amount;
+            $this->say(sprintf(
+                __('takes %1$s damage, %2$s health power left'),
+                $amount,
+                $this->health()
+            ));
+            if ($this->health() <= 0) {
+                $this->position = null;
+                $this->say(__("dies"));
+            }
+        }
     }
-  }
 
-  public function play_turn($turn) {
-    # to be overriden by subclass
-  }
+    public function is_alive()
+    {
+        return !is_null($this->position);
+    }
 
-  public function abilities() {
-    return $this->abilities;
-  }
+    public function is_bound()
+    {
+        return $this->bound;
+    }
 
-  public function character() {
-    return '?';
-  }
+    public function unbind()
+    {
+        $this->say(__("released from bonds"));
+        $this->bound = false;
+    }
+
+    public function bind()
+    {
+        $this->bound = true;
+    }
+
+    public function say($msg)
+    {
+        \PHPWarrior\UI::puts_with_delay("{$this->name()} {$msg}");
+    }
+
+    public function name()
+    {
+        $slice_name = explode('\\', get_class($this));
+        return array_pop($slice_name);
+    }
+
+    public function __ToString()
+    {
+        return __($this->name());
+    }
+
+    public function add_abilities($new_abbilities)
+    {
+        foreach ($new_abbilities as $abbility_str) {
+            $camel = '';
+            $abbility_str = str_replace(':', '', $abbility_str);
+            foreach (explode('_', $abbility_str) as $str) {
+                $camel .= ucfirst($str);
+            }
+            $class_name = 'PHPWarrior\Abilities\\' . $camel;
+            $this->abilities[$abbility_str] = new $class_name($this);
+        }
+        return $this;
+    }
+
+    public function next_turn()
+    {
+        return new \PHPWarrior\Turn($this->abilities());
+    }
+
+    public function prepare_turn()
+    {
+        $this->current_turn = $this->next_turn();
+        return $this->play_turn($this->current_turn);
+    }
+
+    public function perform_turn()
+    {
+        if ($this->position) {
+            foreach ($this->abilities as $ability) {
+                $ability->pass_turn();
+            }
+            if ($this->current_turn->action && !$this->is_bound()) {
+                list ($name, $args) = $this->current_turn->action;
+                call_user_func_array([$this->abilities[$name], 'perform'], $args);
+                //$this->abilities[$name]->perform($args);
+            }
+        }
+    }
+
+    public function play_turn($turn)
+    {
+        # to be overriden by subclass
+    }
+
+    public function abilities()
+    {
+        return $this->abilities;
+    }
+
+    public function character()
+    {
+        return '?';
+    }
 }
