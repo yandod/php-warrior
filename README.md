@@ -13,32 +13,38 @@ You play as a warrior climbing a tall tower to reach the precious PHP at the top
 
 First install the package.
 
-    composer global require "yandod/php-warrior=*"
-    export PATH=$HOME/.composer/vendor/bin:$PATH
+```bash
+composer global require "yandod/php-warrior=*"
+export PATH=$HOME/.composer/vendor/bin:$PATH
+```
 
 Then run the "phpwarrior" command to setup your profile. This will create a phpwarrior directory in your current location where you will find a player.php file in your profile's directory containing this:
 
-    <?php
-    class Player {
-      public function play_turn($warrior){
-        # your code goes here
-      }
+```php
+<?php
+  class Player {
+    public function play_turn($warrior){
+      # your code goes here
     }
+  }
+```
 
 Your objective is to fill this "play_turn" method with commands to instruct the warrior what to do. With each level your abilities will grow along with the difficulty. See the README in your profile's directory for details on what abilities your warrior has available on the current level.
 
 Here is a simple example which will instruct the warrior to attack if he feels an enemy, otherwise he will walk forward.
 
-    <?php
-    class Player {
-      public function play_turn($warrior) {
-        if ($warrior->feel()->is_enemy()) {
-          $warrior->attack();
-        } else {
-          $warrior->walk();
-        }
+```php
+<?php
+  class Player {
+    public function play_turn($warrior) {
+      if ($warrior->feel()->is_enemy()) {
+        $warrior->attack();
+      } else {
+        $warrior->walk();
       }
     }
+  }
+```
 
 Once you are done editing player.php, save the file and run the "phpwarrior" command again to start playing the level. The play happens through a series of turns. On each one, your "play_turn" method is called along with any enemy's.
 
@@ -67,17 +73,19 @@ Don't be too concerned about scoring perfectly in the beginning. After you reach
 
 Even though this is a text-based game, think of it as two-dimensional where you are viewing from overhead. Each level is always rectangular in shape and is made up of a number of squares. Only one unit can be on a given square at a time, and your objective is to find the square with the stairs. Here is an example level map and key.
 
-     ----
-    |C s>|
-    | S s|
-    |C @ |
-     ----
+```bash
+ ----
+|C s>|
+| S s|
+|C @ |
+ ----
 
-    > = Stairs
-    @ = Warrior (20 HP)
-    s = Sludge (12 HP)
-    S = Thick Sludge (24 HP)
-    C = Captive (1 HP)
+> = Stairs
+@ = Warrior (20 HP)
+s = Sludge (12 HP)
+S = Thick Sludge (24 HP)
+C = Captive (1 HP)
+```
 
 
 ## Commanding the Warrior
@@ -86,35 +94,38 @@ When you first start, your warrior will only have a few abilities, but with each
 
 An action is something that effects the game in some way. You can easily tell an action because it ends in an exclamation mark. Only one action can be performed per turn, so choose wisely. Here are some examples of actions.
 
-    $warrior->walk()
-      Move in given direction (forward by default).
+```php
+// Move in given direction (forward by default).
+$warrior->walk()
 
-    $warrior->attack()
-      Attack the unit in given direction (forward by default).
+// Attack the unit in given direction (forward by default).
+$warrior->attack()
 
-    $warrior->rest()
-      Gain 10% of max health back, but do nothing more.
+// Gain 10% of max health back, but do nothing more.
+$warrior->rest()
 
-    $warrior->bind()
-      Bind unit in given direction to keep him from moving (forward by default).
+// Bind unit in given direction to keep him from moving (forward by default).
+$warrior->bind()
 
-    $warrior->rescue()
-      Rescue a captive from his chains (earning 50 points) in given direction (forward by default).
-
+// Rescue a captive from his chains (earning 50 points) in given direction (forward by default).
+$warrior->rescue()
+```
 
 A sense is something which gathers information about the floor. You can perform senses as often as you want per turn to gather information about your surroundings and to aid you in choosing the proper action. Senses do NOT end in an exclamation mark.
 
-    $warrior->feel()
-      Returns a Space for the given direction (forward by default).
+```php
+// Returns a Space for the given direction (forward by default).
+$warrior->feel()
 
-    $warrior->health()
-      Returns an integer representing your health.
+// Returns an integer representing your health.
+$warrior->health()
 
-    $warrior->distance()
-      Returns the number of spaces the stairs are away.
+// Returns the number of spaces the stairs are away.
+$warrior->distance()
 
-    $warrior->listen()
-      Returns an array of all spaces which have units in them.
+// Returns an array of all spaces which have units in them.
+$warrior->listen()
+```
 
 
 Since what you sense will change each turn, you should record what information you gather for use on the next turn. For example, you can determine if you are being attacked if your health has gone down since the last turn.
@@ -154,11 +165,13 @@ You will often call these methods directly after a sense. For example, the "feel
 
 Along your journey you may discover the ability to create a golem. This is a separate unit which you also control. The turn handling is done through a block. Here is an example.
 
-    $warrior->form(function($golem) {
-      if ($golem->feel()->is_enemy()) {
-        $golem->attack();
-      }
-    });
+```php
+$warrior->form(function($golem) {
+  if ($golem->feel()->is_enemy()) {
+    $golem->attack();
+  }
+});
+```
 
 Complex logic can be placed in this block just like in the player turn method. You may want to move the logic into its own class or create multiple classes for different types of golems. You can create multiple golems in a level, but each one will take half of the warrior's health.
 
@@ -194,8 +207,12 @@ Make sure to try the different options you can pass to the phpwarrior command. R
 
 ### How to install dev version?
 
-    composer global require "yandod/php-warrior=dev-master"
+```bash
+composer global require "yandod/php-warrior=dev-master"
+```
 
 ### How to uninstall php-warrior?
 
-    composer global remove "yandod/php-warrior"
+```bash
+composer global remove "yandod/php-warrior"
+```
