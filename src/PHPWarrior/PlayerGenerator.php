@@ -7,11 +7,21 @@ class PlayerGenerator
     public $level;
     public $previous_level;
 
+    /**
+     * Class constrictor.
+     *
+     * @param $level
+     */
     public function __construct($level)
     {
         $this->level = $level;
     }
 
+    /**
+     * Previous level.
+     *
+     * @return Level
+     */
     public function previous_level()
     {
         if (!$this->previous_level) {
@@ -23,6 +33,9 @@ class PlayerGenerator
         return $this->previous_level;
     }
 
+    /**
+     * Generate.
+     */
     public function generate()
     {
         if ($this->level->number == 1) {
@@ -38,11 +51,20 @@ class PlayerGenerator
         );
     }
 
+    /**
+     * Template path
+     *
+     * @return string
+     */
     public function template_path()
     {
         return realpath(__DIR__ . '/../../templates');
     }
 
+    /**
+     * @param $path
+     * @return string
+     */
     public function read_template($path)
     {
         ob_start();

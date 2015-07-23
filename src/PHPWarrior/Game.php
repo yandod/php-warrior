@@ -13,7 +13,7 @@ class Game
 
         if (file_exists(Config::$path_prefix . '/.pwprofile')) {
             $this->profile = Profile::load(Config::$path_prefix . '/.pwprofile');
-        } elseif (!is_dir(Config::$path_prefix . '/phpwarrior')) {
+        } elseif (! is_dir(Config::$path_prefix . '/phpwarrior')) {
             $this->make_game_directory();
         }
         if (is_null($this->profile)) {

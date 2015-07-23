@@ -2,21 +2,35 @@
 
 namespace PHPWarrior\Units;
 
-
 class Warrior extends Base
 {
 
+    /**
+     * Class constructor.
+     *
+     * @todo make score dynamic
+     */
     public function __construct()
     {
-        $this->score = 0; # TODO make score dynamic
+        $this->score = 0;
         $this->golem_abilities = [];
     }
 
+    /**
+     * Play the turn.
+     *
+     * @param $turn
+     */
     public function play_turn($turn)
     {
         $this->player()->play_turn($turn);
     }
 
+    /**
+     * Player.
+     *
+     * @return \Player
+     */
     public function player()
     {
         if (!isset($this->player)) {
@@ -25,6 +39,11 @@ class Warrior extends Base
         return $this->player;
     }
 
+    /**
+     * Earn points.
+     *
+     * @param $points
+     */
     public function earn_points($points)
     {
         $this->score += $points;
@@ -39,16 +58,31 @@ class Warrior extends Base
         return 5;
     }
 
+    /**
+     * Set the shooting power.
+     *
+     * @return int
+     */
     public function shoot_power()
     {
         return 3;
     }
 
+    /**
+     * Set the maximum health.
+     *
+     * @return int
+     */
     public function max_health()
     {
         return 20;
     }
 
+    /**
+     * Return the character name.
+     *
+     * @return mixed
+     */
     public function name()
     {
         if ($this->name && !empty($this->name)) {
@@ -58,11 +92,19 @@ class Warrior extends Base
         }
     }
 
+    /**
+     * Character.
+     *
+     * @return string
+     */
     public function character()
     {
         return '@';
     }
 
+    /**
+     * Perfoirm the warrior his turn.
+     */
     public function perform_turn()
     {
         if (is_null($this->current_turn->action)) {

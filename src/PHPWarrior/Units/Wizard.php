@@ -4,6 +4,9 @@ namespace PHPWarrior\Units;
 
 class Wizard extends Base
 {
+    /**
+     * Class constructor
+     */
     public function __construct()
     {
         $this->add_abilities(['shoot', 'look']);
@@ -24,16 +27,31 @@ class Wizard extends Base
         }
     }
 
+    /**
+     * Shooting power for the wizard.
+     *
+     * @return int
+     */
     public function shoot_power()
     {
         return 11;
     }
 
+    /**
+     * Maximun health for the wizard.
+     *
+     * @return int
+     */
     public function max_health()
     {
         return 3;
     }
 
+    /**
+     * The character.
+     *
+     * @return string
+     */
     public function character()
     {
         return "w";

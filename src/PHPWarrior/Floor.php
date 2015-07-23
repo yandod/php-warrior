@@ -10,17 +10,37 @@ class Floor
     public $units = [];
     public $stairs_location = [-1, -1];
 
+    /**
+     * Add.
+     *
+     * @param $unit
+     * @param $x
+     * @param $y
+     *
+     * @param null $direction
+     */
     public function add($unit, $x, $y, $direction = null)
     {
         $this->units[] = $unit;
         $unit->position = new Position($this, $x, $y, $direction);
     }
 
+    /**
+     * Place the stairs.
+     *
+     * @param $x
+     * @param $y
+     */
     public function place_stairs($x, $y)
     {
         $this->stairs_location = [$x, $y];
     }
 
+    /**
+     * Stairs space.
+     *
+     * @return mixed
+     */
     public function stairs_space()
     {
         return call_user_func_array(
@@ -29,6 +49,11 @@ class Floor
         );
     }
 
+    /**
+     * Units.
+     *
+     * @return array
+     */
     public function units()
     {
         // todo? filter null
@@ -40,6 +65,11 @@ class Floor
         );
     }
 
+    /**
+     * Other units.
+     *
+     * @return array
+     */
     public function other_units()
     {
         return array_filter($this->units, function ($v) {
@@ -47,6 +77,14 @@ class Floor
         });
     }
 
+    /**
+     * Get.
+     *
+     * @param $x
+     * @param $y
+     *
+     * @return mixed
+     */
     public function get($x, $y)
     {
         foreach ($this->units as $v) {
@@ -56,11 +94,27 @@ class Floor
         }
     }
 
+    /**
+     * Space.
+     *
+     * @param $x
+     * @param $y
+     *
+     * @return Space
+     */
     public function space($x, $y)
     {
         return new Space($this, $x, $y);
     }
 
+    /**
+     * Is it out of bounds?
+     *
+     * @param $x
+     * @param $y
+     *
+     * @return bool
+     */
     public function is_out_of_bounds($x, $y)
     {
         return (
@@ -71,6 +125,11 @@ class Floor
         );
     }
 
+    /**
+     * Charecter
+     *
+     * @return string
+     */
     public function character()
     {
         $rows = [];
@@ -87,6 +146,11 @@ class Floor
         return implode("\n", $rows) . "\n";
     }
 
+    /**
+     * Get the unique units.
+     *
+     * @return array
+     */
     public function unique_units()
     {
         $unique_units = [];

@@ -9,20 +9,40 @@ class Base
     public $abilities = [];
     public $bound;
 
+    /**
+     * The attack power in the base.
+     *
+     * @return int, Attack power
+     */
     public function attack_power()
     {
         return 0;
     }
 
+    /**
+     * Maximum health.
+     *
+     * @return int
+     */
     public function max_health()
     {
         return 0;
     }
 
+    /**
+     * Earn points.
+     *
+     * @param $points
+     */
     public function earn_points($points)
     {
     }
 
+    /**
+     * Health.
+     *
+     * @return int
+     */
     public function health()
     {
         if (!isset($this->health)) {
@@ -31,6 +51,11 @@ class Base
         return $this->health;
     }
 
+    /**
+     * Take damage.
+     *
+     * @param $amount
+     */
     public function take_damage($amount)
     {
         if ($this->is_bound()) {
@@ -50,43 +75,80 @@ class Base
         }
     }
 
+    /**
+     * Is unit alive?
+     *
+     * @return bool
+     */
     public function is_alive()
     {
         return !is_null($this->position);
     }
 
+    /**
+     * is_bound?
+     *
+     * @return mixed
+     */
     public function is_bound()
     {
         return $this->bound;
     }
 
+    /**
+     * Unbind
+     */
     public function unbind()
     {
         $this->say(__("released from bonds"));
         $this->bound = false;
     }
 
+    /**
+     * bind.
+     */
     public function bind()
     {
         $this->bound = true;
     }
 
+    /**
+     * Say a message.
+     *
+     * @param $msg
+     */
     public function say($msg)
     {
         \PHPWarrior\UI::puts_with_delay("{$this->name()} {$msg}");
     }
 
+    /**
+     * name.
+     *
+     * @return mixed
+     */
     public function name()
     {
         $slice_name = explode('\\', get_class($this));
         return array_pop($slice_name);
     }
 
+    /**
+     * __ToString function.
+     *
+     * @return mixed
+     */
     public function __ToString()
     {
         return __($this->name());
     }
 
+    /**
+     * Add some abilties.
+     *
+     * @param $new_abbilities
+     * @return $this
+     */
     public function add_abilities($new_abbilities)
     {
         foreach ($new_abbilities as $abbility_str) {
@@ -101,17 +163,28 @@ class Base
         return $this;
     }
 
+    /**
+     * Next turn.
+     *
+     * @return \PHPWarrior\Turn
+     */
     public function next_turn()
     {
         return new \PHPWarrior\Turn($this->abilities());
     }
 
+    /**
+     * Prepare for your turn.
+     */
     public function prepare_turn()
     {
         $this->current_turn = $this->next_turn();
         return $this->play_turn($this->current_turn);
     }
 
+    /**
+     * Perform your turn.
+     */
     public function perform_turn()
     {
         if ($this->position) {
@@ -126,16 +199,31 @@ class Base
         }
     }
 
+    /**
+     * Play your turn.
+     *
+     * @param $turn
+     */
     public function play_turn($turn)
     {
         # to be overriden by subclass
     }
 
+    /**
+     * Abilities.
+     *
+     * @return array
+     */
     public function abilities()
     {
         return $this->abilities;
     }
 
+    /**
+     * The character.
+     *
+     * @return string
+     */
     public function character()
     {
         return '?';
