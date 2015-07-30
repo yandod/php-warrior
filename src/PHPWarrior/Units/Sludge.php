@@ -2,30 +2,59 @@
 
 namespace PHPWarrior\Units;
 
-class Sludge extends Base {
-  public function __construct() {
-    $this->add_abilities(['attack', 'feel']);
-  }
-
-  public function play_turn($turn) {
-    $directions = ['forward', 'left', 'right', 'backward'];
-    foreach ($directions as $direction) {
-      if ($turn->feel($direction)->is_player()) {
-        $turn->attack($direction);
-        return;
-      }
+class Sludge extends Base
+{
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        $this->add_abilities(['attack', 'feel']);
     }
-  }
 
-  public function attack_power() {
-    return 3;
-  }
+    /**
+     * Play your turn.
+     *
+     * @param $turn
+     */
+    public function play_turn($turn)
+    {
+        $directions = ['forward', 'left', 'right', 'backward'];
+        foreach ($directions as $direction) {
+            if ($turn->feel($direction)->is_player()) {
+                $turn->attack($direction);
+                return;
+            }
+        }
+    }
 
-  public function max_health() {
-    return 12;
-  }
+    /**
+     * Your attack power.
+     *
+     * @return int
+     */
+    public function attack_power()
+    {
+        return 3;
+    }
 
-  public function character() {
-    return "s";
-  }
+    /**
+     * Maximun health.
+     *
+     * @return int
+     */
+    public function max_health()
+    {
+        return 12;
+    }
+
+    /**
+     * Your character.
+     *
+     * @return string
+     */
+    public function character()
+    {
+        return "s";
+    }
 }

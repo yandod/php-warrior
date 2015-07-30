@@ -2,12 +2,25 @@
 
 namespace PHPWarrior\Units;
 
-class ThickSludge extends Sludge {
-  public function max_health() {
-    return 24;
-  }
+class ThickSludge extends Sludge
+{
+    /**
+     * Maximum health.
+     *
+     * @return int
+     */
+    public function max_health()
+    {
+        return 24;
+    }
 
-  public function character() {
-    return "S";
-  }
+    /**
+     * Character.
+     *
+     * @return string
+     */
+    public function character()
+    {
+        return "S";
+    }
 }
