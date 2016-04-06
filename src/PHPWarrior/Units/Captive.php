@@ -3,16 +3,33 @@
 namespace PHPWarrior\Units;
 
 
-class Captive extends Base {
-  public function __construct() {
-    $this->bind();
-  }
+class Captive extends Base
+{
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        $this->bind();
+    }
 
-  public function max_health() {
-    return 1;
-  }
+    /**
+     * Maximum health.
+     *
+     * @return int
+     */
+    public function max_health()
+    {
+        return 1;
+    }
 
-  public function character() {
-    return "C";
-  }
+    /**
+     * Character type.
+     *
+     * @return string
+     */
+    public function character()
+    {
+        return "C";
+    }
 }

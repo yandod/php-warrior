@@ -2,61 +2,114 @@
 
 namespace PHPWarrior\Units;
 
+class Warrior extends Base
+{
 
-class Warrior extends Base {
-
-  public function __construct() {
-    $this->score = 0; # TODO make score dynamic
-    $this->golem_abilities = [];
-  }
-
-  public function play_turn($turn) {
-    $this->player()->play_turn($turn);
-  }
-
-  public function player() {
-    if (!isset($this->player)) {
-      $this->player = new \Player();
+    /**
+     * Class constructor.
+     *
+     * @todo make score dynamic
+     */
+    public function __construct()
+    {
+        $this->score = 0;
+        $this->golem_abilities = [];
     }
-    return $this->player;
-  }
 
-  public function earn_points($points) {
-    $this->score += $points;
-    $this->say(sprintf(
-      __("earns %s points"),
-      $points
-    ));
-  }
-
-  public function attack_power() {
-    return 5;
-  }
-
-  public function shoot_power() {
-    return 3;
-  }
-
-  public function max_health() {
-    return 20;
-  }
-
-  public function name() {
-    if ($this->name && !empty($this->name)) {
-      return $this->name;
-    }  else {
-      return __('Warrior');
+    /**
+     * Play the turn.
+     *
+     * @param $turn
+     */
+    public function play_turn($turn)
+    {
+        $this->player()->play_turn($turn);
     }
-  }
 
-  public function character() {
-    return '@';
-  }
-
-  public function perform_turn() {
-    if (is_null($this->current_turn->action)) {
-      $this->say(__("does nothing"));
+    /**
+     * Player.
+     *
+     * @return \Player
+     */
+    public function player()
+    {
+        if (!isset($this->player)) {
+            $this->player = new \Player();
+        }
+        return $this->player;
     }
-    return parent::perform_turn();
-  }
+
+    /**
+     * Earn points.
+     *
+     * @param $points
+     */
+    public function earn_points($points)
+    {
+        $this->score += $points;
+        $this->say(sprintf(
+            __("earns %s points"),
+            $points
+        ));
+    }
+
+    public function attack_power()
+    {
+        return 5;
+    }
+
+    /**
+     * Set the shooting power.
+     *
+     * @return int
+     */
+    public function shoot_power()
+    {
+        return 3;
+    }
+
+    /**
+     * Set the maximum health.
+     *
+     * @return int
+     */
+    public function max_health()
+    {
+        return 20;
+    }
+
+    /**
+     * Return the character name.
+     *
+     * @return mixed
+     */
+    public function name()
+    {
+        if ($this->name && !empty($this->name)) {
+            return $this->name;
+        } else {
+            return __('Warrior');
+        }
+    }
+
+    /**
+     * Character.
+     *
+     * @return string
+     */
+    public function character()
+    {
+        return '@';
+    }
+
+    /**
+     * Perfoirm the warrior his turn.
+     */
+    public function perform_turn()
+    {
+        if (is_null($this->current_turn->action)) {
+            $this->say(__("does nothing"));
+        }
+        return parent::perform_turn();
+    }
 }
