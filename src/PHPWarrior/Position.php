@@ -9,6 +9,14 @@ class Position
     public static $DIRECTIONS = ['north', 'east', 'south', 'west'];
     public static $RELATIVE_DIRECTIONS = ['forward', 'right', 'backward', 'left'];
 
+    /**
+     * Position constructor.
+     *
+     * @param $floor
+     * @param $x
+     * @param $y
+     * @param null $direction
+     */
     public function __construct($floor, $x, $y, $direction = null)
     {
         $this->floor = $floor;
@@ -21,6 +29,11 @@ class Position
         );
     }
 
+    /**
+     * @param  $x
+     * @param  $y
+     * @return bool
+     */
     public function is_at($x, $y)
     {
         return ($this->x == $x && $this->y == $y);
@@ -31,6 +44,9 @@ class Position
         return self::$DIRECTIONS[$this->direction_index];
     }
 
+    /**
+     * @param $amount
+     */
     public function rotate($amount)
     {
         $this->direction_index += $amount;
@@ -42,6 +58,11 @@ class Position
         }
     }
 
+    /**
+     * @param  $forward
+     * @param  int $right
+     * @return mixed
+     */
     public function relative_space($forward, $right = 0)
     {
         return call_user_func_array(
@@ -55,6 +76,10 @@ class Position
         return $this->floor->space($this->x, $this->y);
     }
 
+    /**
+     * @param $forward
+     * @param int $right
+     */
     public function move($forward, $right = 0)
     {
         list($this->x, $this->y) = $this->translate_offset($forward, $right);
@@ -65,6 +90,10 @@ class Position
         return $this->distance_of($this->floor->stairs_space());
     }
 
+    /**
+     * @param  $space
+     * @return mixed
+     */
     public function distance_of($space)
     {
         list ($x, $y) = $space->location();
@@ -76,11 +105,19 @@ class Position
         return $this->relative_direction_of($this->floor->stairs_space());
     }
 
+    /**
+     * @param  $space
+     * @return mixed
+     */
     public function relative_direction_of($space)
     {
         return $this->relative_direction($this->direction_of($space));
     }
 
+    /**
+     * @param  $space
+     * @return string
+     */
     public function direction_of($space)
     {
         list ($space_x, $space_y) = $space->location();
@@ -91,6 +128,10 @@ class Position
         }
     }
 
+    /**
+     * @param  $direction
+     * @return mixed
+     */
     public function relative_direction($direction)
     {
         $direction = self::normalize_direction($direction);
@@ -104,6 +145,11 @@ class Position
         return self::$RELATIVE_DIRECTIONS[$offset];
     }
 
+    /**
+     * @param  $forward
+     * @param  $right
+     * @return array
+     */
     public function translate_offset($forward, $right)
     {
         $direction = Position::normalize_direction($this->direction());
@@ -123,6 +169,10 @@ class Position
         }
     }
 
+    /**
+     * @param  $direction
+     * @return mixed
+     */
     public static function normalize_direction($direction)
     {
         return str_replace(':', '', $direction);

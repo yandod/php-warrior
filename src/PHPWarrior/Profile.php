@@ -36,6 +36,10 @@ class Profile
         return unserialize($str);
     }
 
+    /**
+     * @param  $path
+     * @return mixed
+     */
     public static function load($path)
     {
         $profile = self::decode(file_get_contents($path));

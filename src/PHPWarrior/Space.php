@@ -6,6 +6,13 @@ namespace PHPWarrior;
 class Space
 {
 
+    /**
+     * Space constructor.
+     * 
+     * @param $floor
+     * @param $x
+     * @param $y
+     */
     public function __construct($floor, $x, $y)
     {
         $this->floor = $floor;

@@ -62,7 +62,7 @@ class PlayerGenerator
     }
 
     /**
-     * @param $path
+     * @param  $path
      * @return string
      */
     public function read_template($path)

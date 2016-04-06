@@ -4,6 +4,9 @@ namespace PHPWarrior;
 
 class UI
 {
+    /**
+     * @param $msg
+     */
     public static function puts($msg)
     {
         if (Config::$out_stream) {
@@ -11,6 +14,9 @@ class UI
         }
     }
 
+    /**
+     * @param $msg
+     */
     public static function puts_with_delay($msg)
     {
         $result = self::puts($msg);
@@ -20,6 +26,9 @@ class UI
         return $result;
     }
 
+    /**
+     * @param $msg
+     */
     public static function put($msg)
     {
         if (Config::$out_stream) {
@@ -34,12 +43,20 @@ class UI
         }
     }
 
+    /**
+     * @param $msg
+     * @return mixed
+     */
     public static function request($msg)
     {
         self::put($msg);
         return trim(self::gets());
     }
 
+    /**
+     * @param $msg
+     * @return bool
+     */
     public static function ask($msg)
     {
         fwrite(Config::$out_stream, $msg . ' [yn] ');
@@ -49,6 +66,11 @@ class UI
         return false;
     }
 
+    /**
+     * @param  $item
+     * @param  $options
+     * @return mixed
+     */
     public static function choose($item, $options)
     {
         if (count($options) == 1) {
