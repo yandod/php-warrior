@@ -1,6 +1,11 @@
 <?php
 namespace PHPWarrior;
 
+/**
+ * Class PlayerGenerator
+ * 
+ * @package PHPWarrior
+ */
 class PlayerGenerator
 {
 

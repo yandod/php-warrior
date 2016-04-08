@@ -3,6 +3,11 @@
 namespace PHPWarrior\Units;
 
 
+/**
+ * Class Captive
+ * 
+ * @package PHPWarrior\Units
+ */
 class Captive extends Base
 {
     /**

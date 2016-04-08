@@ -3,6 +3,11 @@
 namespace PHPWarrior;
 
 
+/**
+ * Class Tower
+ * 
+ * @package PHPWarrior
+ */
 class Tower
 {
     public $path;

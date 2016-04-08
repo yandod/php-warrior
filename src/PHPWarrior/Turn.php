@@ -2,6 +2,11 @@
 
 namespace PHPWarrior;
 
+/**
+ * Class Turn
+ * 
+ * @package PHPWarrior
+ */
 class Turn
 {
 

@@ -2,6 +2,11 @@
 
 namespace PHPWarrior\Units;
 
+/**
+ * Class Sludge
+ * 
+ * @package PHPWarrior\Units
+ */
 class Sludge extends Base
 {
     /**

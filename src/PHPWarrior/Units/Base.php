@@ -2,6 +2,11 @@
 
 namespace PHPWarrior\Units;
 
+/**
+ * Class Base
+ * 
+ * @package PHPWarrior\Units
+ */
 class Base
 {
 

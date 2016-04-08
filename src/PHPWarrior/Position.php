@@ -2,6 +2,11 @@
 
 namespace PHPWarrior;
 
+/**
+ * Class Position
+ *
+ * @package PHPWarrior
+ */
 class Position
 {
 
@@ -30,8 +35,8 @@ class Position
     }
 
     /**
-     * @param  $x
-     * @param  $y
+     * @param  int $x
+     * @param  int $y
      * @return bool
      */
     public function is_at($x, $y)

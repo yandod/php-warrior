@@ -6,6 +6,11 @@ use \Ulrichsg\Getopt\Getopt;
 use \Ulrichsg\Getopt\Option;
 use \Gettext\Translator;
 
+/**
+ * Class Runner
+ * 
+ * @package PHPWarrior
+ */
 class Runner
 {
 
@@ -24,6 +29,9 @@ class Runner
         $this->game = new Game();
     }
 
+    /**
+     * Run the level.
+     */
     public function run()
     {
         Config::$in_stream = $this->stdin;
@@ -34,6 +42,9 @@ class Runner
         $this->game->start();
     }
 
+    /**
+     * Parse the options.
+     */
     public function parse_options()
     {
         $getopt = new Getopt([
@@ -73,10 +84,14 @@ class Runner
         }
     }
 
+    /**
+     * Load the i12n translation file.
+     */
     public function load_translation()
     {
         $translator = new \Gettext\Translator();
         $i18n_path = realpath(__DIR__ . '/../../i18n/' . Config::$locale . '.po');
+
         if (file_exists($i18n_path)) {
             $translations = \Gettext\Translations::fromPoFile($i18n_path);
             $translator->loadTranslations($translations);

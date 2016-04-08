@@ -2,6 +2,11 @@
 
 namespace PHPWarrior;
 
+/**
+ * Class UI
+ * 
+ * @package PHPWarrior
+ */
 class UI
 {
     /**

@@ -2,6 +2,11 @@
 
 namespace PHPWarrior;
 
+/**
+ * Class Level
+ * 
+ * @package PHPWarrior
+ */
 class Level
 {
     public $profile;

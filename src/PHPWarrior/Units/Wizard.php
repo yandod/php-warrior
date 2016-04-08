@@ -2,6 +2,11 @@
 
 namespace PHPWarrior\Units;
 
+/**
+ * Class Wizard
+ * 
+ * @package PHPWarrior\Units
+ */
 class Wizard extends Base
 {
     /**

@@ -2,6 +2,11 @@
 
 namespace PHPWarrior\Units;
 
+/**
+ * Class ThickSludge
+ * 
+ * @package PHPWarrior\Units
+ */
 class ThickSludge extends Sludge
 {
     /**
