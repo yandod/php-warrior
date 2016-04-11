@@ -6,14 +6,39 @@ namespace PHPWarrior;
 class Profile
 {
     public $score;
+
+    /**
+     * @var bool
+     */
     public $epic = false;
+
     public $epic_score;
     public $current_epic_score;
     public $average_grade;
+
+    /**
+     * @var array
+     */
     public $current_epic_grades = [];
+
+    /**
+     * @var array
+     */
     public $abilities = [];
+
+    /**
+     * @var int
+     */
     public $level_number = 0;
+
+    /**
+     * @var int
+     */
     public $last_level_number;
+
+    /**
+     * @var string
+     */
     public $tower_path = '';
     public $warrior_name;
     public $player_path;
@@ -24,6 +49,9 @@ class Profile
         return serialize($obj);
     }
 
+    /**
+     * Save
+     */
     public function save()
     {
         // update_epic_score
@@ -31,17 +59,34 @@ class Profile
         file_put_contents($this->player_path() . '/.pwprofile', self::encode($this));
     }
 
+    /**
+     * Decode a string.
+     *
+     * @param  $str
+     * @return mixed
+     */
     public static function decode($str)
     {
         return unserialize($str);
     }
 
+    /**
+     * load
+     *
+     * @param  $path
+     * @return mixed
+     */
     public static function load($path)
     {
         $profile = self::decode(file_get_contents($path));
         return $profile;
     }
 
+    /**
+     * The pad to the player.php file.
+     *
+     * @return string
+     */
     public function player_path()
     {
         if (!$this->player_path) {
@@ -50,6 +95,11 @@ class Profile
         return $this->player_path;
     }
 
+    /**
+     * The directory name
+     *
+     * @return mixed
+     */
     public function directory_name()
     {
         return implode(
@@ -68,6 +118,11 @@ class Profile
         ]);
     }
 
+    /**
+     * Epic score with grade.
+     *
+     * @return string
+     */
     public function epic_score_with_grade()
     {
         if ($this->average_grade) {
@@ -78,6 +133,11 @@ class Profile
         }
     }
 
+    /**
+     * Tower.
+     *
+     * @return Tower
+     */
     public function tower()
     {
         if (!$this->tower) {
@@ -86,11 +146,21 @@ class Profile
         return $this->tower;
     }
 
+    /**
+     * The current level.
+     *
+     * @return Level
+     */
     public function current_level()
     {
         return new Level($this, $this->level_number);
     }
 
+    /**
+     * The next level.
+     *
+     * @return Level
+     */
     public function next_level()
     {
         return new Level($this, $this->level_number + 1);

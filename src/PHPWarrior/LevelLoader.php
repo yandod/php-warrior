@@ -2,6 +2,11 @@
 
 namespace PHPWarrior;
 
+/**
+ * Class LevelLoader
+ * 
+ * @package PHPWarrior
+ */
 class LevelLoader
 {
     /**

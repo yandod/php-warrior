@@ -2,6 +2,11 @@
 
 namespace PHPWarrior;
 
+/**
+ * Class Floor
+ * 
+ * @package PHPWarrior
+ */
 class Floor
 {
 

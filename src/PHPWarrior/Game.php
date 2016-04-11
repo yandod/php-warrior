@@ -2,6 +2,13 @@
 
 namespace PHPWarrior;
 
+/**
+ * Class Game
+ *
+ * @property null current_level
+ *
+ * @package PHPWarrior
+ */
 class Game
 {
 

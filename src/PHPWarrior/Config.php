@@ -2,6 +2,11 @@
 
 namespace PHPWarrior;
 
+/**
+ * Class Config
+ * 
+ * @package PHPWarrior
+ */
 class Config
 {
     public static $delay;

@@ -2,6 +2,11 @@
 
 namespace PHPWarrior\Units;
 
+/**
+ * Class Warrior
+ * 
+ * @package PHPWarrior\Units
+ */
 class Warrior extends Base
 {
 
@@ -103,7 +108,7 @@ class Warrior extends Base
     }
 
     /**
-     * Perfoirm the warrior his turn.
+     * Perform the warrior his turn.
      */
     public function perform_turn()
     {

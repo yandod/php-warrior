@@ -1,6 +1,11 @@
 <?php
 namespace PHPWarrior;
 
+/**
+ * Class PlayerGenerator
+ * 
+ * @package PHPWarrior
+ */
 class PlayerGenerator
 {
 
@@ -62,7 +67,7 @@ class PlayerGenerator
     }
 
     /**
-     * @param $path
+     * @param  $path
      * @return string
      */
     public function read_template($path)

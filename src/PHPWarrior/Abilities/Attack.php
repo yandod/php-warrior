@@ -2,13 +2,28 @@
 
 namespace PHPWarrior\Abilities;
 
+/**
+ * Class Attack
+ * 
+ * @package PHPWarrior\Abilities
+ */
 class Attack extends Base
 {
+    /**
+     * The description of the Attack ability.
+     *
+     * @return mixed
+     */
     public function description()
     {
         return __('Attacks a unit in given direction (forward by default).');
     }
 
+    /**
+     * @param string $direction
+     *
+     * @throws \Exception
+     */
     public function perform($direction = 'forward')
     {
         $direction = \PHPWarrior\Position::normalize_direction($direction);

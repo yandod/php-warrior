@@ -2,6 +2,11 @@
 
 namespace PHPWarrior;
 
+/**
+ * Class Level
+ * 
+ * @package PHPWarrior
+ */
 class Level
 {
     public $profile;
@@ -15,6 +20,10 @@ class Level
     public $time_bonus;
     public $ace_score;
 
+    /**
+     * @param  $percent
+     * @return string
+     */
     public static function grade_letter($percent)
     {
         if ($percent >= 1.0) {
@@ -32,6 +41,12 @@ class Level
         }
     }
 
+    /**
+     * Level constructor.
+     *
+     * @param $profile
+     * @param $number
+     */
     public function __construct($profile, $number)
     {
         $this->profile = $profile;
@@ -136,6 +151,10 @@ class Level
         }
     }
 
+    /**
+     * @param  $score
+     * @return string
+     */
     public function grade_for($score)
     {
         if ($this->ace_score) {
@@ -148,6 +167,11 @@ class Level
         return round(($this->warrior->score + $this->time_bonus) * 0.2);
     }
 
+    /**
+     * @param  $current_score
+     * @param  $addition
+     * @return string
+     */
     public function score_calculation($current_score, $addition)
     {
         if (empty($current_score)) {
@@ -176,6 +200,10 @@ class Level
         return file_exists($this->load_path());
     }
 
+    /**
+     * @param  $warrior
+     * @return mixed
+     */
     public function setup_warrior($warrior)
     {
         $this->warrior = $warrior;

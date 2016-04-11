@@ -3,10 +3,20 @@
 namespace PHPWarrior;
 
 
+/**
+ * Class Tower
+ * 
+ * @package PHPWarrior
+ */
 class Tower
 {
     public $path;
 
+    /**
+     * Tower constructor.
+     * 
+     * @param $path
+     */
     public function __construct($path)
     {
         $this->path = $path;

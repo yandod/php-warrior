@@ -1,13 +1,26 @@
 <?php
+
+namespace PHPWarrior;
+
 use \Ulrichsg\Getopt\Getopt;
 use \Ulrichsg\Getopt\Option;
 use \Gettext\Translator;
 
-namespace PHPWarrior;
-
+/**
+ * Class Runner
+ * 
+ * @package PHPWarrior
+ */
 class Runner
 {
 
+    /**
+     * Runner constructor.
+     *
+     * @param $arguments
+     * @param $stdin
+     * @param $stdout
+     */
     public function __construct($arguments, $stdin, $stdout)
     {
         $this->arguments = $arguments;
@@ -16,6 +29,9 @@ class Runner
         $this->game = new Game();
     }
 
+    /**
+     * Run the level.
+     */
     public function run()
     {
         Config::$in_stream = $this->stdin;
@@ -26,15 +42,18 @@ class Runner
         $this->game->start();
     }
 
+    /**
+     * Parse the options.
+     */
     public function parse_options()
     {
-        $getopt = new \Ulrichsg\Getopt\Getopt([
-            ['d', 'directory', \Ulrichsg\Getopt\Getopt::REQUIRED_ARGUMENT, 'Run under given directory'],
-            ['l', 'level', \Ulrichsg\Getopt\Getopt::REQUIRED_ARGUMENT, 'Practice level on epic'],
-            ['s', 'skip', \Ulrichsg\Getopt\Getopt::NO_ARGUMENT, 'Skip user input'],
-            ['t', 'time', \Ulrichsg\Getopt\Getopt::REQUIRED_ARGUMENT, 'Delay each turn by seconds'],
-            ['L', 'locale', \Ulrichsg\Getopt\Getopt::REQUIRED_ARGUMENT, 'Specify locale like en_US'],
-            ['h', 'help', \Ulrichsg\Getopt\Getopt::NO_ARGUMENT, 'Show this message'],
+        $getopt = new Getopt([
+            ['d', 'directory', Getopt::REQUIRED_ARGUMENT, 'Run under given directory'],
+            ['l', 'level', Getopt::REQUIRED_ARGUMENT, 'Practice level on epic'],
+            ['s', 'skip', Getopt::NO_ARGUMENT, 'Skip user input'],
+            ['t', 'time', Getopt::REQUIRED_ARGUMENT, 'Delay each turn by seconds'],
+            ['L', 'locale', Getopt::REQUIRED_ARGUMENT, 'Specify locale like en_US'],
+            ['h', 'help', Getopt::NO_ARGUMENT, 'Show this message'],
         ]);
         try {
             $getopt->parse();
@@ -65,14 +84,19 @@ class Runner
         }
     }
 
+    /**
+     * Load the i12n translation file.
+     */
     public function load_translation()
     {
         $translator = new \Gettext\Translator();
         $i18n_path = realpath(__DIR__ . '/../../i18n/' . Config::$locale . '.po');
+
         if (file_exists($i18n_path)) {
             $translations = \Gettext\Translations::fromPoFile($i18n_path);
             $translator->loadTranslations($translations);
         }
-        \Gettext\Translator::initGettextFunctions($translator);
+
+        Translator::initGettextFunctions($translator);
     }
 }

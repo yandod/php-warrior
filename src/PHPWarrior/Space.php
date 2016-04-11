@@ -3,9 +3,20 @@
 namespace PHPWarrior;
 
 
+/**
+ * Class Space
+ *
+ * @package PHPWarrior
+ */
 class Space
 {
-
+    /**
+     * Space constructor.
+     * 
+     * @param $floor
+     * @param int $x
+     * @param int $y
+     */
     public function __construct($floor, $x, $y)
     {
         $this->floor = $floor;
