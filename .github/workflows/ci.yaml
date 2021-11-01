@@ -1,0 +1,14 @@
+name: ci
+
+on:
+  push:
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup
+        run: make setup
+      - name: Run test game
+        run: make test
