@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+
+jobs:
+  testgame:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup
+        run: make setup
+      - name: Setup test
+        run: make test-setup
+      - name: Run test game
+        run: make test
+  ja_JP:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup
+        run: make setup
+      - name: Setup test
+        run: make test-setup
+      - name: Run test game
+        run: make test-ja
+  ru_RO:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup
+        run: make setup
+      - name: Setup test
+        run: make test-setup
+      - name: Run test game
+        run: make test-ru
+  
