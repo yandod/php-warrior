@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  phpunit:
+  testgame:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
